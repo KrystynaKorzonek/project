@@ -12,6 +12,7 @@ public class Square extends Shape{
     }
 
     public Square(String feature, double value){
+        super(value);
         switch (feature){
             case "p" -> {
                 area = value;
