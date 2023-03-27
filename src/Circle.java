@@ -20,6 +20,7 @@ public class Circle extends Shape{
     }
 
     public Circle(String feature, double value){
+        super(value);
         double radius = 0;
         switch (feature){
             case "r" -> {

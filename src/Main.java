@@ -9,7 +9,7 @@ public class Main {
             input = scan.nextLine().toLowerCase();
         }
         System.out.println("Wybierz cechę, którą podasz:");
-        Shape shape;
+        Shape shape = null;
         // TODO: remove repeated code
         if (input.equals("s")){
             System.out.println(Square.getMessageChoiceFeature());
@@ -17,10 +17,19 @@ public class Main {
             while (!Square.isFeatureCode(feature))
                 feature = scan.nextLine().toLowerCase();
             System.out.println("Podaj jej wartość:");
-            double value = scan.nextDouble();
-            // TODO:
-            // if value < 0 ...
-            shape = new Square(feature, value);
+            boolean done = false;
+            double value;
+            while (!done){
+                value = scan.nextDouble();
+                try {
+                    shape = new Square(feature, value);
+                    done = true;
+                }
+                catch (IllegalArgumentException e){
+                    System.out.println(e.getMessage() + "\nSpróbuj jeszcze raz:");
+                }
+            }
+
         }
         else{ //input == "c"
             System.out.println(Circle.getMessageChoiceFeature());
@@ -28,10 +37,18 @@ public class Main {
             while (!Circle.isFeatureCode(feature))
                 feature = scan.nextLine().toLowerCase();
             System.out.println("Podaj jej wartość:");
-            double value = scan.nextDouble();
-            // TODO:
-            // if value < 0 ...
-            shape = new Circle(feature, value);
+            boolean done = false;
+            double value;
+            while (!done){
+                value = scan.nextDouble();
+                try {
+                    shape = new Circle(feature, value);
+                    done = true;
+                }
+                catch (IllegalArgumentException e){
+                    System.out.println(e.getMessage() + "\nSpróbuj jeszcze raz:");
+                }
+            }
 
         }
         System.out.println(shape.toString());
@@ -40,9 +57,9 @@ public class Main {
 
     }
     public static void main (String[] args) {
-        System.out.println("hello");
         while(true)
             solveOneTask();
+
     }
 
 }
