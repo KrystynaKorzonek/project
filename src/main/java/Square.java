@@ -6,9 +6,7 @@ public class Square extends Shape{
         return "b - bok, d - przekątna, p - pole";
     }
     public static boolean isFeatureCode(String code){
-        if (code.equals("b") || code.equals("d") || code.equals("p"))
-            return true;
-        return false;
+        return code.equals("b") || code.equals("d") || code.equals("p");
     }
 
     public Square(String feature, double value){

@@ -8,9 +8,7 @@ public class Circle extends Shape{
         return "r - promień, d - średnica, p - pole, l - obwód";
     }
     public static boolean isFeatureCode(String code){
-        if (code.equals("r") || code.equals("d") || code.equals("p") || code.equals("l"))
-            return true;
-        return false;
+        return code.equals("r") || code.equals("d") || code.equals("p") || code.equals("l");
     }
     private void setFeaturesFromRadius(double radius){
         this.radius = radius;
