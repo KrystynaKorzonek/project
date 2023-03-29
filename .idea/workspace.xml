@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="Pracownia 1 - koło i kwadrat - obliczenia, prosty interface (bez obsługi błędów)">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="Dodanie wyjscia z programu('x')&#10;Dodanie możliwość tworzenia testów(dodanie prostych testow)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +61,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SquareTest">
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="project" />
@@ -112,7 +103,8 @@
       <option name="presentableId" value="Default" />
       <updated>1679433951557</updated>
       <workItem from="1680018438738" duration="4631000" />
-      <workItem from="1680036014895" duration="2318000" />
+      <workItem from="1680036014895" duration="2599000" />
+      <workItem from="1680070175707" duration="2216000" />
     </task>
     <task id="LOCAL-00001" summary="Pracownia 1 - koło i kwadrat - obliczenia, prosty interface (bez obsługi błędów)">
       <created>1679772319571</created>
@@ -121,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679772319571</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Dodanie wyjscia z programu('x')&#10;Dodanie możliwość tworzenia testów(dodanie prostych testow)">
+      <created>1680039267148</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680039267148</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +139,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Pracownia 1 - koło i kwadrat - obliczenia, prosty interface (bez obsługi błędów)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pracownia 1 - koło i kwadrat - obliczenia, prosty interface (bez obsługi błędów)" />
+    <MESSAGE value="Dodanie wyjscia z programu('x')&#10;Dodanie możliwość tworzenia testów(dodanie prostych testow)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie wyjscia z programu('x')&#10;Dodanie możliwość tworzenia testów(dodanie prostych testow)" />
   </component>
 </project>
