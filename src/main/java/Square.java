@@ -1,3 +1,6 @@
+import java.util.Map;
+import java.util.Set;
+
 public class Square extends Shape{
     private double side;
     private double diagonal;
@@ -9,8 +12,15 @@ public class Square extends Shape{
         return code.equals("b") || code.equals("d") || code.equals("p");
     }
 
-    public Square(String feature, double value){
-        super(value);
+    public static boolean isProperSetOfFeatures(Set<String> features){
+        if (features.size()==1)
+            if (features.contains("b") || features.contains("d") || features.contains("p"))
+                return true;
+        return false;
+    }
+
+
+    private void setFeatures(String feature, double value){
         switch (feature){
             case "p" -> {
                 area = value;
@@ -27,6 +37,14 @@ public class Square extends Shape{
                 side = diagonal/Math.sqrt(2);
                 area = side*side;
             }
+        }
+    }
+    public Square(Map<String, Double> features){
+        if (features.size() != 1)
+            throw new IllegalArgumentException("Too many features\n(that should never happen...)");
+        for (String feature : features.keySet()) { //poprawić!
+            double value = features.get(feature);
+            setFeatures(feature, value);
         }
     }
 
