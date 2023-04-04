@@ -44,9 +44,9 @@ public class Main {
 
     public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Wybierz figurę (S - kwadrat, C - koło, D - romb)\nX - Zakończ"); //D-romb-diamond :), bo prostokąt chce R też
+        System.out.println("Wybierz figurę (S - kwadrat, C - koło, D - romb, P - prostokat)\nX - Zakończ"); //D-romb-diamond :), bo prostokąt chce R też
         String input = scan.nextLine().toLowerCase();
-        while (!input.equals("s") && !input.equals("c") && !input.equals("d") && !input.equals("x")) {
+        while (!input.equals("s") && !input.equals("c") && !input.equals("d")  && !input.equals("p") && !input.equals("x")) {
             System.out.println("Nieprawidłowa wartość!");
             System.out.println("Wybierz figurę (S - kwadrat, C - koło)\nX - Zakończ");
             input = scan.nextLine().toLowerCase();
@@ -66,6 +66,9 @@ public class Main {
             }
             case "d" -> {
                 figureClass = Rhombus.class;
+            }
+            case "p" -> {
+                figureClass = Rectangle.class;
             }
         }
         Map<String, Double> features = new HashMap<String, Double>();
