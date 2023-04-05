@@ -6,6 +6,7 @@ TODO:
 1. solveOneTask() i main() miotają wyjątkami jak wściekłe (refleksja) --> co z tym?
 2. łapanie ujemnych wartości - zabrałam z Shape - refleksja rzuca innym wyjątkiem, czy chcemy go łapać?
 3. za proste isProperSetOfFeatures; na tą listę starczy, ale zaraz przestanie (TODO niżej)
+4. teraz można podać kilka razy 1 cechę... może tego nie chcemy?
  */
 
 public class Main {
@@ -44,11 +45,12 @@ public class Main {
 
     public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Wybierz figurę (S - kwadrat, C - koło, D - romb, P - prostokat)\nX - Zakończ"); //D-romb-diamond :), bo prostokąt chce R też
+        String messageChoiceShape = "Wybierz figurę (S - kwadrat, C - koło, D - romb, P - prostokat)\nX - Zakończ";
+        System.out.println(messageChoiceShape); //D-romb-diamond :), bo prostokąt chce R też
         String input = scan.nextLine().toLowerCase();
         while (!input.equals("s") && !input.equals("c") && !input.equals("d")  && !input.equals("p") && !input.equals("x")) {
             System.out.println("Nieprawidłowa wartość!");
-            System.out.println("Wybierz figurę (S - kwadrat, C - koło)\nX - Zakończ");
+            System.out.println(messageChoiceShape);
             input = scan.nextLine().toLowerCase();
         }
 
