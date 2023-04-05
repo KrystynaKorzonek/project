@@ -1,3 +1,5 @@
+import com.sun.source.tree.Tree;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
@@ -7,9 +9,11 @@ TODO:
 2. łapanie ujemnych wartości - zabrałam z Shape - refleksja rzuca innym wyjątkiem, czy chcemy go łapać?
 3. za proste isProperSetOfFeatures; na tą listę starczy, ale zaraz przestanie (TODO niżej)
 4. teraz można podać kilka razy 1 cechę... może tego nie chcemy?
+5. romb(bok, pole): musi zachodzić pole < bok^2
  */
 
 public class Main {
+    private static TreeSet<Shape> allShapes = new TreeSet<>();
     public static Pair<String, Double> getFromUserFeatureValuePair(Scanner scan, Class figureClass) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         System.out.println("Wybierz cechę, którą podasz:");
         String messageChoiceFeature = (String) figureClass.getMethod("getMessageChoiceFeature").invoke(null);
@@ -42,21 +46,8 @@ public class Main {
         }
         return new Pair(feature, value);
     }
-
-    public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
+    private static boolean takeOneShape(String input) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
         Scanner scan = new Scanner(System.in);
-        String messageChoiceShape = "Wybierz figurę (S - kwadrat, C - koło, D - romb, P - prostokat)\nX - Zakończ";
-        System.out.println(messageChoiceShape); //D-romb-diamond :), bo prostokąt chce R też
-        String input = scan.nextLine().toLowerCase();
-        while (!input.equals("s") && !input.equals("c") && !input.equals("d")  && !input.equals("p") && !input.equals("x")) {
-            System.out.println("Nieprawidłowa wartość!");
-            System.out.println(messageChoiceShape);
-            input = scan.nextLine().toLowerCase();
-        }
-
-        if (input.equals("x")) {
-            return false;
-        }
         Shape shape = null;
         Class figureClass = null;
         switch (input) {
@@ -84,10 +75,39 @@ public class Main {
         }
 
         shape = (Shape) figureClass.getConstructor(Map.class).newInstance(features);
+        allShapes.add(shape);
         System.out.println(shape);
         System.out.println();
 
         return true;
+    }
+
+    private static boolean showAllShapes(){
+        for (Shape s: allShapes)
+            System.out.println(s);
+        System.out.println("\n");
+        return true;
+    }
+
+    public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
+        Scanner scan = new Scanner(System.in);
+        String messageChoiceShape = "Wybierz figurę (S - kwadrat, C - koło, D - romb, P - prostokat)\nA - zobacz wszystkie figury\nX - Zakończ";
+        System.out.println(messageChoiceShape);
+        String input = scan.nextLine().toLowerCase();
+        while (!input.equals("s") && !input.equals("c") && !input.equals("d")  && !input.equals("p") && !input.equals("x") && !input.equals("a")) {
+            System.out.println("Nieprawidłowa wartość!");
+            System.out.println(messageChoiceShape);
+            input = scan.nextLine().toLowerCase();
+        }
+        if (input.equals("x")) {
+            return false;
+        }
+        if (input.equals("a")){
+            return showAllShapes();
+        }
+        else{
+            return takeOneShape(input);
+        }
     }
 
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {

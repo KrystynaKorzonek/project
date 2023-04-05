@@ -33,8 +33,9 @@ public class Rhombus extends Shape {
                 arr = (String[]) keys.toArray(arr);
                 side = features.get(arr[0]);
                 area = features.get(arr[1]);
-                diag1 = 0;
-                diag2 = 0;
+                double help = Math.sqrt(Math.pow(side, 4) - area*area);
+                diag1 = Math.sqrt(2) * Math.sqrt(help+side*side);
+                diag2 = 2*Math.sqrt(side*side+area) - diag1;
 
             }
             case "[b, e]" -> {
