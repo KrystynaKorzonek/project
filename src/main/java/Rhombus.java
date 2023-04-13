@@ -79,10 +79,19 @@ public class Rhombus extends Shape {
                 side = Math.sqrt((diag1*diag1 + diag2*diag2)/4);
             }
         }
+        perimeter = 4*side;
 
     }
 
     public String toString(){
-        return "Romb - bok: " + side + " przekątne: " + diag1 + ", " + diag2 + " pole:" + area;
+        return "Romb - bok: " + side + " przekątne: " + diag1 + ", " + diag2 + super.toString();
+    }
+
+    @Override
+    public Circle getCircumcircle() throws NoCircumcircleException {
+        if (diag1!=diag2)
+            throw new NoCircumcircleException("Ten romb nie jest kwadratem");
+        return new Circle(diag1/2);
+
     }
 }

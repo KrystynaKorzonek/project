@@ -80,10 +80,16 @@ public class Rectangle extends Shape {
                 side2 = 0;
             }
         }
+        perimeter = 2*(side1 + side2);
 
     }
 
     public String toString(){
-        return "Prostokat - boki: " + side1 + ", " + side2 + " przekątna: " + diag + " pole:" + area;
+        return "Prostokat - boki: " + side1 + ", " + side2 + " przekątna: " + diag + super.toString();
+    }
+
+    @Override
+    public Circle getCircumcircle() {
+        return new Circle(diag/2);
     }
 }

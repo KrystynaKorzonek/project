@@ -10,10 +10,14 @@ TODO:
 3. za proste isProperSetOfFeatures; na tą listę starczy, ale zaraz przestanie (TODO niżej)
 4. teraz można podać kilka razy 1 cechę... może tego nie chcemy?
 5. romb(bok, pole): musi zachodzić pole < bok^2
+6. jedno generyczne pobieranie danych (bierze poprawne kody i enumy cech, zwraca słownik... jakoś tak)
  */
 
 public class Main {
-    private static TreeSet<Shape> allShapes = new TreeSet<>();
+    //private static TreeSet<Shape> allShapes = new TreeSet<>(); :(
+    enum Order {ASC, DESC};
+    enum SortCriterion {AREA, PERIMETER};
+    private static LinkedList<Shape> allShapes = new LinkedList<>();
     public static Pair<String, Double> getFromUserFeatureValuePair(Scanner scan, Class figureClass) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         System.out.println("Wybierz cechę, którą podasz:");
         String messageChoiceFeature = (String) figureClass.getMethod("getMessageChoiceFeature").invoke(null);
@@ -81,12 +85,90 @@ public class Main {
 
         return true;
     }
+    private static boolean addCircumcirleOfShape(Shape shape){
+        System.out.println("Wybrałeś okrąg opisany na figurze: " + shape);
+        try {
+            Circle circle = shape.getCircumcircle();
+            allShapes.add(circle);
+            System.out.println(circle);
+            return true;
+        }
+        catch (NoCircumcircleException ex){
+            System.out.println("Nie da się opisać okręgu: " + ex.getMessage() + "\n");
+            return true;
+        }
+    }
+    private static Pair<Order, SortCriterion> getSortParams(){
+        Order order = null;
+        SortCriterion criterion = null;
+        Scanner scan = new Scanner(System.in);
+        String messageChoiceCriterion = "Wybierz kryterium sortowania (O-obwód, P-pole)";
+        String messageChoiceOrder = "Wybierz sposób sortowania (R-rosnąco, M-malejąco)";
+        System.out.println(messageChoiceCriterion);
+        String input = scan.nextLine().toLowerCase();
+        while (!input.equals("o") && !input.equals("p")) {
+            System.out.println("Nieprawidłowa wartość!");
+            System.out.println(messageChoiceCriterion);
+            input = scan.nextLine().toLowerCase();
+        }
+        switch (input){
+            case "o" -> {
+                criterion = SortCriterion.PERIMETER;
+            }
+            case "p" -> {
+                criterion = SortCriterion.AREA;
+            }
+        }
+        System.out.println(messageChoiceOrder);
+        input = scan.nextLine().toLowerCase();
+        while (!input.equals("r") && !input.equals("m")) {
+            System.out.println("Nieprawidłowa wartość!");
+            System.out.println(messageChoiceCriterion);
+            input = scan.nextLine().toLowerCase();
+        }
+        switch (input){
+            case "r" -> {
+                order = Order.ASC;
+            }
+            case "m" -> {
+                order = Order.DESC;
+            }
+        }
+        return new Pair<Order, SortCriterion>(order, criterion);
 
-    private static boolean showAllShapes(){
-        for (Shape s: allShapes)
-            System.out.println(s);
-        System.out.println("\n");
-        return true;
+    }
+    private static boolean showAllShapes(Pair<Order, SortCriterion> sortParams){
+        Order order = sortParams.first;
+        SortCriterion criterion = sortParams.second;
+        switch (criterion){
+            case AREA -> {
+                allShapes.sort(Comparator.comparing(Shape::getArea));
+            }
+            case PERIMETER -> {
+                allShapes.sort(Comparator.comparing(Shape::getPerimeter));
+            }
+        }
+        if (order == Order.DESC){
+            Collections.reverse(allShapes);
+        }
+        ListIterator<Shape> it = allShapes.listIterator();
+        while (it.hasNext()) {
+            System.out.println(it.nextIndex()+1 + " " + it.next());
+        }
+        System.out.println("Wpisz numer figury, by dodać opisany na niej okrąg:\n(cokolwiek innego - powrót do głównego menu)");
+        Scanner scan = new Scanner(System.in);
+        String string_value = scan.nextLine();
+        int number;
+        try {
+            number = Integer.parseInt(string_value);
+            if (number <= 0 || number > allShapes.size())
+                return true;
+            Shape chosen_shape = allShapes.get(number-1);
+            return addCircumcirleOfShape(chosen_shape);
+        }
+        catch (NumberFormatException ex){
+            return true;
+        }
     }
 
     public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
@@ -103,7 +185,8 @@ public class Main {
             return false;
         }
         if (input.equals("a")){
-            return showAllShapes();
+            Pair<Order, SortCriterion> sortParams = getSortParams();
+            return showAllShapes(sortParams);
         }
         else{
             return takeOneShape(input);

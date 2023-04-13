@@ -38,6 +38,7 @@ public class Square extends Shape{
                 area = side*side;
             }
         }
+        perimeter = 4*side;
     }
     public Square(Map<String, Double> features){
         if (features.size() != 1)
@@ -49,6 +50,11 @@ public class Square extends Shape{
     }
 
     public String toString(){
-        return "Kwadrat - bok: " + side + " przekątna: " + diagonal + " pole:" + area;
+        return "Kwadrat - bok: " + side + " przekątna: " + diagonal + super.toString();
+    }
+
+    @Override
+    public Circle getCircumcircle() {
+        return new Circle(diagonal/2);
     }
 }

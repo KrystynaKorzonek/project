@@ -4,7 +4,7 @@ import java.util.Set;
 public class Circle extends Shape{
     private double radius;
     private double diameter;
-    private double circumference;
+    //private double circumference;
 
 
     public static String getMessageChoiceFeature(){
@@ -22,7 +22,7 @@ public class Circle extends Shape{
     private void setFeaturesFromRadius(double radius){
         this.radius = radius;
         this.diameter = 2*radius;
-        this.circumference = 2 * Math.PI * radius;
+        this.perimeter = 2 * Math.PI * radius;
         this.area = Math.PI * radius * radius;
     }
 
@@ -53,11 +53,19 @@ public class Circle extends Shape{
             double value = features.get(feature);
             setFeatures(feature, value);
         }
+    }
 
+    public Circle(double radius){
+        setFeaturesFromRadius(radius);
     }
 
     public String toString(){
-        return "Koło - promień: " + radius + " średnica: " + diameter + " obwód:" + circumference + " pole:" + area;
+        return "Koło - promień: " + radius + " średnica: " + diameter + super.toString();
+    }
+
+    @Override
+    public Circle getCircumcircle() {
+        return new Circle(radius);
     }
 }
 
