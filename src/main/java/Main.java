@@ -67,6 +67,9 @@ public class Main {
             case "p" -> {
                 figureClass = Rectangle.class;
             }
+            case "i" -> {
+                figureClass = IsosclesTriangle.class;
+            }
         }
         Map<String, Double> features = new HashMap<String, Double>();
 
@@ -173,10 +176,10 @@ public class Main {
 
     public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
         Scanner scan = new Scanner(System.in);
-        String messageChoiceShape = "Wybierz figurę (S - kwadrat, C - koło, D - romb, P - prostokat)\nA - zobacz wszystkie figury\nX - Zakończ";
+        String messageChoiceShape = "Wybierz figurę (S - kwadrat, C - koło, D - romb, P - prostokat I - trójkąt równoramienny)\nA - zobacz wszystkie figury\nX - Zakończ";
         System.out.println(messageChoiceShape);
         String input = scan.nextLine().toLowerCase();
-        while (!input.equals("s") && !input.equals("c") && !input.equals("d")  && !input.equals("p") && !input.equals("x") && !input.equals("a")) {
+        while (!input.equals("s") && !input.equals("c") && !input.equals("d")  && !input.equals("p") && !input.equals("x") && !input.equals("a") && !input.equals("i")) {
             System.out.println("Nieprawidłowa wartość!");
             System.out.println(messageChoiceShape);
             input = scan.nextLine().toLowerCase();

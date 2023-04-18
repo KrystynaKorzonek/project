@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="wypisywanie wszystkich + brakujący kawałek rombu">
-      <change afterPath="$PROJECT_DIR$/src/main/java/NoCircumcircleException.java" afterDir="false" />
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="Dodanie komunikatów błędów">
+      <change afterPath="$PROJECT_DIR$/src/main/java/IsosclesTriangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/IsosclesTriangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Circle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rhombus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rhombus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Circle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Shape.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Square.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +22,8 @@
       <list>
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -70,11 +64,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -109,6 +103,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.project" />
       <item itemvalue="JUnit.CircleTest" />
@@ -132,6 +137,7 @@
       <workItem from="1680018438738" duration="4631000" />
       <workItem from="1680036014895" duration="2599000" />
       <workItem from="1680070175707" duration="2216000" />
+      <workItem from="1681831530812" duration="10732000" />
     </task>
     <task id="LOCAL-00001" summary="Pracownia 1 - koło i kwadrat - obliczenia, prosty interface (bez obsługi błędów)">
       <created>1679772319571</created>
