@@ -1,7 +1,7 @@
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
-public class IsosclesTriangle extends Shape{
+public class IsoscelesTriangle extends Shape{
     private double side;
     private double height;
     private double area;
@@ -24,7 +24,7 @@ public class IsosclesTriangle extends Shape{
         return false;
     }
 
-    public IsosclesTriangle(Map<String, Double> features){
+    public IsoscelesTriangle(Map<String, Double> features){
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         Set<String> codes = new TreeSet<>(features.keySet());
