@@ -33,7 +33,7 @@ public class IsoscelesTriangle extends Shape{
         if (codes.contains("b") && codes.contains("h")){
             side = features.get("b");
             height = features.get("h");
-            base = 4*Math.sqrt(side*side - height*height)/4;
+            base = 2*Math.sqrt(side*side - height*height);
             area = base*height/2;
         }
         else if (codes.contains("b") && codes.contains("p")){
@@ -45,7 +45,7 @@ public class IsoscelesTriangle extends Shape{
         else if (codes.contains("b") && codes.contains("a")){
             side = features.get("b");
             base = features.get("a");
-            height = side*side - base*base/4;
+            height = Math.sqrt(side*side - base*base/4);
             area = base*height/2;
         }
         else if (codes.contains("h") && codes.contains("p")){
