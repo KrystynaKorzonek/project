@@ -67,5 +67,10 @@ public class Circle extends Shape{
     public Circle getCircumcircle() {
         return new Circle(radius);
     }
+
+    @Override
+    public Circle getDoubleShape() {
+        return new Circle(radius*Math.sqrt(2));
+    }
 }
 

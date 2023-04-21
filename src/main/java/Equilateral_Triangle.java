@@ -57,4 +57,9 @@ public class Equilateral_Triangle extends Shape {
     public Circle getCircumcircle() {
         return new Circle(2*height/3);
     }
+
+    @Override
+    public Equilateral_Triangle getDoubleShape(){
+        return new Equilateral_Triangle(Map.of("a", side*Math.sqrt(2)));
+    }
 }

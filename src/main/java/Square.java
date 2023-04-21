@@ -57,4 +57,9 @@ public class Square extends Shape{
     public Circle getCircumcircle() {
         return new Circle(diagonal/2);
     }
+    @Override
+    public Square getDoubleShape(){
+        return new Square(Map.of("b", side*Math.sqrt(2)));
+    }
+
 }

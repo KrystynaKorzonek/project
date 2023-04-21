@@ -92,4 +92,8 @@ public class Rectangle extends Shape {
     public Circle getCircumcircle() {
         return new Circle(diag/2);
     }
+    @Override
+    public Rectangle getDoubleShape(){
+        return new Rectangle(Map.of("a", side1*Math.sqrt(2), "b", side2*Math.sqrt(2)));
+    }
 }

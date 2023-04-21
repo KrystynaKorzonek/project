@@ -83,10 +83,14 @@ public class IsoscelesTriangle extends Shape{
         return "Trójkąt równoramienny - bok: " + side + " wysokość: " + height + " podstawa: " + base + " pole: " + area + " obwód: " + perimeter;
     }
 
+    public IsoscelesTriangle getDoubleShape(){
+        return new IsoscelesTriangle(Map.of("a", base*Math.sqrt(2), "h", height*Math.sqrt(2)));
+    }
     @Override
     public Circle getCircumcircle() {
         return new Circle(base*side*side/(4*area));
     }
+
 
 
 

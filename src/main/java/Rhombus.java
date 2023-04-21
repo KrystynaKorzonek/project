@@ -92,6 +92,9 @@ public class Rhombus extends Shape {
         if (diag1!=diag2)
             throw new NoCircumcircleException("Ten romb nie jest kwadratem");
         return new Circle(diag1/2);
-
+    }
+    @Override
+    public Rhombus getDoubleShape(){
+        return new Rhombus(Map.of("e", diag1*Math.sqrt(2), "f", diag2*Math.sqrt(2)));
     }
 }

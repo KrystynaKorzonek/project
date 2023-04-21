@@ -107,6 +107,29 @@ public class Main {
             return true;
         }
     }
+    private static boolean addModifiedShape(Shape original_shape){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Wybierz, jaką figurę chcesz dodać (D - figura o 2 razy większym polu, O - okrąg opisany na F):\n(cokolwiek innego - powrót do głównego menu)");
+        String input = scan.nextLine().toLowerCase();
+        Shape addedShape;
+        if (input.equals("d"))
+            addedShape = original_shape.getDoubleShape();
+        else if (input.equals("o"))
+            try {
+                addedShape = original_shape.getCircumcircle();
+            }
+            catch (NoCircumcircleException ex){
+                System.out.println("Nie da się opisać okręgu: " + ex.getMessage() + "\n");
+                return true;
+            }
+        else
+            return true;
+        allShapes.add(addedShape);
+        System.out.println("Nowa figura: " + addedShape);
+        return true;
+    }
+
+
     private static Pair<Order, SortCriterion> getSortParams(){
         Order order = null;
         SortCriterion criterion = null;
@@ -164,20 +187,29 @@ public class Main {
         while (it.hasNext()) {
             System.out.println(it.nextIndex()+1 + " " + it.next());
         }
-        System.out.println("Wpisz numer figury, by dodać opisany na niej okrąg:\n(cokolwiek innego - powrót do głównego menu)");
+
+
+        System.out.println("Wpisz numer figury, by dodać nową na jej podstawie:\n(cokolwiek innego - powrót do głównego menu)");
         Scanner scan = new Scanner(System.in);
         String string_value = scan.nextLine();
         int number;
+        Shape chosen_shape;
         try {
             number = Integer.parseInt(string_value);
             if (number <= 0 || number > allShapes.size())
                 return true;
-            Shape chosen_shape = allShapes.get(number-1);
-            return addCircumcirleOfShape(chosen_shape);
+            chosen_shape = allShapes.get(number-1);
         }
         catch (NumberFormatException ex){
             return true;
         }
+        System.out.println("Wybrałeś figurę F: "+ chosen_shape);
+        return addModifiedShape(chosen_shape);
+
+
+
+        //return addCircumcirleOfShape(chosen_shape);
+
     }
 
     public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {

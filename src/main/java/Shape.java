@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.Map;
 import java.util.Set;
 
 public abstract class Shape implements Comparable<Shape> {
@@ -25,7 +26,7 @@ public abstract class Shape implements Comparable<Shape> {
         return Double.compare(this.area, another.area);
     }
     public abstract Circle getCircumcircle() throws NoCircumcircleException;
-
+    public abstract Shape getDoubleShape();
     public static String getMessageChoiceFeature(){return "";}
     public static boolean isFeatureCode(String code){return false;}
     public static boolean isProperSetOfFeatures(Set<String> features){return false;}
