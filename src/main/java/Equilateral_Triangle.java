@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -20,6 +21,7 @@ public class Equilateral_Triangle extends Shape {
     }
 
     public Equilateral_Triangle(Map<String, Double> features){
+        this.dateTime = LocalDateTime.now();
         if (features.size() != 1)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         for (String feature : features.keySet()) { //poprawić!

@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Set;
 
@@ -47,6 +48,7 @@ public class Square extends Shape{
             double value = features.get(feature);
             setFeatures(feature, value);
         }
+        this.dateTime = LocalDateTime.now();
     }
 
     public String toString(){

@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -25,6 +26,7 @@ public class IsoscelesTriangle extends Shape{
     }
 
     public IsoscelesTriangle(Map<String, Double> features){
+        this.dateTime = LocalDateTime.now();
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         Set<String> codes = new TreeSet<>(features.keySet());

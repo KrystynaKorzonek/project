@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.Map;
 import java.util.Set;
@@ -5,14 +6,18 @@ import java.util.Set;
 public abstract class Shape implements Comparable<Shape> {
     protected double area;
     protected double perimeter;
+    protected LocalDateTime dateTime;
     public double getArea(){
         return area;
     }
     public double getPerimeter(){
         return perimeter;
     }
+    public LocalDateTime getDateTime(){
+        return dateTime;
+    }
     public String toString(){
-        return " pole:" + area + " obwód:" + perimeter;
+        return " pole:" + area + " obwód:" + perimeter + " data utworzenia:" + dateTime;
     }
 
 
@@ -45,5 +50,12 @@ class PerimeterComparator implements Comparator<Shape> {
     @Override
     public int compare(Shape s1, Shape s2) {
         return Double.compare(s1.getPerimeter(), s2.getPerimeter());
+    }
+}
+
+class DateTimeComparator implements Comparator<Shape> {
+    @Override
+    public int compare(Shape s1, Shape s2) {
+        return s1.getDateTime().compareTo(s2.getDateTime());
     }
 }

@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -23,10 +24,10 @@ public class Rhombus extends Shape {
     }
 
     public Rhombus(Map<String, Double> features){
+        this.dateTime = LocalDateTime.now();
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         TreeSet keys = new TreeSet(features.keySet());
-        System.out.println(keys);
         switch (keys.toString()) {
             case "[b, p]" -> {
                 String arr[] = new String[2];

@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -25,6 +26,7 @@ public class Rectangle extends Shape {
     }
 
     public Rectangle(Map<String, Double> features){
+        this.dateTime = LocalDateTime.now();
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         TreeSet keys = new TreeSet(features.keySet());

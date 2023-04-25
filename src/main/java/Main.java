@@ -16,7 +16,7 @@ TODO:
 public class Main {
     //private static TreeSet<Shape> allShapes = new TreeSet<>(); :(
     enum Order {ASC, DESC};
-    enum SortCriterion {AREA, PERIMETER};
+    enum SortCriterion {AREA, PERIMETER, DATE};
     private static LinkedList<Shape> allShapes = new LinkedList<>();
     public static Pair<String, Double> getFromUserFeatureValuePair(Scanner scan, Class figureClass) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         System.out.println("Wybierz cechę, którą podasz:");
@@ -137,11 +137,11 @@ public class Main {
         Order order = null;
         SortCriterion criterion = null;
         Scanner scan = new Scanner(System.in);
-        String messageChoiceCriterion = "Wybierz kryterium sortowania (O-obwód, P-pole)";
+        String messageChoiceCriterion = "Wybierz kryterium sortowania (O-obwód, P-pole, D-data)";
         String messageChoiceOrder = "Wybierz sposób sortowania (R-rosnąco, M-malejąco)";
         System.out.println(messageChoiceCriterion);
         String input = scan.nextLine().toLowerCase();
-        while (!input.equals("o") && !input.equals("p")) {
+        while (!input.equals("o") && !input.equals("p") && !input.equals("d")) {
             System.out.println("Nieprawidłowa wartość!");
             System.out.println(messageChoiceCriterion);
             input = scan.nextLine().toLowerCase();
@@ -152,6 +152,9 @@ public class Main {
             }
             case "p" -> {
                 criterion = SortCriterion.AREA;
+            }
+            case "d" -> {
+                criterion = SortCriterion.DATE;
             }
         }
         System.out.println(messageChoiceOrder);
@@ -181,6 +184,9 @@ public class Main {
             }
             case PERIMETER -> {
                 allShapes.sort(Comparator.comparing(Shape::getPerimeter));
+            }
+            case DATE -> {
+                allShapes.sort(Comparator.comparing(Shape::getDateTime));
             }
         }
         if (order == Order.DESC){
