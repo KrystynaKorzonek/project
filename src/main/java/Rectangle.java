@@ -78,8 +78,8 @@ public class Rectangle extends Shape {
                 arr = (String[]) keys.toArray(arr);
                 diag = features.get(arr[0]);
                 area = features.get(arr[1]);
-                side1 = 0;
-                side2 = 0;
+                side1 = (Math.sqrt(diag * diag + 2*area) + Math.sqrt(diag * diag - 2*area))/2;
+                side2 = (Math.sqrt(diag * diag + 2*area) - Math.sqrt(diag * diag - 2*area))/2;;
             }
         }
         perimeter = 2*(side1 + side2);
