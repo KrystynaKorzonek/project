@@ -108,7 +108,7 @@ public class RectangularTriangle extends Shape{
     }
 
     public String toString(){
-        return "Przyprostokątna 1: " + cathetus1 + "\nPrzyprostokątna 2: " + cathetus2 + "\nPrzeciwprostokątna: " + hypotenuse + "\nPole: " + area + "\nObwód: " + perimeter;
+        return " Przyprostokątna 1: " + cathetus1 + " Przyprostokątna 2: " + cathetus2 + " Przeciwprostokątna: " + hypotenuse + super.toString();
     }
 
     @Override

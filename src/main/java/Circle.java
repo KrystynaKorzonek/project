@@ -58,6 +58,7 @@ public class Circle extends Shape{
     }
 
     public Circle(double radius){
+        this.dateTime = LocalDateTime.now();
         setFeaturesFromRadius(radius);
     }
 
