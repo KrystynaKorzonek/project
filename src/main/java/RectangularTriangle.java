@@ -41,6 +41,7 @@ public class RectangularTriangle extends Shape{
 
     public RectangularTriangle(Map<String, Double> features) {
         this.dateTime = LocalDateTime.now();
+        this.verticesNumber = 3;
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         Set<String> codes = new TreeSet<>(features.keySet());
@@ -108,7 +109,7 @@ public class RectangularTriangle extends Shape{
     }
 
     public String toString(){
-        return " Przyprostokątna 1: " + cathetus1 + " Przyprostokątna 2: " + cathetus2 + " Przeciwprostokątna: " + hypotenuse + super.toString();
+        return "Trójkąt prostokątny - Przyprostokątna 1: " + cathetus1 + " Przyprostokątna 2: " + cathetus2 + " Przeciwprostokątna: " + hypotenuse + super.toString();
     }
 
     @Override

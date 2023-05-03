@@ -21,6 +21,7 @@ public class Equilateral_Triangle extends Shape {
     }
 
     public Equilateral_Triangle(Map<String, Double> features){
+        this.verticesNumber = 3;
         this.dateTime = LocalDateTime.now();
         if (features.size() != 1)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");

@@ -26,6 +26,7 @@ public class IsoscelesTriangle extends Shape{
     }
 
     public IsoscelesTriangle(Map<String, Double> features){
+        this.verticesNumber = 3;
         this.dateTime = LocalDateTime.now();
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");

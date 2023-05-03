@@ -25,6 +25,7 @@ public class Rhombus extends Shape {
 
     public Rhombus(Map<String, Double> features){
         this.dateTime = LocalDateTime.now();
+        this.verticesNumber = 4;
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         TreeSet keys = new TreeSet(features.keySet());

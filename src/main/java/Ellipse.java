@@ -24,6 +24,7 @@ public class Ellipse extends Shape{
     }
 
     public Ellipse(Map<String, Double> features) {
+        this.verticesNumber = Integer.MAX_VALUE;
         this.dateTime = LocalDateTime.now();
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
@@ -63,7 +64,7 @@ public class Ellipse extends Shape{
     }
 
     public String toString(){
-        return "Elipsa: polos mala = " + semiMinorAxis + ", polos wielka = " + semiMajorAxis + ", pole = " + area + ", data = " + dateTime;
+        return "Elipsa: polos mala: " + semiMinorAxis + ", polos wielka: " + semiMajorAxis + super.toString();
     }
 
     @Override

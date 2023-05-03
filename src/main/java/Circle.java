@@ -21,6 +21,7 @@ public class Circle extends Shape{
         return false;
     }
     private void setFeaturesFromRadius(double radius){
+        this.verticesNumber = Integer.MAX_VALUE;
         this.radius = radius;
         this.diameter = 2*radius;
         this.perimeter = 2 * Math.PI * radius;

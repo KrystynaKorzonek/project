@@ -26,6 +26,7 @@ public class Rectangle extends Shape {
     }
 
     public Rectangle(Map<String, Double> features){
+        this.verticesNumber = 4;
         this.dateTime = LocalDateTime.now();
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");

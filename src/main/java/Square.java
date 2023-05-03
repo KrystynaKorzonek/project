@@ -49,6 +49,7 @@ public class Square extends Shape{
             setFeatures(feature, value);
         }
         this.dateTime = LocalDateTime.now();
+        this.verticesNumber = 4;
     }
 
     public String toString(){

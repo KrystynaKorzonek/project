@@ -6,6 +6,7 @@ import java.util.Set;
 public abstract class Shape implements Comparable<Shape> {
     protected double area;
     protected double perimeter;
+    protected int verticesNumber;
     protected LocalDateTime dateTime;
     public double getArea(){
         return area;
@@ -16,6 +17,7 @@ public abstract class Shape implements Comparable<Shape> {
     public LocalDateTime getDateTime(){
         return dateTime;
     }
+    public int getVerticesNumber(){return verticesNumber;}
     public String toString(){
         return " pole:" + area + " obwód:" + perimeter + " data utworzenia:" + dateTime;
     }
@@ -37,6 +39,38 @@ public abstract class Shape implements Comparable<Shape> {
     public static boolean isProperSetOfFeatures(Set<String> features){return false;}
 
 
+}
+
+class TwoStageComparator implements Comparator<Shape>{
+    SortRule sortRule;
+    public TwoStageComparator(SortRule sortRule){
+        this.sortRule = sortRule;
+    }
+    public int compare(Shape s1, Shape s2){
+        if (s1.getVerticesNumber() == s2.getVerticesNumber()){
+            int asc_res = 0;
+            switch (sortRule.criterion){
+                case AREA -> {
+                    asc_res = Double.compare(s1.getArea(), s2.getArea());
+                }
+                case PERIMETER -> {
+                    asc_res = Double.compare(s1.getPerimeter(), s2.getPerimeter());
+                }
+                case DATE -> {
+                    asc_res = s1.getDateTime().compareTo(s2.getDateTime());
+                }
+            }
+            if (sortRule.order == Order.DESC)
+                asc_res *= -1;
+            return asc_res;
+        }
+        else{
+            if (sortRule.orderVerticesStage == Order.ASC)
+                return Integer.compare(s1.getVerticesNumber(), s2.getVerticesNumber());
+            else
+                return Integer.compare(s2.getVerticesNumber(), s1.getVerticesNumber());
+        }
+    }
 }
 
 class AreaComparator implements Comparator<Shape> {

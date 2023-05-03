@@ -4,19 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="wypisywanie wszystkich + brakujący kawałek rombu">
-      <change afterPath="$PROJECT_DIR$/src/test/java/RightTriangleTest.java" afterDir="false" />
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataTaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SortCriterion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SortRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ellipse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Equilateral_Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Equilateral_Triangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Rhombus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rhombus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RectangleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RhombusTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RhombusTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Circle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Shape.class" afterDir="false" />
@@ -34,6 +37,7 @@
         <option value="JUnit4 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -95,15 +99,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CircleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CircleTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RectangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
@@ -119,6 +114,15 @@
       <option name="MAIN_CLASS_NAME" value="RectangleTest" />
       <option name="METHOD_NAME" value="diagonalAreaTest" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RectangularTriangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RectangularTriangleTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,19 +147,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.project" />
+      <item itemvalue="JUnit.RectangularTriangleTest" />
       <item itemvalue="JUnit.RectangleTest" />
       <item itemvalue="JUnit.RectangleTest.diagonalAreaTest" />
       <item itemvalue="JUnit.RhombusTest" />
-      <item itemvalue="JUnit.CircleTest" />
       <item itemvalue="JUnit.SquareTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RectangularTriangleTest" />
         <item itemvalue="JUnit.RectangleTest.diagonalAreaTest" />
         <item itemvalue="JUnit.RectangleTest" />
         <item itemvalue="JUnit.RhombusTest" />
         <item itemvalue="JUnit.SquareTest" />
-        <item itemvalue="JUnit.CircleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680731600401</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="podwajanie figur + test do prostokąta! + szkic testów trójkąta prostokątnego">
+      <created>1682117917469</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682117917471</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +232,8 @@
     <MESSAGE value="Dodanie wyjscia z programu('x')&#10;Dodanie możliwość tworzenia testów(dodanie prostych testow)" />
     <MESSAGE value="malutka poprawka" />
     <MESSAGE value="wypisywanie wszystkich + brakujący kawałek rombu" />
-    <option name="LAST_COMMIT_MESSAGE" value="wypisywanie wszystkich + brakujący kawałek rombu" />
+    <MESSAGE value="podwajanie figur + test do prostokąta! + szkic testów trójkąta prostokątnego" />
+    <option name="LAST_COMMIT_MESSAGE" value="podwajanie figur + test do prostokąta! + szkic testów trójkąta prostokątnego" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
