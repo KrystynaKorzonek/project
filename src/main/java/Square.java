@@ -53,9 +53,10 @@ public class Square extends Shape{
     }
 
     public String toString(){
-        return "Kwadrat - bok: " + side + " przekątna: " + diagonal + super.toString();
+        return "Kwadrat - bok: " + RoundClass.round(side, Constants.ROUND_PLACES) +
+                " przekątna: " + RoundClass.round(diagonal, Constants.ROUND_PLACES) + super.toString();
     }
-
+    
     @Override
     public Circle getCircumcircle() {
         return new Circle(diagonal/2);

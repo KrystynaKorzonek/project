@@ -167,6 +167,9 @@ public class DataTaker {
         String string_value = scan.nextLine();
         int number;
         try {
+            if(Objects.equals(string_value, "u")){
+                return Constants.INF;
+            }
             number = Integer.parseInt(string_value);
             if (number < min || number > max)
                 return null;

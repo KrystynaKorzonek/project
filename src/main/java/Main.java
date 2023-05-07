@@ -100,6 +100,12 @@ public class Main {
         return true;
     }
 
+    private static boolean deleteShape(int fig){
+        allShapes.remove(fig);
+        System.out.println("Deleted");
+        return true;
+    }
+
     private static SortRule getDefaultSortParams(){
         return new SortRule(false, SortCriterion.AREA, Order.ASC);
     }
@@ -135,10 +141,17 @@ public class Main {
         while (it.hasNext()) {
             System.out.println(it.nextIndex()+1 + " " + it.next());
         }
-        String message = "Wpisz numer figury, by dodać nową na jej podstawie:\n(cokolwiek innego - powrót do głównego menu)";
+        String message = "Wpisz numer figury, by dodać nową na jej podstawie:\n" +
+                "Wpisz U jeśli chcesz usunąć daną figurę:\n (cokolwiek innego - powrót do głównego menu)";
         Integer number = DataTaker.takeOneNumber(1, allShapes.size(), message);
         if (number == null)
             return true;
+        if(number == Constants.INF){
+            String mess = "Wpisz numer figury, by usunąć ją:\n" +
+                    "(cokolwiek innego - powrót do głównego menu)";
+            Integer num = DataTaker.takeOneNumber(1, allShapes.size(), mess);
+            return deleteShape(num-1);
+        }
         Shape chosen_shape = allShapes.get(number-1);
         System.out.println("Wybrałeś figurę F: "+ chosen_shape);
         return addModifiedShape(chosen_shape);

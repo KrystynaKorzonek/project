@@ -53,7 +53,8 @@ public class Equilateral_Triangle extends Shape {
     }
 
     public String toString(){
-        return "Trojkat rownoboczny - bok: " + side + " wysokosc: " + height + super.toString();
+        return "Trojkat rownoboczny - bok: " + RoundClass.round(side, Constants.ROUND_PLACES) +
+                " wysokosc: " + RoundClass.round(height, Constants.ROUND_PLACES) + super.toString();
     }
 
     @Override

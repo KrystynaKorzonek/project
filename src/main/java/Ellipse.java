@@ -64,7 +64,8 @@ public class Ellipse extends Shape{
     }
 
     public String toString(){
-        return "Elipsa: polos mala: " + semiMinorAxis + ", polos wielka: " + semiMajorAxis + super.toString();
+        return "Elipsa: polos mala: " + RoundClass.round(semiMinorAxis, Constants.ROUND_PLACES) +
+                ", polos wielka: " + RoundClass.round(semiMajorAxis, Constants.ROUND_PLACES) + super.toString();
     }
 
     @Override

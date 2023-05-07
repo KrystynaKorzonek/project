@@ -1,7 +1,7 @@
 import java.time.LocalDateTime;
 import java.util.Comparator;
-import java.util.Map;
 import java.util.Set;
+
 
 public abstract class Shape implements Comparable<Shape> {
     protected double area;
@@ -19,7 +19,8 @@ public abstract class Shape implements Comparable<Shape> {
     }
     public int getVerticesNumber(){return verticesNumber;}
     public String toString(){
-        return " pole:" + area + " obwód:" + perimeter + " data utworzenia:" + dateTime;
+        return " pole:" + RoundClass.round(area, Constants.ROUND_PLACES) + " obwód:" + RoundClass.round(perimeter, Constants.ROUND_PLACES) +
+                " data utworzenia:" + dateTime;
     }
 
 

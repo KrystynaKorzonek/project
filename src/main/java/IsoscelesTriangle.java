@@ -83,7 +83,11 @@ public class IsoscelesTriangle extends Shape{
     }
 
     public String toString(){
-        return "Trójkąt równoramienny - bok: " + side + " wysokość: " + height + " podstawa: " + base + " pole: " + area + " obwód: " + perimeter;
+        return "Trójkąt równoramienny - bok: " + RoundClass.round(side, Constants.ROUND_PLACES) +
+                " wysokość: " + RoundClass.round(height, Constants.ROUND_PLACES) +
+                " podstawa: " + RoundClass.round(base, Constants.ROUND_PLACES) +
+                " pole: " + RoundClass.round(area, Constants.ROUND_PLACES) +
+                " obwód: " + RoundClass.round(perimeter, Constants.ROUND_PLACES);
     }
 
     public IsoscelesTriangle getDoubleShape(){

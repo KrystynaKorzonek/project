@@ -64,7 +64,8 @@ public class Circle extends Shape{
     }
 
     public String toString(){
-        return "Koło - promień: " + radius + " średnica: " + diameter + super.toString();
+        return "Koło - promień: " + RoundClass.round(radius, Constants.ROUND_PLACES) + " średnica: " +
+                RoundClass.round(diameter, Constants.ROUND_PLACES) + super.toString();
     }
 
     @Override
