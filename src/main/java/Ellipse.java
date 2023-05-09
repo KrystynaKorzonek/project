@@ -2,11 +2,10 @@ import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.function.Function;
 public class Ellipse extends Shape{
     private double semiMajorAxis;
     private double semiMinorAxis;
-    private double area;
-
     public static String getMessageChoiceFeature(){
         return "a - półoś mała, b - półoś wielka, p - pole";
     }
@@ -48,6 +47,8 @@ public class Ellipse extends Shape{
         }
         else
             throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
+
+        perimeter = Math.PI * (semiMajorAxis + semiMinorAxis);
 
     }
 
