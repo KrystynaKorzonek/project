@@ -4,26 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataTaker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SortCriterion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SortRule.java" afterDir="false" />
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="refaktoryzacja pobierania danych (wydzielone do klasy DataTaker, jedna ogólna metoda do wybierania z listy) i sortowanie dwupoziomowe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ellipse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Equilateral_Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Equilateral_Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataTaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rhombus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rhombus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Circle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Shape.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Square.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SortCriterion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SortCriterion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SortRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SortRule.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682117917471</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refaktoryzacja pobierania danych (wydzielone do klasy DataTaker, jedna ogólna metoda do wybierania z listy) i sortowanie dwupoziomowe">
+      <created>1683155740245</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683155740245</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +227,8 @@
     <MESSAGE value="malutka poprawka" />
     <MESSAGE value="wypisywanie wszystkich + brakujący kawałek rombu" />
     <MESSAGE value="podwajanie figur + test do prostokąta! + szkic testów trójkąta prostokątnego" />
-    <option name="LAST_COMMIT_MESSAGE" value="podwajanie figur + test do prostokąta! + szkic testów trójkąta prostokątnego" />
+    <MESSAGE value="refaktoryzacja pobierania danych (wydzielone do klasy DataTaker, jedna ogólna metoda do wybierania z listy) i sortowanie dwupoziomowe" />
+    <option name="LAST_COMMIT_MESSAGE" value="refaktoryzacja pobierania danych (wydzielone do klasy DataTaker, jedna ogólna metoda do wybierania z listy) i sortowanie dwupoziomowe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

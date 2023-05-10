@@ -5,8 +5,6 @@ import java.util.*;
 
 /*
 TODO:
-1. solveOneTask() i main() miotają wyjątkami jak wściekłe (refleksja) --> co z tym?
-2. łapanie ujemnych wartości - zabrałam z Shape - refleksja rzuca innym wyjątkiem, czy chcemy go łapać?
 3. za proste isProperSetOfFeatures; na tą listę starczy, ale zaraz przestanie (TODO niżej)
 4. teraz można podać kilka razy 1 cechę... może tego nie chcemy?
 5. romb(bok, pole): musi zachodzić pole < bok^2
@@ -107,32 +105,11 @@ public class Main {
     }
 
     private static SortRule getDefaultSortParams(){
-        return new SortRule(false, SortCriterion.AREA, Order.ASC);
+        return new SortRule(SortCriterion.AREA, Order.ASC);
     }
-    private static void sortShapesTwoStages(SortRule sortRule){
-        Collections.sort(allShapes, new TwoStageComparator(sortRule));
-    }
-    private static void sortShapesOneStage(Order order, SortCriterion criterion){
-        switch (criterion){
-            case AREA -> {
-                allShapes.sort(Comparator.comparing(Shape::getArea));
-            }
-            case PERIMETER -> {
-                allShapes.sort(Comparator.comparing(Shape::getPerimeter));
-            }
-            case DATE -> {
-                allShapes.sort(Comparator.comparing(Shape::getDateTime));
-            }
-        }
-        if (order == Order.DESC){
-            Collections.reverse(allShapes);
-        }
-    }
+
     private static void sortShapes(SortRule sortRule){
-        if (sortRule.verticesStage)
-            sortShapesTwoStages(sortRule);
-        else
-            sortShapesOneStage(sortRule.order, sortRule.criterion);
+        Collections.sort(allShapes, new OneStageComparator(sortRule));
     }
 
     private static boolean showAllShapes(SortRule sortRule){

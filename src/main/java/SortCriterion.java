@@ -1,3 +1,3 @@
 public enum SortCriterion {
-    AREA, PERIMETER, DATE
+    AREA, PERIMETER, DATE, VERTICES_NUMBER
 }

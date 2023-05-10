@@ -25,7 +25,8 @@ public class DataTaker {
     public static Map<String, String> SORT_CRITERION_MAP = Map.of(
             "o", "obwód",
             "p", "pole",
-            "d", "data"
+            "d", "data",
+            "v", "liczba wierzchołków"
     );
     public static Map<String, String> SORT_ORDER_MAP = Map.of(
             "r", "rosnąco",
@@ -42,9 +43,6 @@ public class DataTaker {
     public static String takeOneTaskCommand(){
         return takeOneStringFromList(FIGURES_MAP, OTHER_ACTIONS_MAP, "Wybierz figurę:", null);
     }
-    public static String takeTwoStagesOrNotCommand(){
-        return takeOneStringFromList(TWO_STAGES_OR_NOT_MAP, null, "Czy sortować dwupoziomowo (pierwszy poziom - liczba wierzchołków)", null);
-    }
     public static String takeSortCriterion(){
         return takeOneStringFromList(SORT_CRITERION_MAP, null, "Wybierz kryterium sortowania:", null);
     }
@@ -60,23 +58,8 @@ public class DataTaker {
         );
     }
     public static SortRule getSortRule(){
-        String twoStagesOrNot = takeTwoStagesOrNotCommand();
-        boolean twoStages = true;
-        Order verticesOrder = null;
         SortCriterion criterion = null;
         Order order = null;
-
-        switch (twoStagesOrNot){
-            case "n" -> {
-                twoStages = false;
-            }
-            case "r" -> {
-                verticesOrder = Order.ASC;
-            }
-            case "m" -> {
-                verticesOrder = Order.DESC;
-            }
-        }
         String criterionString = takeSortCriterion();
         switch (criterionString){
             case "o" -> {
@@ -88,6 +71,9 @@ public class DataTaker {
             case "d" -> {
                 criterion = SortCriterion.DATE;
             }
+            case "v" -> {
+                criterion = SortCriterion.VERTICES_NUMBER;
+            }
         }
         String orderString = takeSortOrder();
         switch (orderString) {
@@ -98,7 +84,7 @@ public class DataTaker {
                 order = Order.DESC;
             }
         }
-        return new SortRule(twoStages, verticesOrder, criterion, order);
+        return new SortRule(criterion, order);
     }
 
 

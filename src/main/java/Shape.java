@@ -42,35 +42,30 @@ public abstract class Shape implements Comparable<Shape> {
 
 }
 
-class TwoStageComparator implements Comparator<Shape>{
+class OneStageComparator implements Comparator<Shape>{
     SortRule sortRule;
-    public TwoStageComparator(SortRule sortRule){
+    public OneStageComparator(SortRule sortRule){
         this.sortRule = sortRule;
     }
     public int compare(Shape s1, Shape s2){
-        if (s1.getVerticesNumber() == s2.getVerticesNumber()){
-            int asc_res = 0;
-            switch (sortRule.criterion){
-                case AREA -> {
-                    asc_res = Double.compare(s1.getArea(), s2.getArea());
-                }
-                case PERIMETER -> {
-                    asc_res = Double.compare(s1.getPerimeter(), s2.getPerimeter());
-                }
-                case DATE -> {
-                    asc_res = s1.getDateTime().compareTo(s2.getDateTime());
-                }
+        int asc_res = 0;
+        switch (sortRule.criterion){
+            case AREA -> {
+                asc_res = Double.compare(s1.getArea(), s2.getArea());
             }
-            if (sortRule.order == Order.DESC)
-                asc_res *= -1;
-            return asc_res;
+            case PERIMETER -> {
+                asc_res = Double.compare(s1.getPerimeter(), s2.getPerimeter());
+            }
+            case DATE -> {
+                asc_res = s1.getDateTime().compareTo(s2.getDateTime());
+            }
+            case VERTICES_NUMBER -> {
+                asc_res = Integer.compare(s1.getVerticesNumber(), s2.getVerticesNumber());
+            }
         }
-        else{
-            if (sortRule.orderVerticesStage == Order.ASC)
-                return Integer.compare(s1.getVerticesNumber(), s2.getVerticesNumber());
-            else
-                return Integer.compare(s2.getVerticesNumber(), s1.getVerticesNumber());
-        }
+        if (sortRule.order == Order.DESC)
+            asc_res *= -1;
+        return asc_res;
     }
 }
 
