@@ -6,19 +6,6 @@ import java.util.TreeSet;
 public class Equilateral_Triangle extends Shape {
     private double side;
     private double height;
-    public static String getMessageChoiceFeature(){
-        return "a - bok, h - wysokosc, p - pole"; //?
-    }
-    public static boolean isFeatureCode(String code){
-        return code.equals("a") || code.equals("h") || code.equals("p");
-    }
-
-    public static boolean isProperSetOfFeatures(Set<String> features){
-        if (features.size()==1)
-            if (features.contains("a") || features.contains("h") || features.contains("p"))
-                return true;
-        return false;
-    }
 
     public Equilateral_Triangle(Map<String, Double> features){
         this.verticesNumber = 3;

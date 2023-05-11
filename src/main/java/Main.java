@@ -17,44 +17,47 @@ public class Main {
     private static boolean takeOneShape(String input) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
         Scanner scan = new Scanner(System.in);
         Shape shape = null;
-        Class figureClass = null;
+        ShapeFactory factory = null;
+        //Class figureClass = null;
         switch (input) {
             case "s" -> {
-                figureClass = Square.class;
+                factory = new SquareFactory();
             }
             case "c" -> {
-                figureClass = Circle.class;
+                factory = new CircleFactory();
             }
             case "d" -> {
-                figureClass = Rhombus.class;
+                factory = new RhombusFactory();
             }
             case "p" -> {
-                figureClass = Rectangle.class;
+                factory = new RectangleFactory();
             }
             case "tr" -> {
-                figureClass = Equilateral_Triangle.class;
+                factory = new Equilateral_TriangleFactory();
             }
             case "i" -> {
-                figureClass = IsoscelesTriangle.class;
+                factory = new IsoscelesTriangleFactory();
             }
             case "r" -> {
-                figureClass = RectangularTriangle.class;
+                factory = new RectangularTriangleFactory();
             }
             case "e"->{
-                figureClass = Ellipse.class;
+                factory = new EllipseFactory();
             }
-
         }
         Map<String, Double> features = new HashMap<String, Double>();
 
-        // TODO: obsługa wyjątków!
-
-        while (!(boolean)figureClass.getMethod("isProperSetOfFeatures", Set.class).invoke(null, features.keySet())){
-            Pair<String, Double> p = DataTaker.getFromUserFeatureValuePair(scan, figureClass);
+        while (!factory.isProperSetOfFeatures(features.keySet())){
+            Pair<String, Double> p = DataTaker.getFromUserFeatureValuePair(factory);
             features.put(p.first, p.second);
         }
 
-        shape = (Shape) figureClass.getConstructor(Map.class).newInstance(features);
+        // TODO: obsługa wyjątków!
+        /*
+        try { shape = ... }
+        catch (jaki matematyczny wyjątek?) { print "nie dodano figury, sprzeczne dane", return true}
+         */
+        shape = factory.create(features);
         allShapes.add(shape);
         System.out.println(shape);
         System.out.println();
@@ -113,6 +116,8 @@ public class Main {
     }
 
     private static boolean showAllShapes(SortRule sortRule){
+        if (allShapes.size() == 0)
+            return true;
         sortShapes(sortRule);
         ListIterator<Shape> it = allShapes.listIterator();
         while (it.hasNext()) {

@@ -168,12 +168,14 @@ public class DataTaker {
     }
 
     // przeniesiona żywcem ze starego maina
-    public static Pair<String, Double> getFromUserFeatureValuePair(Scanner scan, Class figureClass) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    public static Pair<String, Double> getFromUserFeatureValuePair(ShapeFactory factory) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Scanner scan = new Scanner(System.in);
         System.out.println("Wybierz cechę, którą podasz:");
-        String messageChoiceFeature = (String) figureClass.getMethod("getMessageChoiceFeature").invoke(null);
+        String messageChoiceFeature = factory.getMessageChoiceFeature();
         System.out.println(messageChoiceFeature);
         String feature = scan.nextLine().toLowerCase();
-        while (!(boolean)figureClass.getMethod("isFeatureCode", String.class).invoke(null, feature)) {
+        //while (!(boolean)figureClass.getMethod("isFeatureCode", String.class).invoke(null, feature)) {
+        while (!factory.isFeatureCode(feature)){
             System.out.println("Nieprawidłowa wartość");
             System.out.println("Wybierz cechę, którą podasz:");
             System.out.println(messageChoiceFeature);

@@ -6,24 +6,7 @@ public class RectangularTriangle extends Shape{
     private double hypotenuse;
     private double cathetus1;
     private double cathetus2;
-    private double area;
-    private double perimeter;
 
-    public static String getMessageChoiceFeature(){
-        return "a - przyprostokątna 1, b - przyprostokątna 2, c - przeciwprostokątna, p - pole";
-    }
-    public static boolean isFeatureCode(String code){
-        return code.equals("a") || code.equals("b") || code.equals("c") || code.equals("p");
-    }
-    public static boolean isProperSetOfFeatures(Set<String> features){
-        if (features.size()==2) {
-            for (String code : features)
-                if (!isFeatureCode(code))
-                    return false;
-            return true;
-        }
-        return false;
-    }
 
     private double findAlpha(double value){
         double left = 0;
@@ -45,8 +28,8 @@ public class RectangularTriangle extends Shape{
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         Set<String> codes = new TreeSet<>(features.keySet());
-        if (!isProperSetOfFeatures(codes))
-            throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
+        //if (!isProperSetOfFeatures(codes))
+          //  throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
         if (codes.contains("a") && codes.contains("b")) {
             cathetus1 = features.get("a");
             cathetus2 = features.get("b");

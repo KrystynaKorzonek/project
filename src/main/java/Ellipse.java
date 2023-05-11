@@ -6,21 +6,6 @@ import java.util.function.Function;
 public class Ellipse extends Shape{
     private double semiMajorAxis;
     private double semiMinorAxis;
-    public static String getMessageChoiceFeature(){
-        return "a - półoś mała, b - półoś wielka, p - pole";
-    }
-    public static boolean isFeatureCode(String code){
-        return code.equals("a") || code.equals("b") || code.equals("p");
-    }
-    public static boolean isProperSetOfFeatures(Set<String> features){
-        if (features.size()==2) {
-            for (String code : features)
-                if (!isFeatureCode(code))
-                    return false;
-            return true;
-        }
-        return false;
-    }
 
     public Ellipse(Map<String, Double> features) {
         this.verticesNumber = Integer.MAX_VALUE;
@@ -28,8 +13,8 @@ public class Ellipse extends Shape{
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         Set<String> codes = new TreeSet<>(features.keySet());
-        if (!isProperSetOfFeatures(codes))
-            throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
+        //if (!isProperSetOfFeatures(codes))
+        //            throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
         if (codes.contains("a") && codes.contains("b")) {
             semiMinorAxis = features.get("a");
             semiMajorAxis = features.get("b");

@@ -5,21 +5,8 @@ import java.util.Set;
 public class Circle extends Shape{
     private double radius;
     private double diameter;
-    //private double circumference;
 
 
-    public static String getMessageChoiceFeature(){
-        return "r - promień, d - średnica, p - pole, l - obwód";
-    }
-    public static boolean isFeatureCode(String code){
-        return code.equals("r") || code.equals("d") || code.equals("p") || code.equals("l");
-    }
-    public static boolean isProperSetOfFeatures(Set<String> features){
-        if (features.size()==1)
-            if (features.contains("r") || features.contains("d") || features.contains("p")  || features.contains("l"))
-                return true;
-        return false;
-    }
     private void setFeaturesFromRadius(double radius){
         this.verticesNumber = Integer.MAX_VALUE;
         this.radius = radius;

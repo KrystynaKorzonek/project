@@ -6,21 +6,6 @@ public class Square extends Shape{
     private double side;
     private double diagonal;
 
-    public static String getMessageChoiceFeature(){
-        return "b - bok, d - przekątna, p - pole";
-    }
-    public static boolean isFeatureCode(String code){
-        return code.equals("b") || code.equals("d") || code.equals("p");
-    }
-
-    public static boolean isProperSetOfFeatures(Set<String> features){
-        if (features.size()==1)
-            if (features.contains("b") || features.contains("d") || features.contains("p"))
-                return true;
-        return false;
-    }
-
-
     private void setFeatures(String feature, double value){
         switch (feature){
             case "p" -> {

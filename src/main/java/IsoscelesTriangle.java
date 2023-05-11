@@ -5,25 +5,7 @@ import java.util.TreeSet;
 public class IsoscelesTriangle extends Shape{
     private double side;
     private double height;
-    private double area;
     private double base;
-    private double perimeter;
-
-    public static String getMessageChoiceFeature(){
-        return "b - bok, h - wysokość, p - pole, a - podstawa";
-    }
-    public static boolean isFeatureCode(String code){
-        return code.equals("b") || code.equals("h") || code.equals("p") || code.equals("a");
-    }
-    public static boolean isProperSetOfFeatures(Set<String> features){
-        if (features.size()==2) {
-            for (String code : features)
-                if (!isFeatureCode(code))
-                    return false;
-            return true;
-        }
-        return false;
-    }
 
     public IsoscelesTriangle(Map<String, Double> features){
         this.verticesNumber = 3;
@@ -31,8 +13,8 @@ public class IsoscelesTriangle extends Shape{
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         Set<String> codes = new TreeSet<>(features.keySet());
-        if (!isProperSetOfFeatures(codes))
-            throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
+        //if (!isProperSetOfFeatures(codes))
+          //  throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
         if (codes.contains("b") && codes.contains("h")){
             side = features.get("b");
             height = features.get("h");
