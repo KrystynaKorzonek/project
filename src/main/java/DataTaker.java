@@ -10,7 +10,8 @@ public class DataTaker {
             "tr", "trójkąt równoboczny",
             "i", "trójkąt równoramienny",
             "r", "trójkąt prostokątny",
-            "e", "elipsa"
+            "e", "elipsa",
+            "t", "trapez równoramienny"
     );
     public static Map<String, String> OTHER_ACTIONS_MAP = Map.of(
             "a", "zobacz wszystkie figury",

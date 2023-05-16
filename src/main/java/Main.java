@@ -44,6 +44,9 @@ public class Main {
             case "e"->{
                 factory = new EllipseFactory();
             }
+            case "t"->{
+                factory = new EquilateralTrapezoidFactory();
+            }
         }
         Map<String, Double> features = new HashMap<String, Double>();
 
@@ -132,6 +135,10 @@ public class Main {
             String mess = "Wpisz numer figury, by usunąć ją:\n" +
                     "(cokolwiek innego - powrót do głównego menu)";
             Integer num = DataTaker.takeOneNumber(1, allShapes.size(), mess);
+            if(num == null) {
+                System.out.println("Nie ma takiej figury");
+                return true;
+            }
             return deleteShape(num-1);
         }
         Shape chosen_shape = allShapes.get(number-1);
