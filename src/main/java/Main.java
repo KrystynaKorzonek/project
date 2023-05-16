@@ -1,5 +1,6 @@
 import com.sun.source.tree.Tree;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
@@ -149,7 +150,14 @@ public class Main {
         return addModifiedShape(chosen_shape);
     }
 
-    public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
+    private static boolean writeAllShapes() throws IOException {
+
+        MultithreadingWriteToFile.write_file_async(allShapes);
+        System.out.println("You've written to file");
+        return true;
+    }
+
+    public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException {
         String taskCode = DataTaker.takeOneTaskCommand();
         switch (taskCode){
             case "x" -> {
@@ -162,13 +170,16 @@ public class Main {
             case "a" -> {
                 return showAllShapes(getDefaultSortParams());
             }
+            case "w" -> {
+                return writeAllShapes();
+            }
             default -> {
                 return takeOneShape(taskCode);
             }
         }
     }
 
-    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException{
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException {
         while (solveOneTask()) ;
     }
 }

@@ -16,6 +16,7 @@ public class DataTaker {
     public static Map<String, String> OTHER_ACTIONS_MAP = Map.of(
             "a", "zobacz wszystkie figury",
             "as", "zobacz posortowane figury",
+            "w", "wypisz figury do pliku",
             "x", "wyjście"
     );
     public static Map<String, String> TWO_STAGES_OR_NOT_MAP = Map.of(
