@@ -59,6 +59,7 @@ public class EquilateralTrapezoid extends Shape{
             }
             else{
                 //TODO: throw exception
+                throw new IllegalArgumentException("Nie obsługiwany zestaw parametrów");
             }
         }
         perimeter = a + b + 2*c;

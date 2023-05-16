@@ -55,16 +55,19 @@ public class Main {
             features.put(p.first, p.second);
         }
 
-        // TODO: obsługa wyjątków!
-        /*
-        try { shape = ... }
-        catch (jaki matematyczny wyjątek?) { print "nie dodano figury, sprzeczne dane", return true}
-         */
-        shape = factory.create(features);
-        allShapes.add(shape);
-        System.out.println(shape);
-        System.out.println();
-        return true;
+
+        try {
+            shape = factory.create(features);
+            allShapes.add(shape);
+            System.out.println(shape);
+            System.out.println();
+            return true;
+        }
+        catch (IllegalArgumentException ex){
+            System.out.println("Nie da się stworzyć figury: " + ex.getMessage() + "\n");
+            return true;
+        }
+
     }
     private static boolean addCircumcirleOfShape(Shape shape){
         System.out.println("Wybrałeś okrąg opisany na figurze: " + shape);
