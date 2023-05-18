@@ -8,6 +8,16 @@ public class Rectangle extends Shape {
     private double side1;
     private double side2;
     private double diag;
+    public double getSide1(){return side1;}
+    public boolean canBeSquare(){
+        return side1==side2;
+    }
+
+    public static Shape toSquareIfPossible(Rectangle r){
+        if (r.canBeSquare())
+            return new Square(Map.of("b", r.getSide1()));
+        return r;
+    }
 
     public Rectangle(Map<String, Double> features){
         this.verticesNumber = 4;

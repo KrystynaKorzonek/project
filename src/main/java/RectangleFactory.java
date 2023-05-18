@@ -4,7 +4,8 @@ import java.util.Set;
 public class RectangleFactory extends ShapeFactory{
     @Override
     public Shape create(Map<String, Double> features) {
-        return new Rectangle(features);
+        Rectangle created = new Rectangle(features);
+        return Rectangle.toSquareIfPossible(created);
     }
 
     @Override

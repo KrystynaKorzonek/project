@@ -23,12 +23,6 @@ public abstract class Shape implements Comparable<Shape> {
                 " data utworzenia:" + dateTime;
     }
 
-
-    /*public Shape(double value) { //TODO: sprawdzanie wyjątków dla całego shape'a z nową sygnaturą konstruktora?
-        if (value < 0)
-            throw new IllegalArgumentException("Ujemna wartość!");
-    }
-*/
     // abstract static :(
     public int compareTo(Shape another){
         return Double.compare(this.area, another.area);

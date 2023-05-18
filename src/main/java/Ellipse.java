@@ -7,6 +7,16 @@ public class Ellipse extends Shape{
     private double semiMajorAxis;
     private double semiMinorAxis;
 
+    public boolean canBeCircle(){
+        return (semiMinorAxis == semiMajorAxis);
+    }
+
+    public static Shape toCircleIfPossible(Ellipse e){
+        if (e.canBeCircle())
+            return new Circle(Map.of("r", e.getSemiMajorAxis()));
+        return e;
+    }
+
     public Ellipse(Map<String, Double> features) {
         this.verticesNumber = Integer.MAX_VALUE;
         this.dateTime = LocalDateTime.now();
@@ -34,7 +44,6 @@ public class Ellipse extends Shape{
             throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
 
         perimeter = Math.PI * (semiMajorAxis + semiMinorAxis);
-
     }
 
     public double getSemiMajorAxis() {

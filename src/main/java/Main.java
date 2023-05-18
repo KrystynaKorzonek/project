@@ -194,7 +194,7 @@ public class Main {
             case "w" -> {
                 return writeAllShapes();
             }
-            case "r" -> {
+            case "z" -> {
                 return changeRoundPlaces();
             }
             default -> {

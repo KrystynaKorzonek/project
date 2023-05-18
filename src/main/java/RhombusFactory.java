@@ -5,7 +5,8 @@ public class RhombusFactory extends ShapeFactory{
 
     @Override
     public Shape create(Map<String, Double> features) {
-        return new Rhombus(features);
+        Rhombus created = new Rhombus(features);
+        return Rhombus.toSquareIfPossible(created);
     }
 
     @Override

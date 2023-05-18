@@ -4,7 +4,10 @@ import java.util.Set;
 public class EllipseFactory extends ShapeFactory{
     @Override
     public Shape create(Map<String, Double> features) {
-        return new Ellipse(features);
+         Ellipse created = new Ellipse(features);
+         return Ellipse.toCircleIfPossible(created);
+
+
     }
 
     @Override

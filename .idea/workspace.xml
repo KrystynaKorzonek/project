@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="dodany wybór dokładności zaokrąglenia">
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="poprawa usuwania figur">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataTaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Circle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ellipse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EllipseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EllipseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RectangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Rhombus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rhombus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RhombusFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RhombusFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Shape.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Square.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684419690766</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="poprawa usuwania figur">
+      <created>1684422395963</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684422395963</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +274,8 @@
     <MESSAGE value="refaktoryzacja - dodanie fabryk dla wszystkich figur (+mały pomysł do trapezu)" />
     <MESSAGE value="obrona przed nullami na liście" />
     <MESSAGE value="dodany wybór dokładności zaokrąglenia" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodany wybór dokładności zaokrąglenia" />
+    <MESSAGE value="poprawa usuwania figur" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawa usuwania figur" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
