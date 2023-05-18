@@ -14,12 +14,18 @@ TODO:
 
 public class Main {
     private static LinkedList<Shape> allShapes = new LinkedList<>();
-
+    private static boolean addToAllShapes(Shape s){
+        if (s!= null){
+            allShapes.add(s);
+            System.out.println(s);
+            return true;
+        }
+        System.out.println("Nie udało się dodać figury");
+        return false;
+    }
     private static boolean takeOneShape(String input) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
-        Scanner scan = new Scanner(System.in);
         Shape shape = null;
         ShapeFactory factory = null;
-        //Class figureClass = null;
         switch (input) {
             case "s" -> {
                 factory = new SquareFactory();
@@ -59,8 +65,7 @@ public class Main {
 
         try {
             shape = factory.create(features);
-            allShapes.add(shape);
-            System.out.println(shape);
+            addToAllShapes(shape);
             System.out.println();
             return true;
         }
@@ -74,8 +79,7 @@ public class Main {
         System.out.println("Wybrałeś okrąg opisany na figurze: " + shape);
         try {
             Circle circle = shape.getCircumcircle();
-            allShapes.add(circle);
-            System.out.println(circle);
+            addToAllShapes(circle);
             return true;
         }
         catch (NoCircumcircleException ex){
@@ -103,8 +107,8 @@ public class Main {
                 return true;
             }
         }
-        allShapes.add(addedShape);
-        System.out.println("Nowa figura: " + addedShape);
+        System.out.print("Dodana figura: ");
+        addToAllShapes(addedShape);
         return true;
     }
 
