@@ -36,8 +36,9 @@ public class DataTaker {
             "m", "malejąco"
     );
     public static Map<String, String> FIGURE_MODIFICATIONS_MAP = Map.of(
-            "d", "figura o 2 razy większym polu",
-            "o", "okrąg opisany na F"
+            "d", "dodaj figurę o 2 razy większym polu",
+            "o", "dodaj okrąg opisany na F",
+            "u", "usuń figurę"
     );
     public static Map<String, String> EXIT_MAP = Map.of(
             "x", "zrezygnuj z dodawania figury"
@@ -56,7 +57,7 @@ public class DataTaker {
         return takeOneStringFromList(
                 FIGURE_MODIFICATIONS_MAP,
                 EXIT_MAP,
-                "Wybierz, jaką figurę chcesz dodać:",
+                "Wybierz, co chcesz zrobić:",
                 null
         );
     }
@@ -156,9 +157,6 @@ public class DataTaker {
         String string_value = scan.nextLine();
         int number;
         try {
-            if(Objects.equals(string_value, "u")){
-                return Constants.INF;
-            }
             number = Integer.parseInt(string_value);
             if (number < min || number > max)
                 return null;

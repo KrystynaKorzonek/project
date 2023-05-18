@@ -87,28 +87,44 @@ public class Main {
             return true;
         }
     }
-    private static boolean addModifiedShape(Shape original_shape){
-        String modificationCode = DataTaker.takeFigureModification();
+    private static boolean addModifiedShape(Shape originalShape, String modificationCode){
         Shape addedShape = null;
-        switch (modificationCode){
+        switch(modificationCode){
             case "d" -> {
-                addedShape = original_shape.getDoubleShape();
+                addedShape = originalShape.getDoubleShape();
             }
             case "o" -> {
                 try {
-                    addedShape = original_shape.getCircumcircle();
+                    addedShape = originalShape.getCircumcircle();
                 }
                 catch (NoCircumcircleException ex){
                     System.out.println("Nie da się opisać okręgu: " + ex.getMessage() + "\n");
                     return true;
                 }
             }
+        }
+        System.out.print("Dodana figura: ");
+        addToAllShapes(addedShape);
+        return true;
+    }
+    private static boolean doActionOnShape(int shapeNumber){
+        Shape chosenShape = allShapes.get(shapeNumber);
+        System.out.println("Wybrałeś figurę F: "+ chosenShape);
+        String modificationCode = DataTaker.takeFigureModification();
+        switch (modificationCode){
+            case "d" -> {
+                return addModifiedShape(chosenShape, "d");
+            }
+            case "o" -> {
+                return addModifiedShape(chosenShape, "o");
+            }
+            case "u" -> {
+                return deleteShape(shapeNumber);
+            }
             case "x" -> {
                 return true;
             }
         }
-        System.out.print("Dodana figura: ");
-        addToAllShapes(addedShape);
         return true;
     }
 
@@ -134,24 +150,12 @@ public class Main {
         while (it.hasNext()) {
             System.out.println(it.nextIndex()+1 + " " + it.next());
         }
-        String message = "Wpisz numer figury, by dodać nową na jej podstawie:\n" +
-                "Wpisz U jeśli chcesz usunąć daną figurę:\n (cokolwiek innego - powrót do głównego menu)";
+        String message = "Wpisz numer figury, by wykonać akcję (usunąć ją lub dodać nową na jej podstawie):\n" +
+                "(cokolwiek innego - powrót do głównego menu)";
         Integer number = DataTaker.takeOneNumber(1, allShapes.size(), message);
         if (number == null)
             return true;
-        if(number == Constants.INF){
-            String mess = "Wpisz numer figury, by usunąć ją:\n" +
-                    "(cokolwiek innego - powrót do głównego menu)";
-            Integer num = DataTaker.takeOneNumber(1, allShapes.size(), mess);
-            if(num == null) {
-                System.out.println("Nie ma takiej figury");
-                return true;
-            }
-            return deleteShape(num-1);
-        }
-        Shape chosen_shape = allShapes.get(number-1);
-        System.out.println("Wybrałeś figurę F: "+ chosen_shape);
-        return addModifiedShape(chosen_shape);
+        return doActionOnShape(number-1);
     }
 
     private static boolean writeAllShapes() throws IOException {
