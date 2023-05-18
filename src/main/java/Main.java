@@ -155,12 +155,25 @@ public class Main {
     }
 
     private static boolean writeAllShapes() throws IOException {
-
         MultithreadingWriteToFile.write_file_async(allShapes);
         System.out.println("You've written to file");
         return true;
     }
 
+    private static boolean changeRoundPlaces(){
+        String initial = "Wybierz, do ilu cyfr po przecinku zaokraglać wartośi (min " +
+                Constants.MIN_ROUND_PLACES + " max "  + Constants.MAX_ROUND_PLACES + ")";
+        Integer places = DataTaker.takeOneNumber(Constants.MIN_ROUND_PLACES, Constants.MAX_ROUND_PLACES, initial);
+        if (places == null){
+            System.out.println("Niepoprawna wartość. Nie wprowadzono zmian.");
+        }
+        else{
+            System.out.println("Nowa dokładność zaokrąglania: " + places);
+            RoundClass.setRoundPlaces(places);
+        }
+
+       return true;
+    }
     public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException {
         String taskCode = DataTaker.takeOneTaskCommand();
         switch (taskCode){
@@ -176,6 +189,9 @@ public class Main {
             }
             case "w" -> {
                 return writeAllShapes();
+            }
+            case "r" -> {
+                return changeRoundPlaces();
             }
             default -> {
                 return takeOneShape(taskCode);

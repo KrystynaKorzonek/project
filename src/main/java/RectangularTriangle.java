@@ -92,9 +92,9 @@ public class RectangularTriangle extends Shape{
     }
 
     public String toString(){
-        return "Trójkąt prostokątny - Przyprostokątna 1: " + RoundClass.round(cathetus1, Constants.ROUND_PLACES) +
-                " Przyprostokątna 2: " + RoundClass.round(cathetus2, Constants.ROUND_PLACES) +
-                " Przeciwprostokątna: " + RoundClass.round(hypotenuse, Constants.ROUND_PLACES) + super.toString();
+        return "Trójkąt prostokątny - Przyprostokątna 1: " + RoundClass.round(cathetus1) +
+                " Przyprostokątna 2: " + RoundClass.round(cathetus2) +
+                " Przeciwprostokątna: " + RoundClass.round(hypotenuse) + super.toString();
     }
 
     @Override

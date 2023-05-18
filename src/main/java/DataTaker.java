@@ -17,6 +17,7 @@ public class DataTaker {
             "a", "zobacz wszystkie figury",
             "as", "zobacz posortowane figury",
             "w", "wypisz figury do pliku",
+            "r", "ustaw dokładność zaokrąglenia",
             "x", "wyjście"
     );
     public static Map<String, String> TWO_STAGES_OR_NOT_MAP = Map.of(

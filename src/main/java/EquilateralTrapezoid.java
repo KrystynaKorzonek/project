@@ -72,7 +72,7 @@ public class EquilateralTrapezoid extends Shape{
 
     }
     public String toString(){
-        return "Trapez równoramienny - dłuższa podstawa: " + RoundClass.round(a, Constants.ROUND_PLACES) + " krótsza podstawa: " + RoundClass.round(b, Constants.ROUND_PLACES) + " ramie: " + RoundClass.round(c, Constants.ROUND_PLACES) + " wysokość: " + RoundClass.round(h, Constants.ROUND_PLACES) + super.toString();
+        return "Trapez równoramienny - dłuższa podstawa: " + RoundClass.round(a) + " krótsza podstawa: " + RoundClass.round(b) + " ramie: " + RoundClass.round(c) + " wysokość: " + RoundClass.round(h) + super.toString();
     }
     @Override
     public Circle getCircumcircle() throws NoCircumcircleException {

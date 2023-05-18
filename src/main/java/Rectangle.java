@@ -72,9 +72,9 @@ public class Rectangle extends Shape {
     }
 
     public String toString(){
-        return "Prostokat - boki: " + RoundClass.round(side1, Constants.ROUND_PLACES) +
-                ", " + RoundClass.round(side2, Constants.ROUND_PLACES) +
-                " przekątna: " + RoundClass.round(diag, Constants.ROUND_PLACES) + super.toString();
+        return "Prostokat - boki: " + RoundClass.round(side1) +
+                ", " + RoundClass.round(side2) +
+                " przekątna: " + RoundClass.round(diag) + super.toString();
     }
 
     @Override

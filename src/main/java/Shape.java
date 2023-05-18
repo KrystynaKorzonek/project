@@ -19,7 +19,7 @@ public abstract class Shape implements Comparable<Shape> {
     }
     public int getVerticesNumber(){return verticesNumber;}
     public String toString(){
-        return " pole:" + RoundClass.round(area, Constants.ROUND_PLACES) + " obwód:" + RoundClass.round(perimeter, Constants.ROUND_PLACES) +
+        return " pole:" + RoundClass.round(area) + " obwód:" + RoundClass.round(perimeter) +
                 " data utworzenia:" + dateTime;
     }
 

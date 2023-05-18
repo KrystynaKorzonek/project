@@ -38,8 +38,8 @@ public class Square extends Shape{
     }
 
     public String toString(){
-        return "Kwadrat - bok: " + RoundClass.round(side, Constants.ROUND_PLACES) +
-                " przekątna: " + RoundClass.round(diagonal, Constants.ROUND_PLACES) + super.toString();
+        return "Kwadrat - bok: " + RoundClass.round(side) +
+                " przekątna: " + RoundClass.round(diagonal) + super.toString();
     }
     
     @Override

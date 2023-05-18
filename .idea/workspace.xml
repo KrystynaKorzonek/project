@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="">
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="obrona przed nullami na liście">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataTaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ellipse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Equilateral_Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Equilateral_Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Rhombus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rhombus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RoundClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoundClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Square.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683821364471</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="obrona przed nullami na liście">
+      <created>1684415579540</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684415579540</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +264,8 @@
     <MESSAGE value="refaktoryzacja pobierania danych (wydzielone do klasy DataTaker, jedna ogólna metoda do wybierania z listy) i sortowanie dwupoziomowe" />
     <MESSAGE value="powrót do sortowania 1-poziomowego, z nowym kryterium (wierzchołki) + lepsza implementacja sortowania (z Comparatorem, bez reverse)" />
     <MESSAGE value="refaktoryzacja - dodanie fabryk dla wszystkich figur (+mały pomysł do trapezu)" />
-    <option name="LAST_COMMIT_MESSAGE" value="refaktoryzacja - dodanie fabryk dla wszystkich figur (+mały pomysł do trapezu)" />
+    <MESSAGE value="obrona przed nullami na liście" />
+    <option name="LAST_COMMIT_MESSAGE" value="obrona przed nullami na liście" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

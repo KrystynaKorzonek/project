@@ -70,9 +70,9 @@ public class Rhombus extends Shape {
     }
 
     public String toString(){
-        return "Romb - bok: " + RoundClass.round(side, Constants.ROUND_PLACES) +
-                " przekątne: " + RoundClass.round(diag1, Constants.ROUND_PLACES) +
-                ", " + RoundClass.round(diag2, Constants.ROUND_PLACES) + super.toString();
+        return "Romb - bok: " + RoundClass.round(side) +
+                " przekątne: " + RoundClass.round(diag1) +
+                ", " + RoundClass.round(diag2) + super.toString();
     }
 
     @Override
