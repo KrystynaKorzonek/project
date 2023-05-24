@@ -173,6 +173,7 @@ public class DataTaker {
         Scanner scan = new Scanner(System.in);
         System.out.println("Wybierz cechę, którą podasz:");
         String messageChoiceFeature = factory.getMessageChoiceFeature();
+        //String messageChoiceFeature = factory.getMessageChoiceFeature(StringManager.getLanguage());
         System.out.println(messageChoiceFeature);
         String feature = scan.nextLine().toLowerCase();
         while (!factory.isFeatureCode(feature)){

@@ -25,4 +25,12 @@ public class CircleFactory extends ShapeFactory{
     public String getMessageChoiceFeature() {
         return "r - promień, d - średnica, p - pole, l - obwód";
     }
+    /*TODO:
+    public String getMessageChoiceFeature(Language lang){
+        switch(lang)
+            ...
+    }
+     */
+
+
 }

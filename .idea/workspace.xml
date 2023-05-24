@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="dwujęzyczność, usunięcie string hardcode z maina i przeniesienie odpowiedzialności za stringi do klasy StringManager">
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="dwujęzyczność w DataTakerze + na razie bardzo prosta opcja zmiany języka">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CircleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CircleFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataTaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ellipse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Rhombus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rhombus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StringManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StringManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -255,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684955913787</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="dwujęzyczność w DataTakerze + na razie bardzo prosta opcja zmiany języka">
+      <created>1684963833773</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684963833773</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +296,8 @@
     <MESSAGE value="poprawa usuwania figur" />
     <MESSAGE value=" sprowadzanie do koła/kwadratu jak się da + malutka poprawka zaokrąglania (zmiana literki)" />
     <MESSAGE value="dwujęzyczność, usunięcie string hardcode z maina i przeniesienie odpowiedzialności za stringi do klasy StringManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="dwujęzyczność, usunięcie string hardcode z maina i przeniesienie odpowiedzialności za stringi do klasy StringManager" />
+    <MESSAGE value="dwujęzyczność w DataTakerze + na razie bardzo prosta opcja zmiany języka" />
+    <option name="LAST_COMMIT_MESSAGE" value="dwujęzyczność w DataTakerze + na razie bardzo prosta opcja zmiany języka" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

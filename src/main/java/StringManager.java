@@ -16,7 +16,7 @@ public class StringManager {
         add(Message.DELETED, "Usunięto figurę", "Shape deleted");
         add(Message.WRITTEN_TO_FILE, "Zapisano do pliku", "Written to a file");
         add(Message.CIRCUMCIRCLE_CHOSEN, "Wybrałeś okrąg opisany na figurze: ", "You've chosen circumcircle of: ");
-        add(Message.IMPOSSIBLE_CIRCUMCIRCLE, "Nie da się opisać okręgu: ", "There is no circumcircle");
+        add(Message.IMPOSSIBLE_CIRCUMCIRCLE, "Nie da się opisać okręgu: ", "There is no circumcircle: ");
         add(Message.CHOSEN_F, "Wybrałeś figurę F: ", "You've chosen shape F: ");
         add(Message.CHOOSE_NUMBER_OF_SHAPE,
                 "Wpisz numer figury, by wykonać akcję (usunąć ją lub dodać nową na jej podstawie):\n" +

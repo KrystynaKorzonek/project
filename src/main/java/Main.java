@@ -1,6 +1,5 @@
 import com.sun.source.tree.Tree;
 
-import javax.print.DocFlavor;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -18,6 +17,7 @@ public class Main {
     private static boolean addToAllShapes(Shape s){
         if (s!= null){
             allShapes.add(s);
+            //System.out.println(s.toString(StringManager.getLanguage());
             System.out.println(s);
             return true;
         }
@@ -62,7 +62,6 @@ public class Main {
             Pair<String, Double> p = DataTaker.getFromUserFeatureValuePair(factory);
             features.put(p.first, p.second);
         }
-
 
         try {
             shape = factory.create(features);

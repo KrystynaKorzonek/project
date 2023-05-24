@@ -86,9 +86,16 @@ public class Rhombus extends Shape {
 
     @Override
     public Circle getCircumcircle() throws NoCircumcircleException {
-        if (diag1!=diag2)
-            throw new NoCircumcircleException("Ten romb nie jest kwadratem");
-        return new Circle(diag1/2);
+        String message = null;
+        switch (StringManager.getLanguage()){
+            case POLISH -> {
+                message = "Romb (nie będący kwadratem) nie ma koła opisanego";
+            }
+            case ENGLISH -> {
+                message = "Rhombus (not square) has no circumcircle";
+            }
+        }
+        throw new NoCircumcircleException(message);
     }
     @Override
     public Rhombus getDoubleShape(){

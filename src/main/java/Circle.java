@@ -54,7 +54,12 @@ public class Circle extends Shape{
         return "Koło - promień: " + RoundClass.round(radius) + " średnica: " +
                 RoundClass.round(diameter) + super.toString();
     }
-
+    /*TODO:
+    public String toString(Language lang){
+        switch(lang)
+            ...
+    }
+     */
     @Override
     public Circle getCircumcircle() {
         return new Circle(radius);

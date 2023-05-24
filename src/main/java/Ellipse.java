@@ -65,7 +65,16 @@ public class Ellipse extends Shape{
 
     @Override
     public Circle getCircumcircle() throws NoCircumcircleException {
-        throw new NoCircumcircleException("Ellipse has no circumcircle");
+        String message = null;
+        switch (StringManager.getLanguage()){
+            case POLISH -> {
+                message = "Elipsa nie ma koła opisanego";
+            }
+            case ENGLISH -> {
+                message = "Ellipse has no circumcircle";
+            }
+        }
+        throw new NoCircumcircleException(message);
     }
 
     @Override
