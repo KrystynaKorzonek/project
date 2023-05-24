@@ -1,5 +1,6 @@
 import com.sun.source.tree.Tree;
 
+import javax.print.DocFlavor;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -20,7 +21,7 @@ public class Main {
             System.out.println(s);
             return true;
         }
-        System.out.println("Nie udało się dodać figury");
+        System.out.println(StringManager.getMessageString(Message.FAILED_ADD));
         return false;
     }
     private static boolean takeOneShape(String input) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
@@ -70,20 +71,20 @@ public class Main {
             return true;
         }
         catch (IllegalArgumentException ex){
-            System.out.println("Nie da się stworzyć figury: " + ex.getMessage() + "\n");
+            System.out.println(StringManager.getMessageString(Message.IMPOSSIBLE_CREATE) + ex.getMessage() + "\n");
             return true;
         }
 
     }
     private static boolean addCircumcirleOfShape(Shape shape){
-        System.out.println("Wybrałeś okrąg opisany na figurze: " + shape);
+        System.out.println(StringManager.getMessageString(Message.CIRCUMCIRCLE_CHOSEN) + shape);
         try {
             Circle circle = shape.getCircumcircle();
             addToAllShapes(circle);
             return true;
         }
         catch (NoCircumcircleException ex){
-            System.out.println("Nie da się opisać okręgu: " + ex.getMessage() + "\n");
+            System.out.println(StringManager.getMessageString(Message.IMPOSSIBLE_CIRCUMCIRCLE) + ex.getMessage() + "\n");
             return true;
         }
     }
@@ -98,18 +99,18 @@ public class Main {
                     addedShape = originalShape.getCircumcircle();
                 }
                 catch (NoCircumcircleException ex){
-                    System.out.println("Nie da się opisać okręgu: " + ex.getMessage() + "\n");
+                    System.out.println(StringManager.getMessageString(Message.IMPOSSIBLE_CIRCUMCIRCLE) + ex.getMessage() + "\n");
                     return true;
                 }
             }
         }
-        System.out.print("Dodana figura: ");
+        System.out.print(StringManager.getMessageString(Message.ADDED));
         addToAllShapes(addedShape);
         return true;
     }
     private static boolean doActionOnShape(int shapeNumber){
         Shape chosenShape = allShapes.get(shapeNumber);
-        System.out.println("Wybrałeś figurę F: "+ chosenShape);
+        System.out.println(StringManager.getMessageString(Message.CHOSEN_F) + chosenShape);
         String modificationCode = DataTaker.takeFigureModification();
         switch (modificationCode){
             case "d" -> {
@@ -130,7 +131,7 @@ public class Main {
 
     private static boolean deleteShape(int fig){
         allShapes.remove(fig);
-        System.out.println("Deleted");
+        System.out.println(StringManager.getMessageString(Message.DELETED));
         return true;
     }
 
@@ -150,8 +151,7 @@ public class Main {
         while (it.hasNext()) {
             System.out.println(it.nextIndex()+1 + " " + it.next());
         }
-        String message = "Wpisz numer figury, by wykonać akcję (usunąć ją lub dodać nową na jej podstawie):\n" +
-                "(cokolwiek innego - powrót do głównego menu)";
+        String message = StringManager.getMessageString(Message.CHOOSE_NUMBER_OF_SHAPE);
         Integer number = DataTaker.takeOneNumber(1, allShapes.size(), message);
         if (number == null)
             return true;
@@ -160,19 +160,19 @@ public class Main {
 
     private static boolean writeAllShapes() throws IOException {
         MultithreadingWriteToFile.write_file_async(allShapes);
-        System.out.println("You've written to file");
+        System.out.println(StringManager.getMessageString(Message.WRITTEN_TO_FILE));
         return true;
     }
 
     private static boolean changeRoundPlaces(){
-        String initial = "Wybierz, do ilu cyfr po przecinku zaokraglać wartośi (min " +
-                Constants.MIN_ROUND_PLACES + " max "  + Constants.MAX_ROUND_PLACES + ")";
+        String initial = StringManager.getMessageString(Message.CHOOSE_ROUND) + " (min " +
+                Constants.MIN_ROUND_PLACES + ", max "  + Constants.MAX_ROUND_PLACES + ")";
         Integer places = DataTaker.takeOneNumber(Constants.MIN_ROUND_PLACES, Constants.MAX_ROUND_PLACES, initial);
         if (places == null){
-            System.out.println("Niepoprawna wartość. Nie wprowadzono zmian.");
+            System.out.println(StringManager.getMessageString(Message.ROUND_INCORRECT));
         }
         else{
-            System.out.println("Nowa dokładność zaokrąglania: " + places);
+            System.out.println(StringManager.getMessageString(Message.ROUND_CHANGED) + places);
             RoundClass.setRoundPlaces(places);
         }
 
