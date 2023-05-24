@@ -2,46 +2,47 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 public class DataTaker {
-    public static Map<String, String> FIGURES_MAP = Map.of(
-            "s", "kwadrat",
-            "c", "koło",
-            "d", "romb",
-            "p", "prostokąt",
-            "tr", "trójkąt równoboczny",
-            "i", "trójkąt równoramienny",
-            "r", "trójkąt prostokątny",
-            "e", "elipsa",
-            "t", "trapez równoramienny"
+    public static Map<String, StringPair> FIGURES_MAP = Map.of(
+            "s", new StringPair("kwadrat", "square"),
+            "c", new StringPair("koło", "circle"),
+            "d", new StringPair("romb", "rhombus"),
+            "p", new StringPair("prostokąt", "rectangle"),
+            "tr", new StringPair("trójkąt równoboczny", "equilateral triangle"),
+            "i", new StringPair("trójkąt równoramienny", "isosceles triangle"),
+            "r", new StringPair("trójkąt prostokątny", "rectangular triangle"),
+            "e", new StringPair("elipsa", "ellipse"),
+            "t", new StringPair("trapez równoramienny", "isosceles trapezoid")
     );
-    public static Map<String, String> OTHER_ACTIONS_MAP = Map.of(
-            "a", "zobacz wszystkie figury",
-            "as", "zobacz posortowane figury",
-            "w", "wypisz figury do pliku",
-            "z", "ustaw dokładność zaokrąglenia",
-            "x", "wyjście"
+    public static Map<String, StringPair> OTHER_ACTIONS_MAP = Map.of(
+            "a", new StringPair("zobacz wszystkie figury", "see all shapes"),
+            "as", new StringPair("zobacz posortowane figury", "see sorted shapes"),
+            "w", new StringPair("wypisz figury do pliku", "write shapes to file"),
+            "z", new StringPair("ustaw dokładność zaokrąglenia", "set rounding precision"),
+            "x", new StringPair("wyjście", "exit"),
+            "l", new StringPair("zmień język na angielski", "switch language to polish")
     );
-    public static Map<String, String> TWO_STAGES_OR_NOT_MAP = Map.of(
-            "n", "nie",
-            "r", "tak (rosnąco)",
-            "m", "tak (malejąco)"
+    public static Map<String, StringPair> TWO_STAGES_OR_NOT_MAP = Map.of(
+            "n", new StringPair("nie", "no"),
+            "r", new StringPair("tak (rosnąco)", "yes (ascending)"),
+            "m", new StringPair("tak (malejąco)", "yes (descending)")
     );
-    public static Map<String, String> SORT_CRITERION_MAP = Map.of(
-            "o", "obwód",
-            "p", "pole",
-            "d", "data",
-            "v", "liczba wierzchołków"
+    public static Map<String, StringPair> SORT_CRITERION_MAP = Map.of(
+            "o", new StringPair("obwód", "perimeter"),
+            "p", new StringPair("pole", "area"),
+            "d", new StringPair("data", "date"),
+            "v", new StringPair("liczba wierzchołków", "number of vertices")
     );
-    public static Map<String, String> SORT_ORDER_MAP = Map.of(
-            "r", "rosnąco",
-            "m", "malejąco"
+    public static Map<String, StringPair> SORT_ORDER_MAP = Map.of(
+            "r", new StringPair("rosnąco", "ascending"),
+            "m", new StringPair("malejąco", "descending")
     );
-    public static Map<String, String> FIGURE_MODIFICATIONS_MAP = Map.of(
-            "d", "dodaj figurę o 2 razy większym polu",
-            "o", "dodaj okrąg opisany na F",
-            "u", "usuń figurę"
+    public static Map<String, StringPair> FIGURE_MODIFICATIONS_MAP = Map.of(
+            "d", new StringPair("dodaj figurę o 2 razy większym polu", "add a figure with twice the area"),
+            "o", new StringPair("dodaj okrąg opisany na F", "add a circle circumscribed on F"),
+            "u", new StringPair("usuń figurę", "remove the shape")
     );
-    public static Map<String, String> EXIT_MAP = Map.of(
-            "x", "zrezygnuj z dodawania figury"
+    public static Map<String, StringPair> EXIT_MAP = Map.of(
+            "x", new StringPair( "zrezygnuj z dodawania figury", "resign from adding the shape")
     );
 
     public static String takeOneTaskCommand(){
@@ -93,20 +94,20 @@ public class DataTaker {
 
 
 
-    public static Map<String, String> makeKeysUppercase(Map<String, String> map){
-        Map <String, String> result = new HashMap<>();
+    public static Map<String, StringPair> makeKeysUppercase(Map<String, StringPair> map){
+        Map <String, StringPair> result = new HashMap<>();
         for (String key : map.keySet())
             result.put(key.toLowerCase(), map.get(key));
         return result;
     }
-    public static List<String> makeListOfOptionDescriptions(Map<String, String> options){
+    public static List<String> makeListOfOptionDescriptions(Map<String, StringPair> options){
         List<String> optionDescriptions = new LinkedList<>();
         for (String code : options.keySet())
-            optionDescriptions.add(code.toUpperCase() + " - " + options.get(code));
+            optionDescriptions.add(code.toUpperCase() + " - " + options.get(code).get(StringManager.getLanguage()));
         return optionDescriptions;
     }
 
-    public static String generateOptionsMessage(Map<String, String> options, Map<String, String> oneLineOptions){
+    public static String generateOptionsMessage(Map<String, StringPair> options, Map<String, StringPair> oneLineOptions){
         List<String> optionsDescriptions = makeListOfOptionDescriptions(options);
         List<String> oneLineOptionsDescritions = makeListOfOptionDescriptions(oneLineOptions);
         String firstLineOptionMessage = String.join(", ", optionsDescriptions);
@@ -118,16 +119,16 @@ public class DataTaker {
         return(optionMessage);
     }
 
-    public static String takeOneStringFromList(Map<String, String> optionsFromUser, Map<String, String> oneLineOptionsFromUser, String initialMessage, String finalMessage){
+    public static String takeOneStringFromList(Map<String, StringPair> optionsFromUser, Map<String, StringPair> oneLineOptionsFromUser, String initialMessage, String finalMessage){
         Scanner scan = new Scanner(System.in);
         if (optionsFromUser == null)
             optionsFromUser = Map.of();
         if (oneLineOptionsFromUser == null)
             oneLineOptionsFromUser = Map.of();
-        Map <String, String> simpleOptions = makeKeysUppercase(optionsFromUser);
-        Map <String, String> oneLineOptions = makeKeysUppercase(oneLineOptionsFromUser);
+        Map <String, StringPair> simpleOptions = makeKeysUppercase(optionsFromUser);
+        Map <String, StringPair> oneLineOptions = makeKeysUppercase(oneLineOptionsFromUser);
         String optionMessage = generateOptionsMessage(simpleOptions, oneLineOptions);
-        Map<String, String> allOptions = new HashMap<>();
+        Map<String, StringPair> allOptions = new HashMap<>();
         allOptions.putAll(simpleOptions);
         allOptions.putAll(oneLineOptions);
 
@@ -143,8 +144,8 @@ public class DataTaker {
             input = scan.nextLine().toLowerCase();
         }
         String result_code = input;
-        String result_name = allOptions.get(result_code);
-        if (finalMessage != null) //nie zawsze chcemy informować usera, że coś wybrał; czasem byłoby za dużo komuniaktów
+        String result_name = allOptions.get(result_code).get(StringManager.getLanguage());
+        if (finalMessage != null)
             System.out.println(finalMessage + result_name);
         return result_code;
     }
@@ -168,14 +169,12 @@ public class DataTaker {
         return chosen_number;
     }
 
-    // przeniesiona żywcem ze starego maina
-    public static Pair<String, Double> getFromUserFeatureValuePair(ShapeFactory factory) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    public static Pair<String, Double> getFromUserFeatureValuePair(ShapeFactory factory) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Wybierz cechę, którą podasz:");
         String messageChoiceFeature = factory.getMessageChoiceFeature();
         System.out.println(messageChoiceFeature);
         String feature = scan.nextLine().toLowerCase();
-        //while (!(boolean)figureClass.getMethod("isFeatureCode", String.class).invoke(null, feature)) {
         while (!factory.isFeatureCode(feature)){
             System.out.println("Nieprawidłowa wartość");
             System.out.println("Wybierz cechę, którą podasz:");

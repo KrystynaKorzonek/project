@@ -178,6 +178,11 @@ public class Main {
 
        return true;
     }
+    private static boolean changeLanguage(){
+        StringManager.changeLanguage();
+        return true;
+    }
+
     public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException {
         String taskCode = DataTaker.takeOneTaskCommand();
         switch (taskCode){
@@ -196,6 +201,9 @@ public class Main {
             }
             case "z" -> {
                 return changeRoundPlaces();
+            }
+            case "l" -> {
+                return changeLanguage();
             }
             default -> {
                 return takeOneShape(taskCode);

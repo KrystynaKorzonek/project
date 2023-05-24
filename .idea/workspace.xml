@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment=" sprowadzanie do koła/kwadratu jak się da + malutka poprawka zaokrąglania (zmiana literki)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Language.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/StringManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/StringPair.java" afterDir="false" />
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="dwujęzyczność, usunięcie string hardcode z maina i przeniesienie odpowiedzialności za stringi do klasy StringManager">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataTaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StringManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StringManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684431911341</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="dwujęzyczność, usunięcie string hardcode z maina i przeniesienie odpowiedzialności za stringi do klasy StringManager">
+      <created>1684955913787</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684955913787</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +285,8 @@
     <MESSAGE value="dodany wybór dokładności zaokrąglenia" />
     <MESSAGE value="poprawa usuwania figur" />
     <MESSAGE value=" sprowadzanie do koła/kwadratu jak się da + malutka poprawka zaokrąglania (zmiana literki)" />
-    <option name="LAST_COMMIT_MESSAGE" value=" sprowadzanie do koła/kwadratu jak się da + malutka poprawka zaokrąglania (zmiana literki)" />
+    <MESSAGE value="dwujęzyczność, usunięcie string hardcode z maina i przeniesienie odpowiedzialności za stringi do klasy StringManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="dwujęzyczność, usunięcie string hardcode z maina i przeniesienie odpowiedzialności za stringi do klasy StringManager" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -18,4 +18,6 @@ public enum Message {
     // komunikat typu "wpisz komendę z podanych..."
     CHOOSE_NUMBER_OF_SHAPE
 
+    //DATA TAKER
+
 }

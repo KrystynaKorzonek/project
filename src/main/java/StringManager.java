@@ -9,6 +9,7 @@ public class StringManager {
     private static Map<Message, StringPair> strings = new HashMap<>();
 
     static{
+        // UŻYWANE W MAINIE:
         add(Message.FAILED_ADD, "Nie udało się dodać figury", "Failed to add shape");
         add(Message.IMPOSSIBLE_CREATE, "Nie da sie stworzyć figury", "Impossible to create shape");
         add(Message.ADDED, "Dodano figurę: ", "Shape added: ");
@@ -32,11 +33,32 @@ public class StringManager {
                 "Niepoprawna wartość. Nie wprowadzono zmian.",
                 "Incorrect value. No changes applied."
         );
+        // UŻYWANE W DATATAKER
+
+        //TODO: Stringi z DataTakera
+        // z funkcji:
+        // 1. 4 funkcje na początku (takeSth...), wrappery na takeOneStringFromList
+        // 2.takeOneStringFromList
+        // 3.getFromUserFeatureValuePair
+        // koniecznie zostawić komentarze, skąd jest ten String (to i tak jest dosć chaotyczne)
     }
 
 
     public static void setLanguage(Language l){
         lang = l;
+    }
+    public static Language getLanguage(){
+        return lang;
+    }
+    public static void changeLanguage(){
+        switch (lang){
+            case POLISH -> {
+                setLanguage(Language.ENGLISH);
+            }
+            case ENGLISH -> {
+                setLanguage(Language.POLISH);
+            }
+        }
     }
 
     public static String getMessageString(Message m){
