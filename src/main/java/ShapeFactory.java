@@ -10,7 +10,7 @@ ShapeFactory lepiej współpracujące z DataTakerem
 
 
 public abstract class ShapeFactory {
-    public abstract Shape create(Map<String, Double> features);
+    public abstract Shape create(Map<String, Double> features) throws NoCircumcircleException;
     public abstract boolean isProperSetOfFeatures(Set<String> features);
     public abstract boolean isFeatureCode(String code);
     public abstract String getMessageChoiceFeature();

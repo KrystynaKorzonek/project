@@ -69,6 +69,9 @@ public class RectangularTriangle extends Shape{
             cathetus2 = Math.round(hypotenuse * (Math.cos(alpha)) * 100.0) / 100.0;
             perimeter = cathetus1 + cathetus2 + hypotenuse;
         }
+
+        if(hypotenuse < cathetus1 || hypotenuse < cathetus2)
+            throw new IllegalArgumentException("Niespełniony warunek trójkąta prostokątnego");
     }
 
     public double getHypotenuse() {

@@ -28,8 +28,11 @@ public class IsoscelesTriangle extends Shape{
             height = 2*area/base;
         }
         else if (codes.contains("b") && codes.contains("a")){
+
             side = features.get("b");
             base = features.get("a");
+            if(2*side < base)
+                throw new IllegalArgumentException("Niespełniony warunek trójkąta");
             height = Math.sqrt(side*side - base*base/4);
             area = base*height/2;
         }
