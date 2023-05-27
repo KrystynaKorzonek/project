@@ -51,4 +51,12 @@ public class Square extends Shape{
         return new Square(Map.of("b", side*Math.sqrt(2)));
     }
 
+    public int compareTo(Shape another){
+        if (another instanceof Square) {
+            return Double.compare(this.side, ((Square)another).side);
+        }
+        return Constants.NONZERO;
+    }
+
+
 }

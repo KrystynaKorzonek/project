@@ -101,4 +101,12 @@ public class Rhombus extends Shape {
     public Rhombus getDoubleShape(){
         return new Rhombus(Map.of("e", diag1*Math.sqrt(2), "f", diag2*Math.sqrt(2)));
     }
+
+    public int compareTo(Shape another){
+        if (another instanceof Rhombus) {
+            if (diag1 == ((Rhombus)another).diag1 && diag2 == ((Rhombus)another).diag2)
+                return 0;
+        }
+        return Constants.NONZERO;
+    }
 }

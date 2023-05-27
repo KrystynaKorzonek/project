@@ -82,7 +82,12 @@ public class IsoscelesTriangle extends Shape{
         return new Circle(base*side*side/(4*area));
     }
 
-
-
+    public int compareTo(Shape another){
+        if (another instanceof IsoscelesTriangle) {
+            if (base == ((IsoscelesTriangle)another).base && height == ((IsoscelesTriangle)another).height)
+                return 0;
+        }
+        return Constants.NONZERO;
+    }
 
 }

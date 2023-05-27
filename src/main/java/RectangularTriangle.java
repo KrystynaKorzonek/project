@@ -4,7 +4,7 @@ import java.util.Set;
 import java.util.TreeSet;
 public class RectangularTriangle extends Shape{
     private double hypotenuse;
-    private double cathetus1;
+    private double cathetus1; //catheus1 <= catheus2
     private double cathetus2;
 
 
@@ -72,6 +72,11 @@ public class RectangularTriangle extends Shape{
 
         if(hypotenuse < cathetus1 || hypotenuse < cathetus2)
             throw new IllegalArgumentException("Niespełniony warunek trójkąta prostokątnego");
+        if (cathetus2 < cathetus1){
+            double temp = cathetus1;
+            cathetus1 = cathetus2;
+            cathetus2 = temp;
+        }
     }
 
     public double getHypotenuse() {
@@ -108,6 +113,14 @@ public class RectangularTriangle extends Shape{
     @Override
     public Shape getDoubleShape() {
         return new RectangularTriangle(Map.of("a", cathetus1*Math.sqrt(2), "b", cathetus2*Math.sqrt(2)));
+    }
+
+    public int compareTo(Shape another){
+        if (another instanceof RectangularTriangle) {
+            if (cathetus1 == ((RectangularTriangle)another).cathetus1 && cathetus2 == ((RectangularTriangle)another).cathetus2)
+                return 0;
+        }
+        return Constants.NONZERO;
     }
 
 }

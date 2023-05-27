@@ -24,7 +24,7 @@ public class Main {
         System.out.println(StringManager.getMessageString(Message.FAILED_ADD));
         return false;
     }
-    private static boolean takeOneShape(String input) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
+    private static boolean takeOneShape(String input) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException{
         Shape shape = null;
         ShapeFactory factory = null;
         switch (input) {
@@ -71,6 +71,9 @@ public class Main {
         }
         catch (IllegalArgumentException ex){
             System.out.println(StringManager.getMessageString(Message.IMPOSSIBLE_CREATE) + ex.getMessage() + "\n");
+            return true;
+        }
+        catch (NoCircumcircleException ex){
             return true;
         }
 
