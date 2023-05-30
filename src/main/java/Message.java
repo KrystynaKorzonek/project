@@ -9,6 +9,7 @@ public enum Message {
     DELETED,
 
     WRITTEN_TO_FILE,
+    NOT_ADDED_ALREADY_EXISTS,
 
     //obsługa zaokrągleń
     CHOOSE_ROUND,

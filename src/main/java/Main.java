@@ -13,12 +13,18 @@ TODO:
  */
 
 public class Main {
-    private static LinkedList<Shape> allShapes = new LinkedList<>();
+    private static TreeSet<Shape> allShapes = new TreeSet<>();
+    //private static LinkedList<Shape> allShapes = new LinkedList<>();
     private static boolean addToAllShapes(Shape s){
         if (s!= null){
-            allShapes.add(s);
-            //System.out.println(s.toString(StringManager.getLanguage());
-            System.out.println(s);
+            if (allShapes.contains(s)){
+                System.out.println(StringManager.getMessageString(Message.NOT_ADDED_ALREADY_EXISTS));
+            }
+            else {
+                allShapes.add(s);
+                //System.out.println(StringManager.getMessageString(Message.ADDED) + s.toString(StringManager.getLanguage()); //todo!
+                System.out.print(StringManager.getMessageString(Message.ADDED) + s);
+            }
             return true;
         }
         System.out.println(StringManager.getMessageString(Message.FAILED_ADD));
@@ -106,12 +112,10 @@ public class Main {
                 }
             }
         }
-        System.out.print(StringManager.getMessageString(Message.ADDED));
         addToAllShapes(addedShape);
         return true;
     }
-    private static boolean doActionOnShape(int shapeNumber){
-        Shape chosenShape = allShapes.get(shapeNumber);
+    private static boolean doActionOnShape(Shape chosenShape){
         System.out.println(StringManager.getMessageString(Message.CHOSEN_F) + chosenShape);
         String modificationCode = DataTaker.takeFigureModification();
         switch (modificationCode){
@@ -122,7 +126,7 @@ public class Main {
                 return addModifiedShape(chosenShape, "o");
             }
             case "u" -> {
-                return deleteShape(shapeNumber);
+                return deleteShape(chosenShape);
             }
             case "x" -> {
                 return true;
@@ -131,8 +135,8 @@ public class Main {
         return true;
     }
 
-    private static boolean deleteShape(int fig){
-        allShapes.remove(fig);
+    private static boolean deleteShape(Shape chosenShape){
+        allShapes.remove(chosenShape);
         System.out.println(StringManager.getMessageString(Message.DELETED));
         return true;
     }
@@ -141,15 +145,14 @@ public class Main {
         return new SortRule(SortCriterion.AREA, Order.ASC);
     }
 
-    private static void sortShapes(SortRule sortRule){
-        Collections.sort(allShapes, new OneStageComparator(sortRule));
-    }
 
     private static boolean showAllShapes(SortRule sortRule){
         if (allShapes.size() == 0)
             return true;
-        sortShapes(sortRule);
-        ListIterator<Shape> it = allShapes.listIterator();
+        LinkedList<Shape> sortedShapes = new LinkedList<>();
+        sortedShapes.addAll(allShapes);
+        Collections.sort(sortedShapes, new OneStageComparator(sortRule));
+        ListIterator<Shape> it = sortedShapes.listIterator();
         while (it.hasNext()) {
             System.out.println(it.nextIndex()+1 + " " + it.next());
         }
@@ -157,7 +160,8 @@ public class Main {
         Integer number = DataTaker.takeOneNumber(1, allShapes.size(), message);
         if (number == null)
             return true;
-        return doActionOnShape(number-1);
+        Shape chosen_shape = sortedShapes.get(number-1);
+        return doActionOnShape(chosen_shape);
     }
 
     private static boolean writeAllShapes() throws IOException {

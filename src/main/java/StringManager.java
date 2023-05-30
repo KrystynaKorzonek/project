@@ -33,6 +33,10 @@ public class StringManager {
                 "Niepoprawna wartość. Nie wprowadzono zmian.",
                 "Incorrect value. No changes applied."
         );
+        add(Message.NOT_ADDED_ALREADY_EXISTS,
+                "Nie dodano fogury - taka figura już istnieje.",
+                "Shape was not added - that shape already exists."
+        );
         // UŻYWANE W DATATAKER
 
         //TODO: Stringi z DataTakera
