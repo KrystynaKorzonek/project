@@ -22,8 +22,19 @@ public class SquareFactory extends ShapeFactory {
         return code.equals("b") || code.equals("d") || code.equals("p");
     }
 
-    @Override
     public String getMessageChoiceFeature() {
         return "b - bok, d - przekątna, p - pole";
+    }
+    @Override
+    public String getMessageChoiceFeature(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "b - bok, d - przekątna, p - pole";
+            }
+            case ENGLISH -> {
+                return "b - side, d - diameter, p - area";
+            }
+        }
+        return "Wrong language";
     }
 }

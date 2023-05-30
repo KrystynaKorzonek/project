@@ -48,18 +48,34 @@ public class Circle extends Shape{
     public Circle(double radius){
         this.dateTime = LocalDateTime.now();
         setFeaturesFromRadius(radius);
+        if(radius< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL || radius> Constants.MAX_ATTR_VAL ||
+                area > Constants.MAX_ATTR_VAL){
+            throw new IllegalArgumentException("Bad values of figure");
+        }
     }
 
-    public String toString(){
-        return "Koło - promień: " + RoundClass.round(radius) + " średnica: " +
-                RoundClass.round(diameter) + super.toString();
-    }
-    /*TODO:
     public String toString(Language lang){
-        switch(lang)
-            ...
+        switch(lang){
+            case POLISH -> {
+                return "Koło - promień: " + RoundClass.round(radius) + " średnica: " +
+                        RoundClass.round(diameter) + super.toString(lang);
+            }
+            case ENGLISH -> {
+                return "Circle - radius: " + RoundClass.round(radius) + " diameter: " +
+                        RoundClass.round(diameter) + super.toString(lang);
+            }
+        }
+        return "Wrong language";
+
     }
-     */
+
+    public int compareTo(Shape another){
+        if (another instanceof Circle) {
+            if (radius == ((Circle)another).radius)
+                return 0;
+        }
+        return Constants.NONZERO;
+    }
     @Override
     public Circle getCircumcircle() {
         return new Circle(radius);

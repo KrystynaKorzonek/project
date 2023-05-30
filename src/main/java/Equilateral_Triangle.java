@@ -16,6 +16,10 @@ public class Equilateral_Triangle extends Shape {
             double value = features.get(feature);
             setFeatures(feature, value);
         }
+        if(side< Constants.MIN_ATTR_VAL || height< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL ||
+                side> Constants.MAX_ATTR_VAL || height> Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL){
+            throw new IllegalArgumentException("Bad values of figure");
+        }
     }
 
     private void setFeatures(String feature, double value) {
@@ -39,9 +43,27 @@ public class Equilateral_Triangle extends Shape {
         perimeter = 3 * side;
     }
 
-    public String toString(){
-        return "Trojkat rownoboczny - bok: " + RoundClass.round(side) +
-                " wysokosc: " + RoundClass.round(height) + super.toString();
+    public int compareTo(Shape another){
+        if (another instanceof Equilateral_Triangle) {
+            if (side == ((Equilateral_Triangle)another).side && height == ((Equilateral_Triangle)another).height)
+                return 0;
+        }
+        return Constants.NONZERO;
+    }
+
+    public String toString(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "Trojkat rownoboczny - bok: " + RoundClass.round(side) +
+                        " wysokosc: " + RoundClass.round(height) + super.toString(lang);
+            }
+            case ENGLISH -> {
+                return "Equilateral triangle - side: " + RoundClass.round(side) +
+                        " height: " + RoundClass.round(height) + super.toString(lang);
+            }
+        }
+        return "Wrong language";
+
     }
 
     @Override

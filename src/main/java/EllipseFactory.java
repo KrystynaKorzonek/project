@@ -26,8 +26,19 @@ public class EllipseFactory extends ShapeFactory{
         return code.equals("a") || code.equals("b") || code.equals("p");
     }
 
-    @Override
     public String getMessageChoiceFeature() {
         return "a - półoś mała, b - półoś wielka, p - pole";
+    }
+    @Override
+    public String getMessageChoiceFeature(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "a - półoś mała, b - półoś wielka, p - pole";
+            }
+            case ENGLISH -> {
+                return "a - semiMinorAxis, b - semiMajorAxis, p - area";
+            }
+        }
+        return "Wrong language";
     }
 }

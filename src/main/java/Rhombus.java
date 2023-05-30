@@ -75,13 +75,28 @@ public class Rhombus extends Shape {
             }
         }
         perimeter = 4*side;
+        if(side< Constants.MIN_ATTR_VAL || diag1< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL ||
+                side> Constants.MAX_ATTR_VAL || diag1> Constants.MAX_ATTR_VAL || diag2< Constants.MIN_ATTR_VAL ||
+                diag2> Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL){
+            throw new IllegalArgumentException("Bad values of figure");
+        }
 
     }
 
-    public String toString(){
-        return "Romb - bok: " + RoundClass.round(side) +
-                " przekątne: " + RoundClass.round(diag1) +
-                ", " + RoundClass.round(diag2) + super.toString();
+    public String toString(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "Romb - bok: " + RoundClass.round(side) +
+                        " przekątne: " + RoundClass.round(diag1) +
+                        ", " + RoundClass.round(diag2) + super.toString(lang);
+            }
+            case ENGLISH -> {
+                return "Rhombus - side: " + RoundClass.round(side) +
+                        " diagonals: " + RoundClass.round(diag1) + ", " + RoundClass.round(diag2) + super.toString(lang);
+            }
+        }
+        return "Wrong language";
+
     }
 
     @Override

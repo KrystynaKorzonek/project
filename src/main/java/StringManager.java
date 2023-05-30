@@ -34,7 +34,7 @@ public class StringManager {
                 "Incorrect value. No changes applied."
         );
         add(Message.NOT_ADDED_ALREADY_EXISTS,
-                "Nie dodano fogury - taka figura już istnieje.",
+                "Nie dodano figury - taka figura już istnieje.",
                 "Shape was not added - that shape already exists."
         );
         // UŻYWANE W DATATAKER
@@ -67,6 +67,10 @@ public class StringManager {
 
     public static String getMessageString(Message m){
         return strings.get(m).get(lang);
+    }
+
+    public static String wrapToString(Shape s){
+        return s.toString(lang);
     }
 
 }

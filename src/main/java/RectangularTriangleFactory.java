@@ -23,8 +23,19 @@ public class RectangularTriangleFactory extends ShapeFactory{
         return code.equals("a") || code.equals("b") || code.equals("c") || code.equals("p");
     }
 
-    @Override
     public String getMessageChoiceFeature() {
         return "a - przyprostokątna 1, b - przyprostokątna 2, c - przeciwprostokątna, p - pole";
+    }
+    @Override
+    public String getMessageChoiceFeature(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "a - przyprostokątna 1, b - przyprostokątna 2, c - przeciwprostokątna, p - pole";
+            }
+            case ENGLISH -> {
+                return "a - cathetus 1, b - cathetus 2, c - hypotenuse, p - area";
+            }
+        }
+        return "Wrong language";
     }
 }

@@ -44,6 +44,19 @@ public class Ellipse extends Shape{
             throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
 
         perimeter = Math.PI * (semiMajorAxis + semiMinorAxis);
+        if(semiMajorAxis< Constants.MIN_ATTR_VAL || semiMinorAxis< Constants.MIN_ATTR_VAL ||
+                area < Constants.MIN_ATTR_VAL || semiMajorAxis> Constants.MAX_ATTR_VAL ||
+                semiMinorAxis> Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL){
+            throw new IllegalArgumentException("Bad values of figure");
+        }
+    }
+
+    public int compareTo(Shape another){
+        if (another instanceof Ellipse) {
+            if (semiMajorAxis == ((Ellipse)another).semiMajorAxis && semiMinorAxis == ((Ellipse)another).semiMinorAxis)
+                return 0;
+        }
+        return Constants.NONZERO;
     }
 
     public double getSemiMajorAxis() {
@@ -58,9 +71,19 @@ public class Ellipse extends Shape{
         return area;
     }
 
-    public String toString(){
-        return "Elipsa: polos mala: " + RoundClass.round(semiMinorAxis) +
-                ", polos wielka: " + RoundClass.round(semiMajorAxis) + super.toString();
+    public String toString(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "Elipsa: polos mala: " + RoundClass.round(semiMinorAxis) +
+                        ", polos wielka: " + RoundClass.round(semiMajorAxis) + super.toString(lang);
+            }
+            case ENGLISH -> {
+                return "Ellipse - semiMinorAxis: " + RoundClass.round(semiMinorAxis) + " semiMajorAxis: " +
+                        RoundClass.round(semiMajorAxis) + super.toString(lang);
+            }
+        }
+        return "Wrong language";
+
     }
 
     @Override

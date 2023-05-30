@@ -77,6 +77,11 @@ public class RectangularTriangle extends Shape{
             cathetus1 = cathetus2;
             cathetus2 = temp;
         }
+        if(hypotenuse< Constants.MIN_ATTR_VAL || cathetus1< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL ||
+                cathetus1> Constants.MAX_ATTR_VAL || cathetus2 < Constants.MIN_ATTR_VAL ||
+                cathetus2> Constants.MAX_ATTR_VAL || hypotenuse> Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL){
+            throw new IllegalArgumentException("Bad values of figure");
+        }
     }
 
     public double getHypotenuse() {
@@ -99,10 +104,21 @@ public class RectangularTriangle extends Shape{
         return perimeter;
     }
 
-    public String toString(){
-        return "Trójkąt prostokątny - Przyprostokątna 1: " + RoundClass.round(cathetus1) +
-                " Przyprostokątna 2: " + RoundClass.round(cathetus2) +
-                " Przeciwprostokątna: " + RoundClass.round(hypotenuse) + super.toString();
+    public String toString(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "Trójkąt prostokątny - Przyprostokątna 1: " + RoundClass.round(cathetus1) +
+                        " Przyprostokątna 2: " + RoundClass.round(cathetus2) +
+                        " Przeciwprostokątna: " + RoundClass.round(hypotenuse) + super.toString(lang);
+            }
+            case ENGLISH -> {
+                return "Rectangular triangle - cathetuses: " + RoundClass.round(cathetus1) +
+                        ", " + RoundClass.round(cathetus2) +
+                        " hypotenuse: " + RoundClass.round(hypotenuse) + super.toString(lang);
+            }
+        }
+        return "Wrong language";
+
     }
 
     @Override

@@ -1,0 +1,3 @@
+Koło - promień: 4.0 średnica: 8.0 pole:50.27 obwód:25.13 data utworzenia:2023-05-17T00:46:15.583442
+Kwadrat - bok: 3.0 przekątna: 4.24 pole:9.0 obwód:12.0 data utworzenia:2023-05-17T00:46:12.660807
+Square@10f87f48

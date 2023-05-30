@@ -25,8 +25,19 @@ public class RhombusFactory extends ShapeFactory{
         return code.equals("b") || code.equals("e") || code.equals("f") || code.equals("p");
     }
 
-    @Override
     public String getMessageChoiceFeature() {
         return "b - bok, e - przekątna, f - druga przekątna, p - pole";
+    }
+    @Override
+    public String getMessageChoiceFeature(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "b - bok, e - przekątna, f - druga przekątna, p - pole";
+            }
+            case ENGLISH -> {
+                return "b - side, e - diagonal, f - second diagonal, p - area";
+            }
+        }
+        return "Wrong language";
     }
 }

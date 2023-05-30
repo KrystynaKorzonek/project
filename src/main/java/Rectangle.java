@@ -78,13 +78,37 @@ public class Rectangle extends Shape {
             }
         }
         perimeter = 2*(side1 + side2);
+        if(side1< Constants.MIN_ATTR_VAL || diag< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL ||
+                side1> Constants.MAX_ATTR_VAL || side2> Constants.MAX_ATTR_VAL || side2< Constants.MIN_ATTR_VAL ||
+                diag> Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL){
+            throw new IllegalArgumentException("Bad values of figure");
+        }
 
     }
 
-    public String toString(){
-        return "Prostokat - boki: " + RoundClass.round(side1) +
-                ", " + RoundClass.round(side2) +
-                " przekątna: " + RoundClass.round(diag) + super.toString();
+    public String toString(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "Prostokat - boki: " + RoundClass.round(side1) +
+                        ", " + RoundClass.round(side2) +
+                        " przekątna: " + RoundClass.round(diag) + super.toString(lang);
+            }
+            case ENGLISH -> {
+                return "Rectangle - sides: " + RoundClass.round(side1) +
+                        ", " + RoundClass.round(side2) +
+                        " diagonal: " + RoundClass.round(diag) + super.toString(lang);
+            }
+        }
+        return "Wrong language";
+
+    }
+
+    public int compareTo(Shape another){
+        if (another instanceof Rectangle) {
+            if (side1 == ((Rectangle)another).side1 && side2 == ((Rectangle)another).side2)
+                return 0;
+        }
+        return Constants.NONZERO;
     }
 
     @Override

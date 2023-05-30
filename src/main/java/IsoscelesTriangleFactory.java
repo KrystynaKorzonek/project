@@ -23,7 +23,18 @@ public class IsoscelesTriangleFactory extends ShapeFactory{
         return code.equals("b") || code.equals("h") || code.equals("p") || code.equals("a");
     }
 
-    @Override
     public String getMessageChoiceFeature() {
         return "b - bok, h - wysokość, p - pole, a - podstawa";    }
+    @Override
+    public String getMessageChoiceFeature(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "b - bok, h - wysokość, p - pole, a - podstawa";
+            }
+            case ENGLISH -> {
+                return "b - side, h - height, p - area, a - base";
+            }
+        }
+        return "Wrong language";
+    }
 }

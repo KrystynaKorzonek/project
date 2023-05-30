@@ -23,7 +23,7 @@ public class Main {
             else {
                 allShapes.add(s);
                 //System.out.println(StringManager.getMessageString(Message.ADDED) + s.toString(StringManager.getLanguage()); //todo!
-                System.out.print(StringManager.getMessageString(Message.ADDED) + s);
+                System.out.print(StringManager.getMessageString(Message.ADDED) + StringManager.wrapToString(s));
             }
             return true;
         }
@@ -85,7 +85,7 @@ public class Main {
 
     }
     private static boolean addCircumcirleOfShape(Shape shape){
-        System.out.println(StringManager.getMessageString(Message.CIRCUMCIRCLE_CHOSEN) + shape);
+        System.out.println(StringManager.getMessageString(Message.CIRCUMCIRCLE_CHOSEN) + StringManager.wrapToString(shape));
         try {
             Circle circle = shape.getCircumcircle();
             addToAllShapes(circle);
@@ -116,8 +116,8 @@ public class Main {
         return true;
     }
     private static boolean doActionOnShape(Shape chosenShape){
-        System.out.println(StringManager.getMessageString(Message.CHOSEN_F) + chosenShape);
-        String modificationCode = DataTaker.takeFigureModification();
+        System.out.println(StringManager.getMessageString(Message.CHOSEN_F) + StringManager.wrapToString(chosenShape));
+        String modificationCode = DataTaker.takeFigureModification(StringManager.getLanguage());
         switch (modificationCode){
             case "d" -> {
                 return addModifiedShape(chosenShape, "d");
@@ -154,7 +154,7 @@ public class Main {
         Collections.sort(sortedShapes, new OneStageComparator(sortRule));
         ListIterator<Shape> it = sortedShapes.listIterator();
         while (it.hasNext()) {
-            System.out.println(it.nextIndex()+1 + " " + it.next());
+            System.out.println(it.nextIndex()+1 + " " + StringManager.wrapToString(it.next()));
         }
         String message = StringManager.getMessageString(Message.CHOOSE_NUMBER_OF_SHAPE);
         Integer number = DataTaker.takeOneNumber(1, allShapes.size(), message);
@@ -190,7 +190,7 @@ public class Main {
     }
 
     public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException {
-        String taskCode = DataTaker.takeOneTaskCommand();
+        String taskCode = DataTaker.takeOneTaskCommand(StringManager.getLanguage());
         switch (taskCode){
             case "x" -> {
                 return false;

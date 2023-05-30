@@ -43,7 +43,18 @@ public class Triangle extends Shape{
         return new Triangle(side1*Math.sqrt(2), side2*Math.sqrt(2), side3*Math.sqrt(2));
     }
 
-    public String toString(){
-        return "Trojkat o bokach: " + RoundClass.round(side1) + ", " + RoundClass.round(side2) + ", " + RoundClass.round(side3) + super.toString();
+    public String toString(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "Trojkat o bokach: " + RoundClass.round(side1) + ", " + RoundClass.round(side2) +
+                        ", " + RoundClass.round(side3) + super.toString(lang);
+            }
+            case ENGLISH -> {
+                return "Triangle with sides: " + RoundClass.round(side1) + ", " + RoundClass.round(side2) +
+                        ", " + RoundClass.round(side3) + super.toString(lang);
+            }
+        }
+        return "Wrong language";
+
     }
 }

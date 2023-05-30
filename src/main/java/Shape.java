@@ -18,9 +18,19 @@ public abstract class Shape implements Comparable<Shape> {
         return dateTime;
     }
     public int getVerticesNumber(){return verticesNumber;}
-    public String toString(){
-        return " pole:" + RoundClass.round(area) + " obwód:" + RoundClass.round(perimeter) +
-                " data utworzenia:" + dateTime;
+    public String toString(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return " pole:" + RoundClass.round(area) + " obwód:" + RoundClass.round(perimeter) +
+                        " data utworzenia:" + dateTime;
+            }
+            case ENGLISH -> {
+                return " area:" + RoundClass.round(area) + " perimeter: " +
+                        RoundClass.round(perimeter) + " creation date:" + dateTime;
+            }
+        }
+        return "Wrong language";
+
     }
 
     // abstract static :(

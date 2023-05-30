@@ -21,16 +21,22 @@ public class CircleFactory extends ShapeFactory{
         return code.equals("r") || code.equals("d") || code.equals("p") || code.equals("l");
     }
 
-    @Override
     public String getMessageChoiceFeature() {
         return "r - promień, d - średnica, p - pole, l - obwód";
     }
-    /*TODO:
+    @Override
     public String getMessageChoiceFeature(Language lang){
-        switch(lang)
-            ...
+        switch(lang){
+            case POLISH -> {
+                return "r - promień, d - średnica, p - pole, l - obwód";
+            }
+            case ENGLISH -> {
+                return "r - radius, d - diameter, p - area, l - perimeter";
+            }
+        }
+        return "Wrong language";
     }
-     */
+
 
 
 }

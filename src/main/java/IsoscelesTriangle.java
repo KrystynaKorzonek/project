@@ -55,6 +55,10 @@ public class IsoscelesTriangle extends Shape{
             side = Math.sqrt(base*base/4 + height*height);
         }
         perimeter = 2*side + base;
+        if(side< Constants.MIN_ATTR_VAL || height< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL ||
+                side> Constants.MAX_ATTR_VAL || height> Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL){
+            throw new IllegalArgumentException("Bad values of figure");
+        }
     }
 
     public Double getSide(){
@@ -72,6 +76,23 @@ public class IsoscelesTriangle extends Shape{
                 " wysokość: " + RoundClass.round(height) +
                 " podstawa: " + RoundClass.round(base) +
                 super.toString();
+    }
+
+    public String toString(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "Trójkąt równoramienny - bok: " + RoundClass.round(side) +
+                        " wysokość: " + RoundClass.round(height) +
+                        " podstawa: " + RoundClass.round(base) +
+                        super.toString();
+            }
+            case ENGLISH -> {
+                return "Isosceles triangle - side: " + RoundClass.round(side) +
+                        " height: " + RoundClass.round(height) + " base: " + RoundClass.round(base) + super.toString(lang);
+            }
+        }
+        return "Wrong language";
+
     }
 
     public IsoscelesTriangle getDoubleShape(){

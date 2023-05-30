@@ -20,8 +20,19 @@ public class Equilateral_TriangleFactory extends ShapeFactory{
         return code.equals("a") || code.equals("h") || code.equals("p");
     }
 
-    @Override
     public String getMessageChoiceFeature() {
         return "a - bok, h - wysokosc, p - pole";
+    }
+    @Override
+    public String getMessageChoiceFeature(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "a - bok, h - wysokosc, p - pole";
+            }
+            case ENGLISH -> {
+                return "a - side, h - height, p - area";
+            }
+        }
+        return "Wrong language";
     }
 }

@@ -68,12 +68,46 @@ public class EquilateralTrapezoid extends Shape{
             a = b;
             b = tmp;
         }
+        if(a< Constants.MIN_ATTR_VAL || h< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL ||
+                a>100000000 || b < Constants.MIN_ATTR_VAL || b> Constants.MAX_ATTR_VAL ||
+                h> Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL){
+            throw new IllegalArgumentException("Bad values of figure");
+        }
 
 
     }
     public String toString(){
-        return "Trapez równoramienny - dłuższa podstawa: " + RoundClass.round(a) + " krótsza podstawa: " + RoundClass.round(b) + " ramie: " + RoundClass.round(c) + " wysokość: " + RoundClass.round(h) + super.toString();
+        return "Trapez równoramienny - dłuższa podstawa: " + RoundClass.round(a) + " krótsza podstawa: " +
+                RoundClass.round(b) + " ramie: " + RoundClass.round(c) + " wysokość: " + RoundClass.round(h)
+                + super.toString();
     }
+
+    public String toString(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "Trapez równoramienny - dłuższa podstawa: " + RoundClass.round(a) + " krótsza podstawa: " +
+                        RoundClass.round(b) + " ramie: " + RoundClass.round(c) + " wysokość: " + RoundClass.round(h)
+                        + super.toString(lang);
+            }
+            case ENGLISH -> {
+                return "Equilateral trapezoid - longer_base: " + RoundClass.round(a) +
+                        " shorter_base: " + RoundClass.round(b) + " side: " + RoundClass.round(c) +
+                        " height: " + RoundClass.round(h) + super.toString(lang);
+            }
+        }
+        return "Wrong language";
+
+    }
+
+    public int compareTo(Shape another){
+        if (another instanceof EquilateralTrapezoid) {
+            if (a == ((EquilateralTrapezoid)another).a && b == ((EquilateralTrapezoid)another).b &&
+                    c == ((EquilateralTrapezoid)another).c && h == ((EquilateralTrapezoid)another).h)
+                return 0;
+        }
+        return Constants.NONZERO;
+    }
+
     @Override
     public Circle getCircumcircle() throws NoCircumcircleException {
         RectangularTriangle triangle = new RectangularTriangle(Map.of("a", (a+b)/2, "b", h));

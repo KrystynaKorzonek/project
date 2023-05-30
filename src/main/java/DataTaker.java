@@ -45,27 +45,63 @@ public class DataTaker {
             "x", new StringPair( "zrezygnuj z dodawania figury", "resign from adding the shape")
     );
 
-    public static String takeOneTaskCommand(){
-        return takeOneStringFromList(FIGURES_MAP, OTHER_ACTIONS_MAP, "Wybierz figurę:", null);
+    public static String takeOneTaskCommand(Language lang){
+        String initial_message = "";
+        switch(lang){
+            case POLISH -> {
+                initial_message = "Wybierz figurę:";
+            }
+            case ENGLISH -> {
+                initial_message = "Pick figure:";
+            }
+        }
+        return takeOneStringFromList(FIGURES_MAP, OTHER_ACTIONS_MAP, initial_message, null);
     }
-    public static String takeSortCriterion(){
-        return takeOneStringFromList(SORT_CRITERION_MAP, null, "Wybierz kryterium sortowania:", null);
+    public static String takeSortCriterion(Language lang){
+        String initial_message = "";
+        switch(lang){
+            case POLISH -> {
+                initial_message = "Wybierz kryterium sortowania:";
+            }
+            case ENGLISH -> {
+                initial_message = "Pick criteria of sorting:";
+            }
+        }
+        return takeOneStringFromList(SORT_CRITERION_MAP, null, initial_message, null);
     }
-    public static String takeSortOrder(){
-        return takeOneStringFromList(SORT_ORDER_MAP, null, "Wybierz sposób sortowania:", null);
+    public static String takeSortOrder(Language lang){
+        String initial_message = "";
+        switch(lang){
+            case POLISH -> {
+                initial_message = "Wybierz sposób sortowania:";
+            }
+            case ENGLISH -> {
+                initial_message = "Pick type of sorting:";
+            }
+        }
+        return takeOneStringFromList(SORT_ORDER_MAP, null, initial_message, null);
     }
-    public static String takeFigureModification(){
+    public static String takeFigureModification(Language lang){
+        String initial_message = "";
+        switch(lang){
+            case POLISH -> {
+                initial_message = "Wybierz, co chcesz zrobić:";
+            }
+            case ENGLISH -> {
+                initial_message = "Pick, what you want to do:";
+            }
+        }
         return takeOneStringFromList(
                 FIGURE_MODIFICATIONS_MAP,
                 EXIT_MAP,
-                "Wybierz, co chcesz zrobić:",
+                initial_message,
                 null
         );
     }
     public static SortRule getSortRule(){
         SortCriterion criterion = null;
         Order order = null;
-        String criterionString = takeSortCriterion();
+        String criterionString = takeSortCriterion(StringManager.getLanguage());
         switch (criterionString){
             case "o" -> {
                 criterion = SortCriterion.PERIMETER;
@@ -80,7 +116,7 @@ public class DataTaker {
                 criterion = SortCriterion.VERTICES_NUMBER;
             }
         }
-        String orderString = takeSortOrder();
+        String orderString = takeSortOrder(StringManager.getLanguage());
         switch (orderString) {
             case "r" -> {
                 order = Order.ASC;
@@ -171,18 +207,45 @@ public class DataTaker {
 
     public static Pair<String, Double> getFromUserFeatureValuePair(ShapeFactory factory) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Wybierz cechę, którą podasz:");
-        String messageChoiceFeature = factory.getMessageChoiceFeature();
+        String initial_message = "";
+        String wrong_value_message = "";
+        String get_value_message = "";
+        String minus_val = "";
+        String zero_val = "";
+        String once_again_message = "";
+        String not_num_message = "";
+        switch(StringManager.getLanguage()){
+            case POLISH -> {
+                initial_message = "Wybierz cechę, którą podasz:";
+                wrong_value_message = "Nieprawidłowa wartość";
+                get_value_message = "Podaj jej wartość:";
+                minus_val = "Ujemna wartość!";
+                zero_val = "Zerowa wartość!";
+                once_again_message = "Spróbuj jeszcze raz:";
+                not_num_message = "Błąd: input nie jest liczbą!";
+            }
+            case ENGLISH -> {
+                initial_message = "Pick feature which you want to add:";
+                wrong_value_message = "Wrong value";
+                get_value_message = "Provide its value";
+                minus_val = "Value lower than 0!";
+                zero_val = "Value equal 0!";
+                once_again_message = "Try once again:";
+                not_num_message = "Error: input is not a number";
+            }
+        }
+        System.out.println(initial_message);
+        String messageChoiceFeature = factory.getMessageChoiceFeature(StringManager.getLanguage());
         //String messageChoiceFeature = factory.getMessageChoiceFeature(StringManager.getLanguage());
         System.out.println(messageChoiceFeature);
         String feature = scan.nextLine().toLowerCase();
         while (!factory.isFeatureCode(feature)){
-            System.out.println("Nieprawidłowa wartość");
-            System.out.println("Wybierz cechę, którą podasz:");
+            System.out.println(wrong_value_message);
+            System.out.println(initial_message);
             System.out.println(messageChoiceFeature);
             feature = scan.nextLine().toLowerCase();
         }
-        System.out.println("Podaj jej wartość:");
+        System.out.println(get_value_message);
         boolean done = false;
         double value = 0;
         String string_value;
@@ -192,15 +255,15 @@ public class DataTaker {
                 value = Double.parseDouble(string_value);
                 try {
                     if (value<0)
-                        throw new IllegalArgumentException("Ujemna wartość!");
+                        throw new IllegalArgumentException(minus_val);
                     if (value==0)
-                        throw new IllegalArgumentException("Zerowa wartość!");
+                        throw new IllegalArgumentException(zero_val);
                     done = true;
                 } catch (IllegalArgumentException e) {
-                    System.out.println(e.getMessage() + "\nSpróbuj jeszcze raz:");
+                    System.out.println(e.getMessage() + "\n" + once_again_message);
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Błąd: input nie jest liczbą!" + "\nSpróbuj jeszcze raz");
+                System.out.println(not_num_message + "\n" + once_again_message);
             }
         }
         return new Pair(feature, value);

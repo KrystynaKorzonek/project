@@ -24,8 +24,19 @@ public class RectangleFactory extends ShapeFactory{
         return code.equals("a") || code.equals("b") || code.equals("e") || code.equals("p");
     }
 
-    @Override
     public String getMessageChoiceFeature() {
         return "a - pierwszy bok, b - drugi bok, e - przekątna, p - pole";
+    }
+    @Override
+    public String getMessageChoiceFeature(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "a - pierwszy bok, b - drugi bok, e - przekątna, p - pole";
+            }
+            case ENGLISH -> {
+                return "a - first side, b - second side, e - diagonal, p - area";
+            }
+        }
+        return "Wrong language";
     }
 }

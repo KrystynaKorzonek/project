@@ -35,11 +35,25 @@ public class Square extends Shape{
         }
         this.dateTime = LocalDateTime.now();
         this.verticesNumber = 4;
+        if(side< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL || side> Constants.MAX_ATTR_VAL ||
+                area > Constants.MAX_ATTR_VAL || diagonal < Constants.MIN_ATTR_VAL || diagonal> Constants.MAX_ATTR_VAL){
+            throw new IllegalArgumentException("Bad values of figure");
+        }
     }
 
-    public String toString(){
-        return "Kwadrat - bok: " + RoundClass.round(side) +
-                " przekątna: " + RoundClass.round(diagonal) + super.toString();
+    public String toString(Language lang){
+        switch(lang){
+            case POLISH -> {
+                return "Kwadrat - bok: " + RoundClass.round(side) +
+                        " przekątna: " + RoundClass.round(diagonal) + super.toString(lang);
+            }
+            case ENGLISH -> {
+                return "Square - sode: " + RoundClass.round(side) + " diagonal: " +
+                        RoundClass.round(diagonal) + super.toString(lang);
+            }
+        }
+        return "Wrong language";
+
     }
     
     @Override
