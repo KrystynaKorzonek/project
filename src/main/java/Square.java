@@ -5,6 +5,12 @@ import java.util.Set;
 public class Square extends Shape{
     private double side;
     private double diagonal;
+    public double getSide(){
+        return side;
+    }
+    public double getDiagonal(){
+        return diagonal;
+    }
 
     private void setFeatures(String feature, double value){
         switch (feature){
