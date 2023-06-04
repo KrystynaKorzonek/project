@@ -2,17 +2,20 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 public class DataTaker {
-    public static Map<String, StringPair> FIGURES_MAP = Map.of(
-            "s", new StringPair("kwadrat", "square"),
-            "c", new StringPair("koło", "circle"),
-            "d", new StringPair("romb", "rhombus"),
-            "p", new StringPair("prostokąt", "rectangle"),
-            "tr", new StringPair("trójkąt równoboczny", "equilateral triangle"),
-            "i", new StringPair("trójkąt równoramienny", "isosceles triangle"),
-            "r", new StringPair("trójkąt prostokątny", "rectangular triangle"),
-            "e", new StringPair("elipsa", "ellipse"),
-            "t", new StringPair("trapez równoramienny", "isosceles trapezoid")
+    public static Map<String, StringPair> FIGURES_MAP = Map.ofEntries(
+            Map.entry("s", new StringPair("kwadrat", "square")),
+            Map.entry("c", new StringPair("koło", "circle")),
+            Map.entry("d", new StringPair("romb", "rhombus")),
+            Map.entry("p", new StringPair("prostokąt", "rectangle")),
+            Map.entry("tr", new StringPair("trójkąt równoboczny", "equilateral triangle")),
+            Map.entry("i", new StringPair("trójkąt równoramienny", "isosceles triangle")),
+            Map.entry("r", new StringPair("trójkąt prostokątny", "rectangular triangle")),
+            Map.entry("e", new StringPair("elipsa", "ellipse")),
+            Map.entry("t", new StringPair("trapez równoramienny", "isosceles trapezoid")),
+            Map.entry("tg", new StringPair("trójkąt", "triangle")),
+            Map.entry("h", new StringPair("sześciokąt foremny", "regular hexagon"))
     );
+
     public static Map<String, StringPair> OTHER_ACTIONS_MAP = Map.of(
             "a", new StringPair("zobacz wszystkie figury", "see all shapes"),
             "as", new StringPair("zobacz posortowane figury", "see sorted shapes"),

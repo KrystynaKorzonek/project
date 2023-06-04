@@ -61,6 +61,12 @@ public class Main {
             case "t"->{
                 factory = new EquilateralTrapezoidFactory();
             }
+            case "tg"->{
+                factory = new TriangleFactory();
+            }
+            case "h"->{
+                factory = new RegularHexagonFactory();
+            }
         }
         Map<String, Double> features = new HashMap<String, Double>();
 

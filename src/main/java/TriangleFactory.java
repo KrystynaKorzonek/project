@@ -56,9 +56,7 @@ public class TriangleFactory extends ShapeFactory{
         return code.equals("a") || code.equals("b") || code.equals("c");
     }
 
-    public String getMessageChoiceFeature() {
-        return "a - bok1, b - bok2, c - bok3";
-    }
+
     @Override
     public String getMessageChoiceFeature(Language lang){
         switch(lang){

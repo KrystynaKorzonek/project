@@ -57,4 +57,12 @@ public class Triangle extends Shape{
         return "Wrong language";
 
     }
+
+    public int compareTo(Shape shape){
+        if(shape instanceof Triangle triangle){
+            return Double.compare(this.area, triangle.area);
+        }
+        else
+            return super.compareTo(shape);
+    }
 }
