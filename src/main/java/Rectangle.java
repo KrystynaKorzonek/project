@@ -9,6 +9,8 @@ public class Rectangle extends Shape {
     private double side2;
     private double diag;
     public double getSide1(){return side1;}
+    public double getSide2(){return side2;}
+    public double getDiagonal(){return diag;}
     public boolean canBeSquare(){
         return side1==side2;
     }

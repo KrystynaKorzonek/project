@@ -37,6 +37,22 @@ public class SquareTest {
         double expectedSide = 5.0;
         Assert.assertEquals(expectedArea, actualArea, 0);
         Assert.assertEquals(expectedPerimeter, actualPerimeter, 0);
-        Assert.assertEquals(actualSide, expectedSide, 0.00001);
+        Assert.assertEquals(actualSide, expectedSide, 0.0000001);
+    }
+
+    @Test
+    public void test_all_given_area() {
+        Map<String, Double> features = new HashMap<>();
+        features.put("p",25.0);
+        Square square = new Square(features);
+        double actualSide = square.getSide();
+        double expectedSide = 5.0;
+        double actualPerimeter = square.getPerimeter();
+        double expectedPerimeter = 20.0;
+        double actualDiagonal = square.getDiagonal();
+        double expectedDiagonal = 7.0710678118654755;
+        Assert.assertEquals(actualSide, expectedSide, 0);
+        Assert.assertEquals(expectedPerimeter, actualPerimeter, 0);
+        Assert.assertEquals(expectedDiagonal, actualDiagonal, 0.00000001);
     }
 }
