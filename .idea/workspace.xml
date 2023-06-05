@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="compareTo dla: kwadratu, rombu, trójkąta równoramiennego i prostokątnego">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CircleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RectangleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SquareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SquareTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Circle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Circle$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Circle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IsoscelesTriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IsoscelesTriangleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +85,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.project">
+  <component name="RunManager" selected="JUnit.IsoscelesTriangleTest.test_all_given_area_and_side">
     <configuration name="project" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="project" />
@@ -99,48 +93,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CircleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IsoscelesTriangleTest.test_all_given_area_and_base" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CircleTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CircleTest.test_all_given_area" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CircleTest" />
-      <option name="METHOD_NAME" value="test_all_given_area" />
+      <option name="MAIN_CLASS_NAME" value="IsoscelesTriangleTest" />
+      <option name="METHOD_NAME" value="test_all_given_area_and_base" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RectangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IsoscelesTriangleTest.test_all_given_area_and_height" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RectangleTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="IsoscelesTriangleTest" />
+      <option name="METHOD_NAME" value="test_all_given_area_and_height" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SquareTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IsoscelesTriangleTest.test_all_given_area_and_side" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SquareTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="IsoscelesTriangleTest" />
+      <option name="METHOD_NAME" value="test_all_given_area_and_side" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SquareTest.test_all_given_area" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IsoscelesTriangleTest.test_all_given_base_and_height" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SquareTest" />
-      <option name="METHOD_NAME" value="test_all_given_area" />
+      <option name="MAIN_CLASS_NAME" value="IsoscelesTriangleTest" />
+      <option name="METHOD_NAME" value="test_all_given_base_and_height" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IsoscelesTriangleTest.test_all_given_side_and_height" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="IsoscelesTriangleTest" />
+      <option name="METHOD_NAME" value="test_all_given_side_and_height" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,19 +145,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.project" />
-      <item itemvalue="JUnit.CircleTest" />
-      <item itemvalue="JUnit.CircleTest.test_all_given_area" />
-      <item itemvalue="JUnit.RectangleTest" />
-      <item itemvalue="JUnit.SquareTest.test_all_given_area" />
-      <item itemvalue="JUnit.SquareTest" />
+      <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_area_and_base" />
+      <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_area_and_height" />
+      <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_area_and_side" />
+      <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_base_and_height" />
+      <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_side_and_height" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CircleTest" />
-        <item itemvalue="JUnit.CircleTest.test_all_given_area" />
-        <item itemvalue="JUnit.SquareTest" />
-        <item itemvalue="JUnit.SquareTest.test_all_given_area" />
-        <item itemvalue="JUnit.RectangleTest" />
+        <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_area_and_side" />
+        <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_area_and_base" />
+        <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_area_and_height" />
+        <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_base_and_height" />
+        <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_side_and_height" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +175,7 @@
       <workItem from="1685470212483" duration="7947000" />
       <workItem from="1685511927136" duration="1730000" />
       <workItem from="1685777598320" duration="7054000" />
-      <workItem from="1685997240732" duration="2788000" />
+      <workItem from="1685997240732" duration="3662000" />
     </task>
     <task id="LOCAL-00001" summary="Pracownia 1 - koło i kwadrat - obliczenia, prosty interface (bez obsługi błędów)">
       <created>1679772319571</created>
