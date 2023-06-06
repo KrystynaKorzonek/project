@@ -1,6 +1,6 @@
-public class NoSuchTriangleException extends Exception{
+public class NoSuchTriangleException extends Exception {
 
-    public NoSuchTriangleException(String message){
+    public NoSuchTriangleException(String message) {
         super(message);
     }
 }

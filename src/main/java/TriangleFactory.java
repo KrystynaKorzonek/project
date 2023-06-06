@@ -1,9 +1,8 @@
 import java.util.Map;
 import java.util.Set;
 
-public class TriangleFactory extends ShapeFactory{
-    private double side1, side2, side3;
-
+public class TriangleFactory extends ShapeFactory {
+    private double side1, side2, side3; //side1 < side2 < side3
 
 
     @Override
@@ -13,7 +12,10 @@ public class TriangleFactory extends ShapeFactory{
         side3 = features.get("c");
 
         if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
-            throw new NoCircumcircleException("Boki muszą być dodatnie");
+            String m = "Boki muszą być dodatnie";
+            if (StringManager.getLanguage() == Language.ENGLISH)
+                m = "Sides must be positive";
+            throw new NoSuchTriangleException(m);
         }
         if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1) {
             String m = "Niespełniony warunek trójkąta";
@@ -29,38 +31,38 @@ public class TriangleFactory extends ShapeFactory{
         if (side1 == side2) {
             return new IsoscelesTriangle(Map.of("a", side3, "b", side1));
         }
-        if(side1 == side3){
+        if (side1 == side3) {
             return new IsoscelesTriangle(Map.of("a", side2, "b", side1));
         }
-        if(side2 == side3){
+        if (side2 == side3) {
             return new IsoscelesTriangle(Map.of("a", side1, "b", side2));
         }
-        if(side1*side1 + side2*side2 == side3*side3) {
+        if (side1 * side1 + side2 * side2 == side3 * side3) {
             return new RectangularTriangle(Map.of("a", side1, "b", side2));
         }
-        if(side1*side1 + side3*side3 == side2*side2) {
+        if (side1 * side1 + side3 * side3 == side2 * side2) {
             return new RectangularTriangle(Map.of("a", side1, "b", side3));
         }
-        if(side2*side2 + side3*side3 == side1*side1) {
+        if (side2 * side2 + side3 * side3 == side1 * side1) {
             return new RectangularTriangle(Map.of("a", side2, "b", side3));
         }
         return new Triangle(side1, side2, side3);
 
     }
 
-    private void sortSides(){
+    private void sortSides() {
         double tmp;
-        if (side1 > side2){
+        if (side1 > side2) {
             tmp = side1;
             side1 = side2;
             side2 = tmp;
         }
-        if (side2 > side3){
+        if (side2 > side3) {
             tmp = side2;
             side2 = side3;
             side3 = tmp;
         }
-        if (side1 > side2){
+        if (side1 > side2) {
             tmp = side1;
             side1 = side2;
             side2 = tmp;
@@ -69,7 +71,7 @@ public class TriangleFactory extends ShapeFactory{
 
     @Override
     public boolean isProperSetOfFeatures(Set<String> features) {
-        if (features.size()==3)
+        if (features.size() == 3)
             if (features.contains("a") && features.contains("b") && features.contains("c"))
                 return true;
         return false;
@@ -82,8 +84,8 @@ public class TriangleFactory extends ShapeFactory{
 
 
     @Override
-    public String getMessageChoiceFeature(Language lang){
-        switch(lang){
+    public String getMessageChoiceFeature(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return "a - bok1, b - bok2, c - bok3";
             }

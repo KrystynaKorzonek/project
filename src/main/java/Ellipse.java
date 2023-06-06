@@ -3,15 +3,16 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.function.Function;
-public class Ellipse extends Shape{
+
+public class Ellipse extends Shape {
     private double semiMajorAxis;
     private double semiMinorAxis;
 
-    public boolean canBeCircle(){
+    public boolean canBeCircle() {
         return (semiMinorAxis == semiMajorAxis);
     }
 
-    public static Shape toCircleIfPossible(Ellipse e){
+    public static Shape toCircleIfPossible(Ellipse e) {
         if (e.canBeCircle())
             return new Circle(Map.of("r", e.getSemiMajorAxis()));
         return e;
@@ -23,43 +24,38 @@ public class Ellipse extends Shape{
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         Set<String> codes = new TreeSet<>(features.keySet());
-        //if (!isProperSetOfFeatures(codes))
-        //            throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
         if (codes.contains("a") && codes.contains("b")) {
             semiMinorAxis = features.get("a");
             semiMajorAxis = features.get("b");
             area = Math.PI * semiMinorAxis * semiMajorAxis;
-        }
-        else if(codes.contains("a") && codes.contains("p")){
+        } else if (codes.contains("a") && codes.contains("p")) {
             semiMinorAxis = features.get("a");
             area = features.get("p");
-            semiMajorAxis = area/(Math.PI*semiMinorAxis);
-        }
-        else if(codes.contains("b") && codes.contains("p")){
+            semiMajorAxis = area / (Math.PI * semiMinorAxis);
+        } else if (codes.contains("b") && codes.contains("p")) {
             semiMajorAxis = features.get("b");
             area = features.get("p");
-            semiMinorAxis = area/(Math.PI*semiMajorAxis);
-        }
-        else
+            semiMinorAxis = area / (Math.PI * semiMajorAxis);
+        } else
             throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
 
-        if(semiMajorAxis < semiMinorAxis){
+        if (semiMajorAxis < semiMinorAxis) {
             double temp = semiMajorAxis;
             semiMajorAxis = semiMinorAxis;
             semiMinorAxis = temp;
         }
 
         perimeter = Math.PI * (semiMajorAxis + semiMinorAxis);
-        if(semiMajorAxis< Constants.MIN_ATTR_VAL || semiMinorAxis< Constants.MIN_ATTR_VAL ||
-                area < Constants.MIN_ATTR_VAL || semiMajorAxis> Constants.MAX_ATTR_VAL ||
-                semiMinorAxis> Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL){
+        if (semiMajorAxis < Constants.MIN_ATTR_VAL || semiMinorAxis < Constants.MIN_ATTR_VAL ||
+                area < Constants.MIN_ATTR_VAL || semiMajorAxis > Constants.MAX_ATTR_VAL ||
+                semiMinorAxis > Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL) {
             throw new IllegalArgumentException("Bad values of figure");
         }
     }
 
-    public int compareTo(Shape another){
+    public int compareTo(Shape another) {
         if (another instanceof Ellipse) {
-            if (semiMajorAxis == ((Ellipse)another).semiMajorAxis && semiMinorAxis == ((Ellipse)another).semiMinorAxis)
+            if (semiMajorAxis == ((Ellipse) another).semiMajorAxis && semiMinorAxis == ((Ellipse) another).semiMinorAxis)
                 return 0;
         }
         return Constants.NONZERO;
@@ -77,8 +73,8 @@ public class Ellipse extends Shape{
         return area;
     }
 
-    public String toString(Language lang){
-        switch(lang){
+    public String toString(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return "Elipsa: polos mala: " + RoundClass.round(semiMinorAxis) +
                         ", polos wielka: " + RoundClass.round(semiMajorAxis) + super.toString(lang);
@@ -95,7 +91,7 @@ public class Ellipse extends Shape{
     @Override
     public Circle getCircumcircle() throws NoCircumcircleException {
         String message = null;
-        switch (StringManager.getLanguage()){
+        switch (StringManager.getLanguage()) {
             case POLISH -> {
                 message = "Elipsa nie ma koła opisanego";
             }

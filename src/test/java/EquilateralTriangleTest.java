@@ -6,7 +6,7 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-public class Equilateral_TriangleTest {
+public class EquilateralTriangleTest {
     @Test
     public void test_all_given_side() {
         Map<String, Double> features = new HashMap<>();

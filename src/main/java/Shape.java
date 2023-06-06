@@ -8,18 +8,25 @@ public abstract class Shape implements Comparable<Shape> {
     protected double perimeter;
     protected int verticesNumber;
     protected LocalDateTime dateTime;
-    public double getArea(){
+
+    public double getArea() {
         return area;
     }
-    public double getPerimeter(){
+
+    public double getPerimeter() {
         return perimeter;
     }
-    public LocalDateTime getDateTime(){
+
+    public LocalDateTime getDateTime() {
         return dateTime;
     }
-    public int getVerticesNumber(){return verticesNumber;}
-    public String toString(Language lang){
-        switch(lang){
+
+    public int getVerticesNumber() {
+        return verticesNumber;
+    }
+
+    public String toString(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return " pole:" + RoundClass.round(area) + " obwód:" + RoundClass.round(perimeter) +
                         " data utworzenia:" + dateTime;
@@ -33,24 +40,27 @@ public abstract class Shape implements Comparable<Shape> {
 
     }
 
-    // abstract static :(
-    public int compareTo(Shape another){
+    public int compareTo(Shape another) {
         return Double.compare(this.area, another.area);
     }
+
     public abstract Circle getCircumcircle() throws NoCircumcircleException;
+
     public abstract Shape getDoubleShape();
 
 
 }
 
-class OneStageComparator implements Comparator<Shape>{
+class OneStageComparator implements Comparator<Shape> {
     SortRule sortRule;
-    public OneStageComparator(SortRule sortRule){
+
+    public OneStageComparator(SortRule sortRule) {
         this.sortRule = sortRule;
     }
-    public int compare(Shape s1, Shape s2){
+
+    public int compare(Shape s1, Shape s2) {
         int asc_res = 0;
-        switch (sortRule.criterion){
+        switch (sortRule.criterion) {
             case AREA -> {
                 asc_res = Double.compare(s1.getArea(), s2.getArea());
             }

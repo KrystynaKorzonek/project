@@ -1,7 +1,7 @@
 import java.util.Map;
 import java.util.Set;
 
-public class RectangleFactory extends ShapeFactory{
+public class RectangleFactory extends ShapeFactory {
     @Override
     public Shape create(Map<String, Double> features) {
         Rectangle created = new Rectangle(features);
@@ -10,7 +10,7 @@ public class RectangleFactory extends ShapeFactory{
 
     @Override
     public boolean isProperSetOfFeatures(Set<String> features) {
-        if (features.size()==2) {
+        if (features.size() == 2) {
             for (String code : features)
                 if (!isFeatureCode(code))
                     return false;
@@ -27,9 +27,10 @@ public class RectangleFactory extends ShapeFactory{
     public String getMessageChoiceFeature() {
         return "a - pierwszy bok, b - drugi bok, e - przekątna, p - pole";
     }
+
     @Override
-    public String getMessageChoiceFeature(Language lang){
-        switch(lang){
+    public String getMessageChoiceFeature(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return "a - pierwszy bok, b - drugi bok, e - przekątna, p - pole";
             }
