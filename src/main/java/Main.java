@@ -1,5 +1,3 @@
-import com.sun.source.tree.Tree;
-
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -47,7 +45,7 @@ public class Main {
                 factory = new RectangleFactory();
             }
             case "tr" -> {
-                factory = new Equilateral_TriangleFactory();
+                factory = new EquilateralTriangleFactory();
             }
             case "i" -> {
                 factory = new IsoscelesTriangleFactory();

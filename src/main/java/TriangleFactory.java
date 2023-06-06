@@ -22,7 +22,7 @@ public class TriangleFactory extends ShapeFactory{
             throw new NoSuchTriangleException(m);
         }
         if (side1 == side2 && side2 == side3) {
-            return new Equilateral_Triangle(Map.of("a", side1));
+            return new EquilateralTriangle(Map.of("a", side1));
         }
         // trójkąt prostokątny równoramienny -> utworzy się trójkąt równoramienny (tak jak ma być)
         if (side1 == side2) {

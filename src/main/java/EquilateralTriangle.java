@@ -1,15 +1,13 @@
 import java.time.LocalDateTime;
 import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
 
-public class Equilateral_Triangle extends Shape {
+public class EquilateralTriangle extends Shape {
     private double side;
     private double height;
     public double getSide() { return side;}
     public double getHeight() { return height;}
 
-    public Equilateral_Triangle(Map<String, Double> features){
+    public EquilateralTriangle(Map<String, Double> features){
         this.verticesNumber = 3;
         this.dateTime = LocalDateTime.now();
         if (features.size() != 1)
@@ -46,8 +44,8 @@ public class Equilateral_Triangle extends Shape {
     }
 
     public int compareTo(Shape another){
-        if (another instanceof Equilateral_Triangle) {
-            if (side == ((Equilateral_Triangle)another).side && height == ((Equilateral_Triangle)another).height)
+        if (another instanceof EquilateralTriangle) {
+            if (side == ((EquilateralTriangle)another).side && height == ((EquilateralTriangle)another).height)
                 return 0;
         }
         return Constants.NONZERO;
@@ -74,7 +72,7 @@ public class Equilateral_Triangle extends Shape {
     }
 
     @Override
-    public Equilateral_Triangle getDoubleShape(){
-        return new Equilateral_Triangle(Map.of("a", side*Math.sqrt(2)));
+    public EquilateralTriangle getDoubleShape(){
+        return new EquilateralTriangle(Map.of("a", side*Math.sqrt(2)));
     }
 }
