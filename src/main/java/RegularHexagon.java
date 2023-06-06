@@ -18,7 +18,7 @@ public class RegularHexagon extends Shape {
                 this.side = perimeter / 6;
                 this.area = calculateArea();
             } else if (perimeter == 0.0) {
-                this.side = Math.sqrt(area * 2 / Math.sqrt(3));
+                this.side = Math.sqrt(area * 2 / (Math.sqrt(3)*3));
                 this.perimeter = calculatePerimeter();
             }
         } else {

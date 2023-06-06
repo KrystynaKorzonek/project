@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="drobiazgi w compare">
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="poprawka pole 6-kata">
       <change beforePath="$PROJECT_DIR$/src/main/java/RegularHexagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularHexagon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -339,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686090155065</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="poprawka pole 6-kata">
+      <created>1686090388408</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1686090388408</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +387,8 @@
     <MESSAGE value="kosmetyka" />
     <MESSAGE value="formatowanie" />
     <MESSAGE value="drobiazgi w compare" />
-    <option name="LAST_COMMIT_MESSAGE" value="drobiazgi w compare" />
+    <MESSAGE value="poprawka pole 6-kata" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawka pole 6-kata" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
