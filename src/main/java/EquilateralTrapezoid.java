@@ -146,8 +146,8 @@ public class EquilateralTrapezoid extends Shape{
         return h;
     }
 
-    @Override //TODO!
+    @Override
     public Shape getDoubleShape() {
-        return null;
+        return new EquilateralTrapezoid(Map.of("a", Math.sqrt(2)*a, "b", Math.sqrt(2)*b, "h", Math.sqrt(2)*h));
     }
 }

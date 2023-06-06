@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="wprowadzenie TreeSeta i zablokowanie możliwości tworzenia dubli&#10;(UWAGA! ciągle brakuje metod compareTo() w większości klas!)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Equilateral_TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Equilateral_TriangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoid.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +87,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Equilateral_TriangleTest.test_all_given_area">
+  <component name="RunManager" selected="Application.project">
     <configuration name="project" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="project" />
