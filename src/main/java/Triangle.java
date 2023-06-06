@@ -60,7 +60,8 @@ public class Triangle extends Shape{
 
     public int compareTo(Shape shape){
         if(shape instanceof Triangle triangle){
-            return Double.compare(this.area, triangle.area);
+            return Double.compare(side1, triangle.side1) + Double.compare(side2, triangle.side2) +
+                    Double.compare(side3, triangle.side3);
         }
         else
             return super.compareTo(shape);
