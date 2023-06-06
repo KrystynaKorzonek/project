@@ -67,7 +67,7 @@ public class RegularHexagon extends Shape{
             return Double.compare(this.side, ((RegularHexagon) shape).side);
         }
         else{
-            return super.compareTo(shape);
+            return Constants.NONZERO;
         }
     }
 }
