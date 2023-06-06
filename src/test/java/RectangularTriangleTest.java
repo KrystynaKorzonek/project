@@ -15,52 +15,68 @@ public class RectangularTriangleTest {
 
     @Test
     public void getHypotenuse() {
-        assertEquals(5.0, test1.getHypotenuse(), 0.001);
-        assertEquals(17.0, test2.getHypotenuse(), 0.001);
-        assertEquals(13.0, test3.getHypotenuse(), 0.001);
-        assertEquals(13.0, test4.getHypotenuse(), 0.001);
-        assertEquals(17.0, test5.getHypotenuse(), 0.001);
-        assertEquals(13.0, test6.getHypotenuse(), 0.001);
+        assertEquals(5.0, test1.getHypotenuse(), 0.0000001);
+        assertEquals(17.0, test2.getHypotenuse(), 0.0000001);
+        assertEquals(13.0, test3.getHypotenuse(), 0.0000001);
+        assertEquals(13.0, test4.getHypotenuse(), 0.0000001);
+        assertEquals(17.0, test5.getHypotenuse(), 0.0000001);
+        assertEquals(13.0, test6.getHypotenuse(), 0.0000001);
 
     }
 
     @Test
     public void getCathetus1() {
-        assertEquals(3.0, test1.getCathetus1(), 0.001);
-        assertEquals(8.0, test2.getCathetus1(), 0.001);
-        assertEquals(5.0, test3.getCathetus1(), 0.001);
-        assertEquals(5.0, test4.getCathetus1(), 0.001);
-        assertEquals(8.0, test5.getCathetus1(), 0.001);
-        assertEquals(5.0, test6.getCathetus1(), 0.001);
+        assertEquals(3.0, test1.getCathetus1(), 0.0000001);
+        assertEquals(8.0, test2.getCathetus1(), 0.0000001);
+        assertEquals(5.0, test3.getCathetus1(), 0.0000001);
+        assertEquals(5.0, test4.getCathetus1(), 0.0000001);
+        assertEquals(8.0, test5.getCathetus1(), 0.0000001);
+        assertEquals(5.0, test6.getCathetus1(), 0.0000001);
     }
 
     @Test
     public void getCathetus2() {
-        assertEquals(4.0, test1.getCathetus2(), 0.001);
-        assertEquals(15.0, test2.getCathetus2(), 0.001);
-        assertEquals(12.0, test3.getCathetus2(), 0.001);
-        assertEquals(12.0, test4.getCathetus2(), 0.001);
-        assertEquals(15.0, test5.getCathetus2(), 0.001);
-        assertEquals(12.0, test6.getCathetus2(), 0.001);
+        assertEquals(4.0, test1.getCathetus2(), 0.0000001);
+        assertEquals(15.0, test2.getCathetus2(), 0.0000001);
+        assertEquals(12.0, test3.getCathetus2(), 0.0000001);
+        assertEquals(12.0, test4.getCathetus2(), 0.0000001);
+        assertEquals(15.0, test5.getCathetus2(), 0.0000001);
+        assertEquals(12.0, test6.getCathetus2(), 0.0000001);
     }
 
     @Test
     public void getArea() {
-        assertEquals(6.0, test1.getArea(), 0.001);
-        assertEquals(60.0, test2.getArea(), 0.001);
-        assertEquals(30.0, test3.getArea(), 0.001);
-        assertEquals(30.0, test4.getArea(), 0.001);
-        assertEquals(60.0, test5.getArea(), 0.001);
-        assertEquals(30.0, test6.getArea(), 0.001);
+        assertEquals(6.0, test1.getArea(), 0.0000001);
+        assertEquals(60.0, test2.getArea(), 0.0000001);
+        assertEquals(30.0, test3.getArea(), 0.0000001);
+        assertEquals(30.0, test4.getArea(), 0.0000001);
+        assertEquals(60.0, test5.getArea(), 0.0000001);
+        assertEquals(30.0, test6.getArea(), 0.0000001);
     }
 
     @Test
     public void getPerimeter() {
-        assertEquals(12.0, test1.getPerimeter(), 0.001);
-        assertEquals(40.0, test2.getPerimeter(), 0.001);
-        assertEquals(30.0, test3.getPerimeter(), 0.001);
-        assertEquals(30.0, test4.getPerimeter(), 0.001);
-        assertEquals(40.0, test5.getPerimeter(), 0.001);
-        assertEquals(30.0, test6.getPerimeter(), 0.001);
+        assertEquals(12.0, test1.getPerimeter(), 0.0000001);
+        assertEquals(40.0, test2.getPerimeter(), 0.0000001);
+        assertEquals(30.0, test3.getPerimeter(), 0.0000001);
+        assertEquals(30.0, test4.getPerimeter(), 0.0000001);
+        assertEquals(40.0, test5.getPerimeter(), 0.0000001);
+        assertEquals(30.0, test6.getPerimeter(), 0.0000001);
+    }
+
+    @Test
+    public void getDoubledTriangle() {
+        Shape rect1 = test1.getDoubleShape();
+        Shape rect2 = test2.getDoubleShape();
+        Shape rect3 = test3.getDoubleShape();
+        Shape rect4 = test4.getDoubleShape();
+        Shape rect5 = test5.getDoubleShape();
+        Shape rect6 = test6.getDoubleShape();
+        assertEquals(12.0, rect1.getArea(), 0.0000001);
+        assertEquals(120.0, rect2.getArea(), 0.0000001);
+        assertEquals(60.0, rect3.getArea(), 0.0000001);
+        assertEquals(60.0, rect4.getArea(), 0.0000001);
+        assertEquals(120.0, rect5.getArea(), 0.0000001);
+        assertEquals(60.0, rect6.getArea(), 0.0000001);
     }
 }

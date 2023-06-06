@@ -3,8 +3,10 @@ import java.util.Set;
 public class EquilateralTrapezoidFactory extends ShapeFactory{
     @Override
     public Shape create(Map<String, Double> features) {
-        return new EquilateralTrapezoid(features);
+        EquilateralTrapezoid created = new EquilateralTrapezoid(features);
+        return EquilateralTrapezoid.toRectangleOrSquareIfPossible(created);
     }
+
 
     @Override
     public boolean isProperSetOfFeatures(Set<String> features) {

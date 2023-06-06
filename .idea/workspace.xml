@@ -4,34 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="compareTo dla: kwadratu, rombu, trójkąta równoramiennego i prostokątnego">
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="ppodwojenie trapezu równoramiennego">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CircleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CircleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataTaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ellipse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EllipseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EllipseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoidFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoidFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Equilateral_Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Equilateral_Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Equilateral_TriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Equilateral_TriangleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IsoscelesTriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IsoscelesTriangleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RectangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rhombus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rhombus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RhombusFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RhombusFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SquareFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SquareFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StringManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StringManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TriangleFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,10 +19,13 @@
         <option value="JUnit5 Test Class" />
         <option value="JUnit4 Test Class" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <excluded-from-favorite>
@@ -88,20 +66,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/korzonek/Documents/java/testy/first",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/korzonek/Documents/java/testy/first&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -118,47 +96,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RectangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Equilateral_TriangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RectangleTest" />
+      <option name="MAIN_CLASS_NAME" value="Equilateral_TriangleTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RectangleTest.diagonalAreaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Equilateral_TriangleTest.test_all_given_area" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RectangleTest" />
-      <option name="METHOD_NAME" value="diagonalAreaTest" />
+      <option name="MAIN_CLASS_NAME" value="Equilateral_TriangleTest" />
+      <option name="METHOD_NAME" value="test_all_given_area" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RectangularTriangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Equilateral_TriangleTest.test_all_given_height" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RectangularTriangleTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="Equilateral_TriangleTest" />
+      <option name="METHOD_NAME" value="test_all_given_height" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RhombusTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Equilateral_TriangleTest.test_all_given_side" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RhombusTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="Equilateral_TriangleTest" />
+      <option name="METHOD_NAME" value="test_all_given_side" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SquareTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TriangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SquareTest" />
+      <option name="MAIN_CLASS_NAME" value="TriangleTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,19 +146,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.project" />
-      <item itemvalue="JUnit.RectangularTriangleTest" />
-      <item itemvalue="JUnit.RectangleTest" />
-      <item itemvalue="JUnit.RectangleTest.diagonalAreaTest" />
-      <item itemvalue="JUnit.RhombusTest" />
-      <item itemvalue="JUnit.SquareTest" />
+      <item itemvalue="JUnit.Equilateral_TriangleTest" />
+      <item itemvalue="JUnit.Equilateral_TriangleTest.test_all_given_area" />
+      <item itemvalue="JUnit.Equilateral_TriangleTest.test_all_given_height" />
+      <item itemvalue="JUnit.Equilateral_TriangleTest.test_all_given_side" />
+      <item itemvalue="JUnit.TriangleTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RectangularTriangleTest" />
-        <item itemvalue="JUnit.RectangleTest.diagonalAreaTest" />
-        <item itemvalue="JUnit.RectangleTest" />
-        <item itemvalue="JUnit.RhombusTest" />
-        <item itemvalue="JUnit.SquareTest" />
+        <item itemvalue="JUnit.Equilateral_TriangleTest.test_all_given_area" />
+        <item itemvalue="JUnit.Equilateral_TriangleTest.test_all_given_height" />
+        <item itemvalue="JUnit.Equilateral_TriangleTest.test_all_given_side" />
+        <item itemvalue="JUnit.Equilateral_TriangleTest" />
+        <item itemvalue="JUnit.TriangleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +173,11 @@
       <workItem from="1680018438738" duration="4631000" />
       <workItem from="1680036014895" duration="2599000" />
       <workItem from="1680070175707" duration="2216000" />
-      <workItem from="1685470212483" duration="7838000" />
+      <workItem from="1685470212483" duration="7947000" />
+      <workItem from="1685511927136" duration="1730000" />
+      <workItem from="1685777598320" duration="7054000" />
+      <workItem from="1685997240732" duration="3662000" />
+      <workItem from="1686069852274" duration="5477000" />
     </task>
     <task id="LOCAL-00001" summary="Pracownia 1 - koło i kwadrat - obliczenia, prosty interface (bez obsługi błędów)">
       <created>1679772319571</created>
@@ -307,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685221203387</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="ppodwojenie trapezu równoramiennego">
+      <created>1686080442256</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1686080442256</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +332,8 @@
     <MESSAGE value="dwujęzyczność w DataTakerze + na razie bardzo prosta opcja zmiany języka" />
     <MESSAGE value="dwujęzyczne wyjątki + szkic nowych, dwujęzycznych metod toString i getMessageChoiceFeature (w Circle)" />
     <MESSAGE value="compareTo dla: kwadratu, rombu, trójkąta równoramiennego i prostokątnego" />
-    <option name="LAST_COMMIT_MESSAGE" value="compareTo dla: kwadratu, rombu, trójkąta równoramiennego i prostokątnego" />
+    <MESSAGE value="ppodwojenie trapezu równoramiennego" />
+    <option name="LAST_COMMIT_MESSAGE" value="ppodwojenie trapezu równoramiennego" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

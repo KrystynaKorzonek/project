@@ -5,6 +5,12 @@ import java.util.Set;
 public class Circle extends Shape{
     private double radius;
     private double diameter;
+    public double getDiameter(){
+        return diameter;
+    }
+    public double getRadius(){
+        return radius;
+    }
 
 
     private void setFeaturesFromRadius(double radius){

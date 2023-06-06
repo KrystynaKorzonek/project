@@ -6,6 +6,8 @@ import java.util.TreeSet;
 public class Equilateral_Triangle extends Shape {
     private double side;
     private double height;
+    public double getSide() { return side;}
+    public double getHeight() { return height;}
 
     public Equilateral_Triangle(Map<String, Double> features){
         this.verticesNumber = 3;

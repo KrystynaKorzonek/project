@@ -1,10 +1,14 @@
+import org.w3c.dom.css.Rect;
+
 import java.util.Map;
 import java.util.Set;
 
 public class RectangularTriangleFactory extends ShapeFactory{
+    // UWAGA! trójkąt prostokątny równoramienny będzie równoramienny, a nie prostokątny
     @Override
     public Shape create(Map<String, Double> features) {
-        return new RectangularTriangle(features);
+        RectangularTriangle created = new RectangularTriangle(features);
+        return RectangularTriangle.toIsoscelesIfPossible(created);
     }
 
     @Override
