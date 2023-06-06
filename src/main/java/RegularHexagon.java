@@ -32,7 +32,7 @@ public class RegularHexagon extends Shape {
     }
 
     private double calculateArea() {
-        return side * side * Math.sqrt(3) / 2;
+        return side * side * Math.sqrt(3) * 3 / 2;
     }
 
     private double calculatePerimeter() {
