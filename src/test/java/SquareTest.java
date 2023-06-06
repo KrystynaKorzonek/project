@@ -21,7 +21,7 @@ public class SquareTest {
         double expectedDiagonal = 7.071;
         Assert.assertEquals(expectedArea, actualArea, 0);
         Assert.assertEquals(expectedPerimeter, actualPerimeter, 0);
-        Assert.assertEquals(expectedDiagonal, actualDiagonal, 0.001);
+        Assert.assertEquals(expectedDiagonal, actualDiagonal, 0.0000001);
     }
 
     @Test

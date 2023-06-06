@@ -14,6 +14,8 @@ public class IsoscelesTriangleTest {
         features.put("a",3.0);
         features.put("b",5.0);
         IsoscelesTriangle triangle = new IsoscelesTriangle(features);
+        Shape doubled = triangle.getDoubleShape();
+        Assert.assertEquals(14.309088021254187, doubled.getArea(), 0);
         double actualArea = triangle.getArea();
         double expectedArea = 7.154544010627092;
         double actualPerimeter = triangle.getPerimeter();
@@ -31,6 +33,8 @@ public class IsoscelesTriangleTest {
         features.put("h",4.0);
         features.put("b",5.0);
         IsoscelesTriangle triangle = new IsoscelesTriangle(features);
+        Shape doubled = triangle.getDoubleShape();
+        Assert.assertEquals(24.000000000000004, doubled.getArea(), 0);
         double actualArea = triangle.getArea();
         double expectedArea = 12.0;
         double actualPerimeter = triangle.getPerimeter();
@@ -48,6 +52,8 @@ public class IsoscelesTriangleTest {
         features.put("h",4.0);
         features.put("a",5.0);
         IsoscelesTriangle triangle = new IsoscelesTriangle(features);
+        Shape doubled = triangle.getDoubleShape();
+        Assert.assertEquals(20.000000000000004, doubled.getArea(), 0);
         double actualArea = triangle.getArea();
         double expectedArea = 10.0;
         double actualPerimeter = triangle.getPerimeter();
@@ -65,6 +71,8 @@ public class IsoscelesTriangleTest {
         features.put("h",4.0);
         features.put("p",10.0);
         IsoscelesTriangle triangle = new IsoscelesTriangle(features);
+        Shape doubled = triangle.getDoubleShape();
+        Assert.assertEquals(20.000000000000004, doubled.getArea(), 0);
         double actualBase = triangle.getBase();
         double expectedBase = 5.0;
         double actualPerimeter = triangle.getPerimeter();
@@ -82,6 +90,8 @@ public class IsoscelesTriangleTest {
         features.put("a",5.0);
         features.put("p",10.0);
         IsoscelesTriangle triangle = new IsoscelesTriangle(features);
+        Shape doubled = triangle.getDoubleShape();
+        Assert.assertEquals(20.000000000000004, doubled.getArea(), 0);
         double actualHeight = triangle.getHeight();
         double expectedHeight = 4.0;
         double actualPerimeter = triangle.getPerimeter();
@@ -99,6 +109,8 @@ public class IsoscelesTriangleTest {
         features.put("b",4.716990566028302);
         features.put("p",10.0);
         IsoscelesTriangle triangle = new IsoscelesTriangle(features);
+        Shape doubled = triangle.getDoubleShape();
+        Assert.assertEquals(20.000000000000004, doubled.getArea(), 0);
         double actualHeight = triangle.getHeight();
         double expectedHeight = 3.9999999999999987;
         double actualPerimeter = triangle.getPerimeter();

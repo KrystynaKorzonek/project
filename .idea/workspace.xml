@@ -5,40 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="wprowadzenie TreeSeta i zablokowanie możliwości tworzenia dubli&#10;(UWAGA! ciągle brakuje metod compareTo() w większości klas!)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/NoSuchTriangleException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TriangleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataTaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoidFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoidFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IsoscelesTriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IsoscelesTriangleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TriangleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/EquilateralTrapezoidTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EquilateralTrapezoidTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataTaker$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataTaker$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataTaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataTaker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EquilateralTrapezoid$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EquilateralTrapezoid$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EquilateralTrapezoid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EquilateralTrapezoid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EquilateralTrapezoidFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EquilateralTrapezoidFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EquilateralTrapezoidFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EquilateralTrapezoidFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IsoscelesTriangle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IsoscelesTriangle$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IsoscelesTriangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IsoscelesTriangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IsoscelesTriangleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IsoscelesTriangleFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IsoscelesTriangleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IsoscelesTriangleFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Rectangle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Rectangle$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Rectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RectangularTriangle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RectangularTriangle$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RectangularTriangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RectangularTriangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RectangularTriangleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RectangularTriangleFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RectangularTriangleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RectangularTriangleFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TriangleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TriangleFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TriangleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TriangleFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Equilateral_Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Equilateral_Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EllipseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EllipseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Equilateral_TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Equilateral_TriangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IsoscelesTriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IsoscelesTriangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RectangularTriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RectangularTriangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SquareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SquareTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShapeFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShapeFactory.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +95,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.project">
+  <component name="RunManager" selected="JUnit.Equilateral_TriangleTest.test_all_given_area">
     <configuration name="project" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="project" />
@@ -128,51 +103,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsoscelesTriangleTest.test_all_given_area_and_base" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Equilateral_TriangleTest.test_all_given_area" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IsoscelesTriangleTest" />
-      <option name="METHOD_NAME" value="test_all_given_area_and_base" />
+      <option name="MAIN_CLASS_NAME" value="Equilateral_TriangleTest" />
+      <option name="METHOD_NAME" value="test_all_given_area" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsoscelesTriangleTest.test_all_given_area_and_height" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Equilateral_TriangleTest.test_all_given_height" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IsoscelesTriangleTest" />
-      <option name="METHOD_NAME" value="test_all_given_area_and_height" />
+      <option name="MAIN_CLASS_NAME" value="Equilateral_TriangleTest" />
+      <option name="METHOD_NAME" value="test_all_given_height" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsoscelesTriangleTest.test_all_given_area_and_side" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Equilateral_TriangleTest.test_all_given_side" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IsoscelesTriangleTest" />
-      <option name="METHOD_NAME" value="test_all_given_area_and_side" />
+      <option name="MAIN_CLASS_NAME" value="Equilateral_TriangleTest" />
+      <option name="METHOD_NAME" value="test_all_given_side" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsoscelesTriangleTest.test_all_given_base_and_height" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TriangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IsoscelesTriangleTest" />
-      <option name="METHOD_NAME" value="test_all_given_base_and_height" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="TriangleTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsoscelesTriangleTest.test_all_given_side_and_height" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TriangleTest.getDoubled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IsoscelesTriangleTest" />
-      <option name="METHOD_NAME" value="test_all_given_side_and_height" />
+      <option name="MAIN_CLASS_NAME" value="TriangleTest" />
+      <option name="METHOD_NAME" value="getDoubled" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,19 +154,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.project" />
-      <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_area_and_base" />
-      <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_area_and_height" />
-      <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_area_and_side" />
-      <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_base_and_height" />
-      <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_side_and_height" />
+      <item itemvalue="JUnit.Equilateral_TriangleTest.test_all_given_area" />
+      <item itemvalue="JUnit.Equilateral_TriangleTest.test_all_given_height" />
+      <item itemvalue="JUnit.Equilateral_TriangleTest.test_all_given_side" />
+      <item itemvalue="JUnit.TriangleTest" />
+      <item itemvalue="JUnit.TriangleTest.getDoubled" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_area_and_side" />
-        <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_area_and_base" />
-        <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_area_and_height" />
-        <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_base_and_height" />
-        <item itemvalue="JUnit.IsoscelesTriangleTest.test_all_given_side_and_height" />
+        <item itemvalue="JUnit.Equilateral_TriangleTest.test_all_given_area" />
+        <item itemvalue="JUnit.Equilateral_TriangleTest.test_all_given_height" />
+        <item itemvalue="JUnit.Equilateral_TriangleTest.test_all_given_side" />
+        <item itemvalue="JUnit.TriangleTest" />
+        <item itemvalue="JUnit.TriangleTest.getDoubled" />
       </list>
     </recent_temporary>
   </component>
@@ -211,6 +185,7 @@
       <workItem from="1685511927136" duration="1730000" />
       <workItem from="1685777598320" duration="7054000" />
       <workItem from="1685997240732" duration="3662000" />
+      <workItem from="1686069852274" duration="5177000" />
     </task>
     <task id="LOCAL-00001" summary="Pracownia 1 - koło i kwadrat - obliczenia, prosty interface (bez obsługi błędów)">
       <created>1679772319571</created>
