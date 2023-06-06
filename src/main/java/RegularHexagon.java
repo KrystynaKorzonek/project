@@ -46,7 +46,7 @@ public class RegularHexagon extends Shape{
 
     @Override
     public Shape getDoubleShape() {
-        return new RegularHexagon(side*Math.sqrt(2), area*2, perimeter*2);
+        return new RegularHexagon(0.0, area*2, 0.0);
     }
 
     public String toString(Language lang){
