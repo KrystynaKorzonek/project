@@ -131,7 +131,7 @@ public class Rhombus extends Shape {
 
     public int compareTo(Shape another) {
         if (another instanceof Rhombus) {
-            if (diag1 == ((Rhombus) another).diag1 && diag2 == ((Rhombus) another).diag2)
+            if (Double.compare(diag1, ((Rhombus) another).diag1) == 0 && Double.compare(diag2, ((Rhombus) another).diag2) == 0)
                 return 0;
         }
         return Constants.NONZERO;

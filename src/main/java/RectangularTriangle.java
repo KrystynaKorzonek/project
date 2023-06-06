@@ -145,7 +145,8 @@ public class RectangularTriangle extends Shape {
 
     public int compareTo(Shape another) {
         if (another instanceof RectangularTriangle) {
-            if (cathetus1 == ((RectangularTriangle) another).cathetus1 && cathetus2 == ((RectangularTriangle) another).cathetus2)
+            if (Double.compare(cathetus1, ((RectangularTriangle) another).cathetus1) == 0 &&
+                    Double.compare(cathetus2, ((RectangularTriangle) another).cathetus2) == 0)
                 return 0;
         }
         return Constants.NONZERO;

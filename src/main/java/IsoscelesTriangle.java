@@ -112,7 +112,8 @@ public class IsoscelesTriangle extends Shape {
 
     public int compareTo(Shape another) {
         if (another instanceof IsoscelesTriangle) {
-            if (base == ((IsoscelesTriangle) another).base && height == ((IsoscelesTriangle) another).height)
+            if (Double.compare(base, ((IsoscelesTriangle) another).base) == 0
+                    && Double.compare(height, ((IsoscelesTriangle) another).height) == 0)
                 return 0;
         }
         return Constants.NONZERO;

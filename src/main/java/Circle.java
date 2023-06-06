@@ -79,8 +79,7 @@ public class Circle extends Shape {
 
     public int compareTo(Shape another) {
         if (another instanceof Circle) {
-            if (radius == ((Circle) another).radius)
-                return 0;
+            return Double.compare(radius, ((Circle) another).radius);
         }
         return Constants.NONZERO;
     }

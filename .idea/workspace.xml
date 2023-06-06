@@ -4,22 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="compareTo sześciokąta">
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="formatowanie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Circle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ellipse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/EquilateralTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTriangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangleFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Rhombus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rhombus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SortRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SortRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StringManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StringManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TriangleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AreaComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AreaComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Circle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Circle$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Circle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CircleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CircleFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CircleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CircleFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DateTimeComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DateTimeComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Ellipse$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Ellipse$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EllipseFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EllipseFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EllipseFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EllipseFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EquilateralTrapezoid$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EquilateralTrapezoid$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EquilateralTrapezoidFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EquilateralTrapezoidFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EquilateralTrapezoidFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EquilateralTrapezoidFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IntegralRomberg.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IntegralRomberg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IsoscelesTriangle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IsoscelesTriangle$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IsoscelesTriangleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IsoscelesTriangleFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IsoscelesTriangleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IsoscelesTriangleFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OneStageComparator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/OneStageComparator$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OneStageComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/OneStageComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PerimeterComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PerimeterComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Rectangle$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RectangleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RectangleFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RectangleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RectangleFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RectangularTriangle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RectangularTriangle$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RectangularTriangleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RectangularTriangleFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Rhombus$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Rhombus$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RhombusFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RhombusFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RhombusFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RhombusFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RoundClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RoundClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Shape$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Shape$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Shape.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Square$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Square$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Square.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SquareFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SquareFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SquareFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SquareFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StringManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StringManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StringManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StringManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StringPair$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StringPair$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StringPair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StringPair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Triangle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Triangle$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Triangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Triangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TriangleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TriangleFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Writer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Writer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,7 +371,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686085890862</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="kosmetyka">
+      <created>1686087179082</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1686087179082</updated>
+    </task>
+    <task id="LOCAL-00022" summary="formatowanie">
+      <created>1686087511872</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1686087511872</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +423,9 @@
     <MESSAGE value="małe poprawki w getFromUserFeatureValuePair (informacja o min i max wartości)" />
     <MESSAGE value="zmiana nazwy klasy Equilateral_Triangle -&gt; EquilateralTriangle" />
     <MESSAGE value="compareTo sześciokąta" />
-    <option name="LAST_COMMIT_MESSAGE" value="compareTo sześciokąta" />
+    <MESSAGE value="kosmetyka" />
+    <MESSAGE value="formatowanie" />
+    <option name="LAST_COMMIT_MESSAGE" value="formatowanie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

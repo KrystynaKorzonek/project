@@ -51,7 +51,7 @@ public class EquilateralTriangle extends Shape {
 
     public int compareTo(Shape another) {
         if (another instanceof EquilateralTriangle) {
-            if (side == ((EquilateralTriangle) another).side && height == ((EquilateralTriangle) another).height)
+            if (Double.compare(side, ((EquilateralTriangle) another).side) == 0)
                 return 0;
         }
         return Constants.NONZERO;

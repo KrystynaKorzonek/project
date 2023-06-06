@@ -55,7 +55,8 @@ public class Ellipse extends Shape {
 
     public int compareTo(Shape another) {
         if (another instanceof Ellipse) {
-            if (semiMajorAxis == ((Ellipse) another).semiMajorAxis && semiMinorAxis == ((Ellipse) another).semiMinorAxis)
+            if (Double.compare(semiMajorAxis, ((Ellipse) another).semiMajorAxis) == 0 &&
+                    Double.compare(semiMinorAxis, ((Ellipse) another).semiMinorAxis) == 0)
                 return 0;
         }
         return Constants.NONZERO;

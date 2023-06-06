@@ -124,7 +124,7 @@ public class Rectangle extends Shape {
 
     public int compareTo(Shape another) {
         if (another instanceof Rectangle) {
-            if (side1 == ((Rectangle) another).side1 && side2 == ((Rectangle) another).side2)
+            if (Double.compare(side1, ((Rectangle) another).side1) == 0 && Double.compare(side2, ((Rectangle) another).side2) == 0)
                 return 0;
         }
         return Constants.NONZERO;

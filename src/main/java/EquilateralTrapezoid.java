@@ -113,9 +113,8 @@ public class EquilateralTrapezoid extends Shape {
 
     public int compareTo(Shape another) {
         if (another instanceof EquilateralTrapezoid) {
-            if (a == ((EquilateralTrapezoid) another).a && b == ((EquilateralTrapezoid) another).b &&
-                    c == ((EquilateralTrapezoid) another).c && h == ((EquilateralTrapezoid) another).h)
-                return 0;
+            return Double.compare(a, ((EquilateralTrapezoid) another).a) + Double.compare(b, ((EquilateralTrapezoid) another).b) +
+                    Double.compare(h, ((EquilateralTrapezoid) another).h);
         }
         return Constants.NONZERO;
     }
