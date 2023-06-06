@@ -58,8 +58,11 @@ public class Main {
             case "e"->{
                 factory = new EllipseFactory();
             }
-            case "t"->{
+            case "et"->{
                 factory = new EquilateralTrapezoidFactory();
+            }
+            case "t"->{
+                factory = new TriangleFactory();
             }
         }
         Map<String, Double> features = new HashMap<String, Double>();
@@ -76,7 +79,11 @@ public class Main {
             return true;
         }
         catch (IllegalArgumentException ex){
-            System.out.println(StringManager.getMessageString(Message.IMPOSSIBLE_CREATE) + ex.getMessage() + "\n");
+            System.out.println(StringManager.getMessageString(Message.IMPOSSIBLE_CREATE) + ": " + ex.getMessage() + "\n");
+            return true;
+        }
+        catch (NoSuchTriangleException ex){
+            System.out.println(StringManager.getMessageString(Message.IMPOSSIBLE_CREATE) + ": " + ex.getMessage() + "\n");
             return true;
         }
         catch (NoCircumcircleException ex){

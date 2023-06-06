@@ -17,14 +17,14 @@ public class EquilateralTrapezoidTest {
 
     @Test
     public void getLagerBase() {
-        assertEquals(10.0, test1.getLagerBase(), 0.001);
-        assertEquals(10.0, test2.getLagerBase(), 0.001);
-        assertEquals(10.0, test3.getLagerBase(), 0.001);
-        assertEquals(10.0, test4.getLagerBase(), 0.001);
-        assertEquals(10.0, test5.getLagerBase(), 0.001);
-        assertEquals(10.0, test6.getLagerBase(), 0.001);
-        assertEquals(10.0, test7.getLagerBase(), 0.001);
-        assertEquals(10.0, test8.getLagerBase(), 0.001);
+        assertEquals(10.0, test1.getLargerBase(), 0.001);
+        assertEquals(10.0, test2.getLargerBase(), 0.001);
+        assertEquals(10.0, test3.getLargerBase(), 0.001);
+        assertEquals(10.0, test4.getLargerBase(), 0.001);
+        assertEquals(10.0, test5.getLargerBase(), 0.001);
+        assertEquals(10.0, test6.getLargerBase(), 0.001);
+        assertEquals(10.0, test7.getLargerBase(), 0.001);
+        assertEquals(10.0, test8.getLargerBase(), 0.001);
     }
 
     @Test

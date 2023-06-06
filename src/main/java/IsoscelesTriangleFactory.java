@@ -2,9 +2,11 @@ import java.util.Map;
 import java.util.Set;
 
 public class IsoscelesTriangleFactory extends ShapeFactory{
+    // UWAGA! trójkąt prostokątny równoramienny będzie równoramienny, a nie prostokątny
     @Override
     public Shape create(Map<String, Double> features) {
-        return new IsoscelesTriangle(features);
+        IsoscelesTriangle created = new IsoscelesTriangle(features);
+        return IsoscelesTriangle.toEquilateralIfPossible(created);
     }
 
     @Override

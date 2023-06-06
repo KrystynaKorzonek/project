@@ -5,6 +5,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Rectangle extends Shape {
+    //side1 < side2
     private double side1;
     private double side2;
     private double diag;
@@ -78,6 +79,11 @@ public class Rectangle extends Shape {
                 side1 = (Math.sqrt(diag * diag + 2*area) + Math.sqrt(diag * diag - 2*area))/2;
                 side2 = (Math.sqrt(diag * diag + 2*area) - Math.sqrt(diag * diag - 2*area))/2;;
             }
+        }
+        if (side1 > side2){
+            double temp = side1;
+            side1 = side2;
+            side2 = temp;
         }
         perimeter = 2*(side1 + side2);
         if(side1< Constants.MIN_ATTR_VAL || diag< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL ||

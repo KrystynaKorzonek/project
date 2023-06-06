@@ -7,6 +7,18 @@ public class RectangularTriangle extends Shape{
     private double cathetus1; //catheus1 <= catheus2
     private double cathetus2;
 
+    public boolean canBeIsosceles(){
+        return cathetus1==cathetus2;
+    }
+
+    public static Shape toIsoscelesIfPossible(RectangularTriangle r){
+        if (r.canBeIsosceles())
+            return new IsoscelesTriangle(Map.of("b", r.getCathetus1(), "a", r.getHypotenuse()));
+        return r;
+
+
+    }
+
 
     private double findAlpha(double value){
         double left = 0;
@@ -103,6 +115,7 @@ public class RectangularTriangle extends Shape{
     public double getPerimeter() {
         return perimeter;
     }
+
 
     public String toString(Language lang){
         switch(lang){

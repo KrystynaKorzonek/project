@@ -4,9 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="compareTo dla: kwadratu, rombu, trójkąta równoramiennego i prostokątnego">
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="wprowadzenie TreeSeta i zablokowanie możliwości tworzenia dubli&#10;(UWAGA! ciągle brakuje metod compareTo() w większości klas!)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/NoSuchTriangleException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/IsoscelesTriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IsoscelesTriangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataTaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoidFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTrapezoidFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IsoscelesTriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IsoscelesTriangleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TriangleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EquilateralTrapezoidTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EquilateralTrapezoidTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataTaker$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataTaker$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataTaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataTaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EquilateralTrapezoid$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EquilateralTrapezoid$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EquilateralTrapezoid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EquilateralTrapezoid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EquilateralTrapezoidFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EquilateralTrapezoidFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EquilateralTrapezoidFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EquilateralTrapezoidFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IsoscelesTriangle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IsoscelesTriangle$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IsoscelesTriangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IsoscelesTriangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IsoscelesTriangleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IsoscelesTriangleFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IsoscelesTriangleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IsoscelesTriangleFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Rectangle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Rectangle$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Rectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RectangularTriangle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RectangularTriangle$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RectangularTriangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RectangularTriangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RectangularTriangleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RectangularTriangleFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RectangularTriangleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RectangularTriangleFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TriangleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TriangleFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TriangleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TriangleFactory.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +51,13 @@
         <option value="JUnit5 Test Class" />
         <option value="JUnit4 Test Class" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <excluded-from-favorite>
@@ -85,7 +120,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IsoscelesTriangleTest.test_all_given_area_and_side">
+  <component name="RunManager" selected="Application.project">
     <configuration name="project" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="project" />

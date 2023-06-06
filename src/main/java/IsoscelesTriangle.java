@@ -7,6 +7,16 @@ public class IsoscelesTriangle extends Shape{
     private double height;
     private double base;
 
+    public boolean canBeEquilateral(){
+        return base==side;
+    }
+
+    public static Shape toEquilateralIfPossible(IsoscelesTriangle t){
+        if (t.canBeEquilateral())
+            return new Equilateral_Triangle(Map.of("a", t.getSide()));
+        return t;
+    }
+
     public IsoscelesTriangle(Map<String, Double> features){
         this.verticesNumber = 3;
         this.dateTime = LocalDateTime.now();
@@ -84,7 +94,7 @@ public class IsoscelesTriangle extends Shape{
                 return "Trójkąt równoramienny - bok: " + RoundClass.round(side) +
                         " wysokość: " + RoundClass.round(height) +
                         " podstawa: " + RoundClass.round(base) +
-                        super.toString();
+                        super.toString(lang);
             }
             case ENGLISH -> {
                 return "Isosceles triangle - side: " + RoundClass.round(side) +

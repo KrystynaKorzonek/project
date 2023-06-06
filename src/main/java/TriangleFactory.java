@@ -7,7 +7,7 @@ public class TriangleFactory extends ShapeFactory{
 
 
     @Override
-    public Shape create(Map<String, Double> features) throws NoCircumcircleException {
+    public Shape create(Map<String, Double> features) throws NoCircumcircleException, NoSuchTriangleException {
         side1 = features.get("a");
         side2 = features.get("b");
         side3 = features.get("c");
@@ -16,11 +16,15 @@ public class TriangleFactory extends ShapeFactory{
             throw new NoCircumcircleException("Boki muszą być dodatnie");
         }
         if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1) {
-            throw new NoCircumcircleException("Niespełniony warunek trójkąta");
+            String m = "Niespełniony warunek trójkąta";
+            if (StringManager.getLanguage() == Language.ENGLISH)
+                m = "Triangle condition not satisfied";
+            throw new NoSuchTriangleException(m);
         }
         if (side1 == side2 && side2 == side3) {
             return new Equilateral_Triangle(Map.of("a", side1));
         }
+        // trójkąt prostokątny równoramienny -> utworzy się trójkąt równoramienny (tak jak ma być)
         if (side1 == side2) {
             return new IsoscelesTriangle(Map.of("a", side3, "b", side1));
         }

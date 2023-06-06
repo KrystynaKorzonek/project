@@ -4,10 +4,26 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class EquilateralTrapezoid extends Shape{
+
+
     //a >= b!
     private double a, b;
     private double c;
     private double h;
+
+    public boolean canBeRectangle(){
+        return a==b;
+    }
+    public boolean canBeSquare(){
+        return a==b && a==h;
+    }
+    public static Shape toRectangleOrSquareIfPossible(EquilateralTrapezoid t){
+        if (t.canBeSquare())
+            return new Square(Map.of("b", t.getShorterBase()));
+        if (t.canBeRectangle())
+            return new Rectangle(Map.of("a", t.getShorterBase(), "b", t.getHeight()));
+        return t;
+    }
 
     private void setFeaturesFromMap(Map<String, Double> features){
         this.a = features.getOrDefault("a", 0.0);
@@ -76,6 +92,9 @@ public class EquilateralTrapezoid extends Shape{
 
 
     }
+
+
+
     public String toString(){
         return "Trapez równoramienny - dłuższa podstawa: " + RoundClass.round(a) + " krótsza podstawa: " +
                 RoundClass.round(b) + " ramie: " + RoundClass.round(c) + " wysokość: " + RoundClass.round(h)
@@ -114,7 +133,7 @@ public class EquilateralTrapezoid extends Shape{
         return new Circle(triangle.getCathetus1()*triangle.getCathetus2()*triangle.getHypotenuse()/triangle.getArea());
     }
 
-    double getLagerBase(){
+    double getLargerBase(){
         return a;
     }
     double getShorterBase(){

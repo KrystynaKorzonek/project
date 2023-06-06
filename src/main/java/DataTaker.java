@@ -11,7 +11,8 @@ public class DataTaker {
             "i", new StringPair("trójkąt równoramienny", "isosceles triangle"),
             "r", new StringPair("trójkąt prostokątny", "rectangular triangle"),
             "e", new StringPair("elipsa", "ellipse"),
-            "t", new StringPair("trapez równoramienny", "isosceles trapezoid")
+            "et", new StringPair("trapez równoramienny", "isosceles trapezoid"),
+            "t", new StringPair("dowolny trójkąt", "any triangle")
     );
     public static Map<String, StringPair> OTHER_ACTIONS_MAP = Map.of(
             "a", new StringPair("zobacz wszystkie figury", "see all shapes"),
