@@ -2,7 +2,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class TriangleFactory extends ShapeFactory{
-    private double side1, side2, side3;
+    private double side1, side2, side3; //side1 < side2 < side3
 
 
 
@@ -13,7 +13,10 @@ public class TriangleFactory extends ShapeFactory{
         side3 = features.get("c");
 
         if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
-            throw new NoCircumcircleException("Boki muszą być dodatnie");
+            String m = "Boki muszą być dodatnie";
+            if (StringManager.getLanguage() == Language.ENGLISH)
+                m = "Sides must be positive";
+            throw new NoSuchTriangleException(m);
         }
         if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1) {
             String m = "Niespełniony warunek trójkąta";

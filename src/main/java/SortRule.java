@@ -7,7 +7,6 @@ public class SortRule {
         this.criterion = criterion;
     }
     public String toString(){
-        //TODO: ładne polskie wypisywanie
         return "Sortowanie po " + criterion + " " + order;
 
     }

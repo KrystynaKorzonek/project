@@ -12,7 +12,7 @@ public class EquilateralTriangle extends Shape {
         this.dateTime = LocalDateTime.now();
         if (features.size() != 1)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
-        for (String feature : features.keySet()) { //poprawić!
+        for (String feature : features.keySet()) {
             double value = features.get(feature);
             setFeatures(feature, value);
         }

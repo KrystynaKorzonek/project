@@ -5,7 +5,7 @@ import java.util.TreeSet;
 
 public class Rhombus extends Shape {
     private double side;
-    private double diag1, diag2; //czy odróżniać krótszą i dłuższą??
+    private double diag1, diag2; //diag1 >= diag2
     public double getSide(){return side;}
     public boolean canBeSquare(){
         return diag1==diag2;

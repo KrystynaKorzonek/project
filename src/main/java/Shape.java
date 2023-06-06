@@ -33,7 +33,6 @@ public abstract class Shape implements Comparable<Shape> {
 
     }
 
-    // abstract static :(
     public int compareTo(Shape another){
         return Double.compare(this.area, another.area);
     }

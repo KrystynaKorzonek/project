@@ -23,8 +23,6 @@ public class IsoscelesTriangle extends Shape{
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         Set<String> codes = new TreeSet<>(features.keySet());
-        //if (!isProperSetOfFeatures(codes))
-          //  throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
         if (codes.contains("b") && codes.contains("h")){
             side = features.get("b");
             height = features.get("h");

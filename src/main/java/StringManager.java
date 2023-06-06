@@ -37,14 +37,7 @@ public class StringManager {
                 "Nie dodano figury - taka figura już istnieje.",
                 "Shape was not added - that shape already exists."
         );
-        // UŻYWANE W DATATAKER
 
-        //TODO: Stringi z DataTakera
-        // z funkcji:
-        // 1. 4 funkcje na początku (takeSth...), wrappery na takeOneStringFromList
-        // 2.takeOneStringFromList
-        // 3.getFromUserFeatureValuePair
-        // koniecznie zostawić komentarze, skąd jest ten String (to i tak jest dosć chaotyczne)
     }
 
 

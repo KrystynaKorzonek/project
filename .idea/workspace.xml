@@ -4,11 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="zmiana nazwy klasy Equilateral_Triangle -&gt; EquilateralTriangle">
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="compareTo sześciokąta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Equilateral_Triangle$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Equilateral_TriangleFactory$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TriangleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TriangleFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ellipse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EquilateralTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RectangularTriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RectangularTriangleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Rhombus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rhombus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SortRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SortRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StringManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StringManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TriangleFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686083378464</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="compareTo sześciokąta">
+      <created>1686085890862</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1686085890862</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +369,8 @@
     <MESSAGE value="ppodwojenie trapezu równoramiennego" />
     <MESSAGE value="małe poprawki w getFromUserFeatureValuePair (informacja o min i max wartości)" />
     <MESSAGE value="zmiana nazwy klasy Equilateral_Triangle -&gt; EquilateralTriangle" />
-    <option name="LAST_COMMIT_MESSAGE" value="zmiana nazwy klasy Equilateral_Triangle -&gt; EquilateralTriangle" />
+    <MESSAGE value="compareTo sześciokąta" />
+    <option name="LAST_COMMIT_MESSAGE" value="compareTo sześciokąta" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

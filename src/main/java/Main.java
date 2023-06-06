@@ -2,17 +2,9 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
-/*
-TODO:
-3. za proste isProperSetOfFeatures; na tą listę starczy, ale zaraz przestanie (TODO niżej)
-4. teraz można podać kilka razy 1 cechę... może tego nie chcemy?
-5. romb(bok, pole): musi zachodzić pole < bok^2
-6. jedno generyczne pobieranie danych (bierze poprawne kody i enumy cech, zwraca słownik... jakoś tak)
- */
 
 public class Main {
     private static TreeSet<Shape> allShapes = new TreeSet<>();
-    //private static LinkedList<Shape> allShapes = new LinkedList<>();
     private static boolean addToAllShapes(Shape s){
         if (s!= null){
             if (allShapes.contains(s)){
@@ -20,7 +12,6 @@ public class Main {
             }
             else {
                 allShapes.add(s);
-                //System.out.println(StringManager.getMessageString(Message.ADDED) + s.toString(StringManager.getLanguage()); //todo!
                 System.out.print(StringManager.getMessageString(Message.ADDED) + StringManager.wrapToString(s));
             }
             return true;
@@ -28,7 +19,7 @@ public class Main {
         System.out.println(StringManager.getMessageString(Message.FAILED_ADD));
         return false;
     }
-    private static boolean takeOneShape(String input) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException{
+    private static boolean takeOneShape(String input){
         Shape shape = null;
         ShapeFactory factory = null;
         switch (input) {
@@ -197,7 +188,7 @@ public class Main {
         return true;
     }
 
-    public static boolean solveOneTask() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException {
+    public static boolean solveOneTask() throws IOException {
         String taskCode = DataTaker.takeOneTaskCommand(StringManager.getLanguage());
         switch (taskCode){
             case "x" -> {
@@ -225,7 +216,7 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException {
+    public static void main(String[] args) throws IOException {
         while (solveOneTask()) ;
     }
 }
