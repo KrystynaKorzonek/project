@@ -24,7 +24,7 @@ public class RegularHexagon extends Shape {
         } else {
             if (area == 0.0)
                 this.area = calculateArea();
-            else if (perimeter == 0.0)
+            if (perimeter == 0.0)
                 this.perimeter = calculatePerimeter();
         }
 
