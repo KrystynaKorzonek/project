@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 
@@ -12,7 +11,7 @@ public class Main {
                 System.out.println(StringManager.getMessageString(Message.NOT_ADDED_ALREADY_EXISTS));
             } else {
                 allShapes.add(s);
-                System.out.print(StringManager.getMessageString(Message.ADDED) + StringManager.wrapToString(s));
+                System.out.print(StringManager.getMessageString(Message.ADDED) + StringManager.wrapToString(s) + "\n");
             }
             return true;
         }
