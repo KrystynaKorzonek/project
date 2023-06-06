@@ -74,6 +74,12 @@ public class Rhombus extends Shape {
                 side = Math.sqrt((diag1*diag1 + diag2*diag2)/4);
             }
         }
+        double temp;
+        if (diag1 < diag2){
+            temp = diag1;
+            diag1 = diag2;
+            diag2 = temp;
+        }
         perimeter = 4*side;
         if(side< Constants.MIN_ATTR_VAL || diag1< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL ||
                 side> Constants.MAX_ATTR_VAL || diag1> Constants.MAX_ATTR_VAL || diag2< Constants.MIN_ATTR_VAL ||

@@ -43,6 +43,12 @@ public class Ellipse extends Shape{
         else
             throw new IllegalArgumentException("Wrong features\n(that should never happen...)");
 
+        if(semiMajorAxis < semiMinorAxis){
+            double temp = semiMajorAxis;
+            semiMajorAxis = semiMinorAxis;
+            semiMinorAxis = temp;
+        }
+
         perimeter = Math.PI * (semiMajorAxis + semiMinorAxis);
         if(semiMajorAxis< Constants.MIN_ATTR_VAL || semiMinorAxis< Constants.MIN_ATTR_VAL ||
                 area < Constants.MIN_ATTR_VAL || semiMajorAxis> Constants.MAX_ATTR_VAL ||
