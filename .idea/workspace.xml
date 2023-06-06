@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="ppodwojenie trapezu równoramiennego">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataTaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTaker.java" afterDir="false" />
+    <list default="true" id="a974dcc9-f71a-40c3-a8a7-4e147a8d5185" name="Changes" comment="małe poprawki w getFromUserFeatureValuePair (informacja o min i max wartości)">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Equilateral_Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Equilateral_TriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquilateralTriangleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IsoscelesTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TriangleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TriangleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Equilateral_TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Equilateral_TriangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataTaker$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataTaker$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataTaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataTaker.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686080442256</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="małe poprawki w getFromUserFeatureValuePair (informacja o min i max wartości)">
+      <created>1686082887361</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1686082887361</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +346,8 @@
     <MESSAGE value="dwujęzyczne wyjątki + szkic nowych, dwujęzycznych metod toString i getMessageChoiceFeature (w Circle)" />
     <MESSAGE value="compareTo dla: kwadratu, rombu, trójkąta równoramiennego i prostokątnego" />
     <MESSAGE value="ppodwojenie trapezu równoramiennego" />
-    <option name="LAST_COMMIT_MESSAGE" value="ppodwojenie trapezu równoramiennego" />
+    <MESSAGE value="małe poprawki w getFromUserFeatureValuePair (informacja o min i max wartości)" />
+    <option name="LAST_COMMIT_MESSAGE" value="małe poprawki w getFromUserFeatureValuePair (informacja o min i max wartości)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

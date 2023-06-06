@@ -1,10 +1,10 @@
 import java.util.Map;
 import java.util.Set;
 
-public class Equilateral_TriangleFactory extends ShapeFactory{
+public class EquilateralTriangleFactory extends ShapeFactory{
     @Override
     public Shape create(Map<String, Double> features) {
-        return new Equilateral_Triangle(features);
+        return new EquilateralTriangle(features);
     }
 
     @Override

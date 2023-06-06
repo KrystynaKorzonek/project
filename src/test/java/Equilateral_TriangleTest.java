@@ -11,7 +11,7 @@ public class Equilateral_TriangleTest {
     public void test_all_given_side() {
         Map<String, Double> features = new HashMap<>();
         features.put("a",5.0);
-        Equilateral_Triangle triangle = new Equilateral_Triangle(features);
+        EquilateralTriangle triangle = new EquilateralTriangle(features);
         Shape doubled = triangle.getDoubleShape();
         Assert.assertEquals(21.650635094610966, doubled.getArea(), 0);
         double actualArea = triangle.getArea();
@@ -29,7 +29,7 @@ public class Equilateral_TriangleTest {
     public void test_all_given_height() {
         Map<String, Double> features = new HashMap<>();
         features.put("h",5.0);
-        Equilateral_Triangle triangle = new Equilateral_Triangle(features);
+        EquilateralTriangle triangle = new EquilateralTriangle(features);
         Shape doubled = triangle.getDoubleShape();
         Assert.assertEquals(28.86751345948129, doubled.getArea(), 0);
         double actualArea = triangle.getArea();
@@ -47,7 +47,7 @@ public class Equilateral_TriangleTest {
     public void test_all_given_area() {
         Map<String, Double> features = new HashMap<>();
         features.put("p",12.0);
-        Equilateral_Triangle triangle = new Equilateral_Triangle(features);
+        EquilateralTriangle triangle = new EquilateralTriangle(features);
         Shape doubled = triangle.getDoubleShape();
         Assert.assertEquals(24.000000000000007, doubled.getArea(), 0);
         double actualHeight = triangle.getHeight();

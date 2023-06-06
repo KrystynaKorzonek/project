@@ -13,7 +13,7 @@ public class IsoscelesTriangle extends Shape{
 
     public static Shape toEquilateralIfPossible(IsoscelesTriangle t){
         if (t.canBeEquilateral())
-            return new Equilateral_Triangle(Map.of("a", t.getSide()));
+            return new EquilateralTriangle(Map.of("a", t.getSide()));
         return t;
     }
 
