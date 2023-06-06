@@ -21,6 +21,7 @@ public class TriangleFactory extends ShapeFactory{
                 m = "Triangle condition not satisfied";
             throw new NoSuchTriangleException(m);
         }
+        sortSides();
         if (side1 == side2 && side2 == side3) {
             return new EquilateralTriangle(Map.of("a", side1));
         }
@@ -45,6 +46,25 @@ public class TriangleFactory extends ShapeFactory{
         }
         return new Triangle(side1, side2, side3);
 
+    }
+
+    private void sortSides(){
+        double tmp;
+        if (side1 > side2){
+            tmp = side1;
+            side1 = side2;
+            side2 = tmp;
+        }
+        if (side2 > side3){
+            tmp = side2;
+            side2 = side3;
+            side3 = tmp;
+        }
+        if (side1 > side2){
+            tmp = side1;
+            side1 = side2;
+            side2 = tmp;
+        }
     }
 
     @Override
