@@ -5,6 +5,7 @@ public class RegularHexagonFactory extends ShapeFactory {
     private double side;
     private double area;
     private double perimeter;
+
     @Override
     public Shape create(Map<String, Double> features) throws NoCircumcircleException {
         this.side = features.getOrDefault("s", 0.0);

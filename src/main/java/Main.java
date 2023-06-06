@@ -5,12 +5,12 @@ import java.util.*;
 
 public class Main {
     private static TreeSet<Shape> allShapes = new TreeSet<>();
-    private static boolean addToAllShapes(Shape s){
-        if (s!= null){
-            if (allShapes.contains(s)){
+
+    private static boolean addToAllShapes(Shape s) {
+        if (s != null) {
+            if (allShapes.contains(s)) {
                 System.out.println(StringManager.getMessageString(Message.NOT_ADDED_ALREADY_EXISTS));
-            }
-            else {
+            } else {
                 allShapes.add(s);
                 System.out.print(StringManager.getMessageString(Message.ADDED) + StringManager.wrapToString(s));
             }
@@ -19,7 +19,8 @@ public class Main {
         System.out.println(StringManager.getMessageString(Message.FAILED_ADD));
         return false;
     }
-    private static boolean takeOneShape(String input){
+
+    private static boolean takeOneShape(String input) {
         Shape shape = null;
         ShapeFactory factory = null;
         switch (input) {
@@ -44,22 +45,22 @@ public class Main {
             case "r" -> {
                 factory = new RectangularTriangleFactory();
             }
-            case "e"->{
+            case "e" -> {
                 factory = new EllipseFactory();
             }
-            case "et"->{
+            case "et" -> {
                 factory = new EquilateralTrapezoidFactory();
             }
-            case "t"->{
+            case "t" -> {
                 factory = new TriangleFactory();
             }
-            case "h"->{
+            case "h" -> {
                 factory = new RegularHexagonFactory();
             }
         }
         Map<String, Double> features = new HashMap<String, Double>();
 
-        while (!factory.isProperSetOfFeatures(features.keySet())){
+        while (!factory.isProperSetOfFeatures(features.keySet())) {
             Pair<String, Double> p = DataTaker.getFromUserFeatureValuePair(factory);
             features.put(p.first, p.second);
         }
@@ -69,43 +70,40 @@ public class Main {
             addToAllShapes(shape);
             System.out.println();
             return true;
-        }
-        catch (IllegalArgumentException ex){
+        } catch (IllegalArgumentException ex) {
             System.out.println(StringManager.getMessageString(Message.IMPOSSIBLE_CREATE) + ": " + ex.getMessage() + "\n");
             return true;
-        }
-        catch (NoSuchTriangleException ex){
+        } catch (NoSuchTriangleException ex) {
             System.out.println(StringManager.getMessageString(Message.IMPOSSIBLE_CREATE) + ": " + ex.getMessage() + "\n");
             return true;
-        }
-        catch (NoCircumcircleException ex){
+        } catch (NoCircumcircleException ex) {
             return true;
         }
 
     }
-    private static boolean addCircumcirleOfShape(Shape shape){
+
+    private static boolean addCircumcirleOfShape(Shape shape) {
         System.out.println(StringManager.getMessageString(Message.CIRCUMCIRCLE_CHOSEN) + StringManager.wrapToString(shape));
         try {
             Circle circle = shape.getCircumcircle();
             addToAllShapes(circle);
             return true;
-        }
-        catch (NoCircumcircleException ex){
+        } catch (NoCircumcircleException ex) {
             System.out.println(StringManager.getMessageString(Message.IMPOSSIBLE_CIRCUMCIRCLE) + ex.getMessage() + "\n");
             return true;
         }
     }
-    private static boolean addModifiedShape(Shape originalShape, String modificationCode){
+
+    private static boolean addModifiedShape(Shape originalShape, String modificationCode) {
         Shape addedShape = null;
-        switch(modificationCode){
+        switch (modificationCode) {
             case "d" -> {
                 addedShape = originalShape.getDoubleShape();
             }
             case "o" -> {
                 try {
                     addedShape = originalShape.getCircumcircle();
-                }
-                catch (NoCircumcircleException ex){
+                } catch (NoCircumcircleException ex) {
                     System.out.println(StringManager.getMessageString(Message.IMPOSSIBLE_CIRCUMCIRCLE) + ex.getMessage() + "\n");
                     return true;
                 }
@@ -114,10 +112,11 @@ public class Main {
         addToAllShapes(addedShape);
         return true;
     }
-    private static boolean doActionOnShape(Shape chosenShape){
+
+    private static boolean doActionOnShape(Shape chosenShape) {
         System.out.println(StringManager.getMessageString(Message.CHOSEN_F) + StringManager.wrapToString(chosenShape));
         String modificationCode = DataTaker.takeFigureModification(StringManager.getLanguage());
-        switch (modificationCode){
+        switch (modificationCode) {
             case "d" -> {
                 return addModifiedShape(chosenShape, "d");
             }
@@ -134,18 +133,18 @@ public class Main {
         return true;
     }
 
-    private static boolean deleteShape(Shape chosenShape){
+    private static boolean deleteShape(Shape chosenShape) {
         allShapes.remove(chosenShape);
         System.out.println(StringManager.getMessageString(Message.DELETED));
         return true;
     }
 
-    private static SortRule getDefaultSortParams(){
+    private static SortRule getDefaultSortParams() {
         return new SortRule(SortCriterion.AREA, Order.ASC);
     }
 
 
-    private static boolean showAllShapes(SortRule sortRule){
+    private static boolean showAllShapes(SortRule sortRule) {
         if (allShapes.size() == 0)
             return true;
         LinkedList<Shape> sortedShapes = new LinkedList<>();
@@ -153,13 +152,13 @@ public class Main {
         Collections.sort(sortedShapes, new OneStageComparator(sortRule));
         ListIterator<Shape> it = sortedShapes.listIterator();
         while (it.hasNext()) {
-            System.out.println(it.nextIndex()+1 + " " + StringManager.wrapToString(it.next()));
+            System.out.println(it.nextIndex() + 1 + " " + StringManager.wrapToString(it.next()));
         }
         String message = StringManager.getMessageString(Message.CHOOSE_NUMBER_OF_SHAPE);
         Integer number = DataTaker.takeOneNumber(1, allShapes.size(), message);
         if (number == null)
             return true;
-        Shape chosen_shape = sortedShapes.get(number-1);
+        Shape chosen_shape = sortedShapes.get(number - 1);
         return doActionOnShape(chosen_shape);
     }
 
@@ -169,28 +168,28 @@ public class Main {
         return true;
     }
 
-    private static boolean changeRoundPlaces(){
+    private static boolean changeRoundPlaces() {
         String initial = StringManager.getMessageString(Message.CHOOSE_ROUND) + " (min " +
-                Constants.MIN_ROUND_PLACES + ", max "  + Constants.MAX_ROUND_PLACES + ")";
+                Constants.MIN_ROUND_PLACES + ", max " + Constants.MAX_ROUND_PLACES + ")";
         Integer places = DataTaker.takeOneNumber(Constants.MIN_ROUND_PLACES, Constants.MAX_ROUND_PLACES, initial);
-        if (places == null){
+        if (places == null) {
             System.out.println(StringManager.getMessageString(Message.ROUND_INCORRECT));
-        }
-        else{
+        } else {
             System.out.println(StringManager.getMessageString(Message.ROUND_CHANGED) + places);
             RoundClass.setRoundPlaces(places);
         }
 
-       return true;
+        return true;
     }
-    private static boolean changeLanguage(){
+
+    private static boolean changeLanguage() {
         StringManager.changeLanguage();
         return true;
     }
 
     public static boolean solveOneTask() throws IOException {
         String taskCode = DataTaker.takeOneTaskCommand(StringManager.getLanguage());
-        switch (taskCode){
+        switch (taskCode) {
             case "x" -> {
                 return false;
             }

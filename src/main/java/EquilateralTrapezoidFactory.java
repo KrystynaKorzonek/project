@@ -1,6 +1,7 @@
 import java.util.Map;
 import java.util.Set;
-public class EquilateralTrapezoidFactory extends ShapeFactory{
+
+public class EquilateralTrapezoidFactory extends ShapeFactory {
     @Override
     public Shape create(Map<String, Double> features) {
         EquilateralTrapezoid created = new EquilateralTrapezoid(features);
@@ -10,7 +11,7 @@ public class EquilateralTrapezoidFactory extends ShapeFactory{
 
     @Override
     public boolean isProperSetOfFeatures(Set<String> features) {
-        if (features.size()==3) {
+        if (features.size() == 3) {
             for (String code : features)
                 if (!isFeatureCode(code))
                     return false;
@@ -27,9 +28,10 @@ public class EquilateralTrapezoidFactory extends ShapeFactory{
     public String getMessageChoiceFeature() {
         return "a - dłuższa podstawa, b - krótsza podstawa, c - ramie, h - wysokość, p - pole";
     }
+
     @Override
-    public String getMessageChoiceFeature(Language lang){
-        switch(lang){
+    public String getMessageChoiceFeature(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return "a - dłuższa podstawa, b - krótsza podstawa, c - ramie, h - wysokość, p - pole";
             }

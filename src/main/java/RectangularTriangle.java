@@ -2,16 +2,17 @@ import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
-public class RectangularTriangle extends Shape{
+
+public class RectangularTriangle extends Shape {
     private double hypotenuse;
     private double cathetus1; //catheus1 <= catheus2
     private double cathetus2;
 
-    public boolean canBeIsosceles(){
-        return cathetus1==cathetus2;
+    public boolean canBeIsosceles() {
+        return cathetus1 == cathetus2;
     }
 
-    public static Shape toIsoscelesIfPossible(RectangularTriangle r){
+    public static Shape toIsoscelesIfPossible(RectangularTriangle r) {
         if (r.canBeIsosceles())
             return new IsoscelesTriangle(Map.of("b", r.getCathetus1(), "a", r.getHypotenuse()));
         return r;
@@ -20,16 +21,16 @@ public class RectangularTriangle extends Shape{
     }
 
 
-    private double findAlpha(double value){
+    private double findAlpha(double value) {
         double left = 0;
-        double right = Math.PI/2;
-        double middle = (left+right)/2;
-        while (Math.abs(Math.sin(middle)-value)>0.0000000000001){
-            if (Math.sin(middle)>value)
+        double right = Math.PI / 2;
+        double middle = (left + right) / 2;
+        while (Math.abs(Math.sin(middle) - value) > 0.0000000000001) {
+            if (Math.sin(middle) > value)
                 right = middle;
             else
                 left = middle;
-            middle = (left+right)/2;
+            middle = (left + right) / 2;
         }
         return middle;
     }
@@ -80,16 +81,16 @@ public class RectangularTriangle extends Shape{
             perimeter = cathetus1 + cathetus2 + hypotenuse;
         }
 
-        if(hypotenuse < cathetus1 || hypotenuse < cathetus2)
+        if (hypotenuse < cathetus1 || hypotenuse < cathetus2)
             throw new IllegalArgumentException("Niespełniony warunek trójkąta prostokątnego");
-        if (cathetus2 < cathetus1){
+        if (cathetus2 < cathetus1) {
             double temp = cathetus1;
             cathetus1 = cathetus2;
             cathetus2 = temp;
         }
-        if(hypotenuse< Constants.MIN_ATTR_VAL || cathetus1< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL ||
-                cathetus1> Constants.MAX_ATTR_VAL || cathetus2 < Constants.MIN_ATTR_VAL ||
-                cathetus2> Constants.MAX_ATTR_VAL || hypotenuse> Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL){
+        if (hypotenuse < Constants.MIN_ATTR_VAL || cathetus1 < Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL ||
+                cathetus1 > Constants.MAX_ATTR_VAL || cathetus2 < Constants.MIN_ATTR_VAL ||
+                cathetus2 > Constants.MAX_ATTR_VAL || hypotenuse > Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL) {
             throw new IllegalArgumentException("Bad values of figure");
         }
     }
@@ -115,8 +116,8 @@ public class RectangularTriangle extends Shape{
     }
 
 
-    public String toString(Language lang){
-        switch(lang){
+    public String toString(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return "Trójkąt prostokątny - Przyprostokątna 1: " + RoundClass.round(cathetus1) +
                         " Przyprostokątna 2: " + RoundClass.round(cathetus2) +
@@ -134,17 +135,17 @@ public class RectangularTriangle extends Shape{
 
     @Override
     public Circle getCircumcircle() throws NoCircumcircleException {
-        return new Circle(hypotenuse/2);
+        return new Circle(hypotenuse / 2);
     }
 
     @Override
     public Shape getDoubleShape() {
-        return new RectangularTriangle(Map.of("a", cathetus1*Math.sqrt(2), "b", cathetus2*Math.sqrt(2)));
+        return new RectangularTriangle(Map.of("a", cathetus1 * Math.sqrt(2), "b", cathetus2 * Math.sqrt(2)));
     }
 
-    public int compareTo(Shape another){
+    public int compareTo(Shape another) {
         if (another instanceof RectangularTriangle) {
-            if (cathetus1 == ((RectangularTriangle)another).cathetus1 && cathetus2 == ((RectangularTriangle)another).cathetus2)
+            if (cathetus1 == ((RectangularTriangle) another).cathetus1 && cathetus2 == ((RectangularTriangle) another).cathetus2)
                 return 0;
         }
         return Constants.NONZERO;

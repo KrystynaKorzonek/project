@@ -11,7 +11,7 @@ public class SquareFactory extends ShapeFactory {
 
     @Override
     public boolean isProperSetOfFeatures(Set<String> features) {
-        if (features.size()==1)
+        if (features.size() == 1)
             if (features.contains("b") || features.contains("d") || features.contains("p"))
                 return true;
         return false;
@@ -25,9 +25,10 @@ public class SquareFactory extends ShapeFactory {
     public String getMessageChoiceFeature() {
         return "b - bok, d - przekątna, p - pole";
     }
+
     @Override
-    public String getMessageChoiceFeature(Language lang){
-        switch(lang){
+    public String getMessageChoiceFeature(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return "b - bok, d - przekątna, p - pole";
             }

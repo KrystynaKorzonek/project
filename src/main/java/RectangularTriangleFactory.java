@@ -2,7 +2,7 @@
 import java.util.Map;
 import java.util.Set;
 
-public class RectangularTriangleFactory extends ShapeFactory{
+public class RectangularTriangleFactory extends ShapeFactory {
     // UWAGA! trójkąt prostokątny równoramienny będzie równoramienny, a nie prostokątny
     @Override
     public Shape create(Map<String, Double> features) {
@@ -12,7 +12,7 @@ public class RectangularTriangleFactory extends ShapeFactory{
 
     @Override
     public boolean isProperSetOfFeatures(Set<String> features) {
-        if (features.size()==2) {
+        if (features.size() == 2) {
             for (String code : features)
                 if (!isFeatureCode(code))
                     return false;
@@ -29,9 +29,10 @@ public class RectangularTriangleFactory extends ShapeFactory{
     public String getMessageChoiceFeature() {
         return "a - przyprostokątna 1, b - przyprostokątna 2, c - przeciwprostokątna, p - pole";
     }
+
     @Override
-    public String getMessageChoiceFeature(Language lang){
-        switch(lang){
+    public String getMessageChoiceFeature(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return "a - przyprostokątna 1, b - przyprostokątna 2, c - przeciwprostokątna, p - pole";
             }

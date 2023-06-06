@@ -2,46 +2,48 @@ import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Set;
 
-public class Circle extends Shape{
+public class Circle extends Shape {
     private double radius;
     private double diameter;
-    public double getDiameter(){
+
+    public double getDiameter() {
         return diameter;
     }
-    public double getRadius(){
+
+    public double getRadius() {
         return radius;
     }
 
 
-    private void setFeaturesFromRadius(double radius){
+    private void setFeaturesFromRadius(double radius) {
         this.verticesNumber = Integer.MAX_VALUE;
         this.radius = radius;
-        this.diameter = 2*radius;
+        this.diameter = 2 * radius;
         this.perimeter = 2 * Math.PI * radius;
         this.area = Math.PI * radius * radius;
     }
 
-    private void setFeatures(String feature, double value){
+    private void setFeatures(String feature, double value) {
         double radius = 0;
-        switch (feature){
+        switch (feature) {
             case "r" -> {
                 radius = value;
             }
             case "d" -> {
-                radius = value/2;
+                radius = value / 2;
             }
             case "p" -> {
-                radius = Math.sqrt(value/Math.PI);
+                radius = Math.sqrt(value / Math.PI);
             }
             case "l" -> {
-                radius  = value/(2*Math.PI);
+                radius = value / (2 * Math.PI);
             }
         }
         setFeaturesFromRadius(radius);
 
     }
 
-    public Circle(Map<String, Double> features){
+    public Circle(Map<String, Double> features) {
         this.dateTime = LocalDateTime.now();
         if (features.size() != 1)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
@@ -51,17 +53,17 @@ public class Circle extends Shape{
         }
     }
 
-    public Circle(double radius){
+    public Circle(double radius) {
         this.dateTime = LocalDateTime.now();
         setFeaturesFromRadius(radius);
-        if(radius< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL || radius> Constants.MAX_ATTR_VAL ||
-                area > Constants.MAX_ATTR_VAL){
+        if (radius < Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL || radius > Constants.MAX_ATTR_VAL ||
+                area > Constants.MAX_ATTR_VAL) {
             throw new IllegalArgumentException("Bad values of figure");
         }
     }
 
-    public String toString(Language lang){
-        switch(lang){
+    public String toString(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return "Koło - promień: " + RoundClass.round(radius) + " średnica: " +
                         RoundClass.round(diameter) + super.toString(lang);
@@ -75,13 +77,14 @@ public class Circle extends Shape{
 
     }
 
-    public int compareTo(Shape another){
+    public int compareTo(Shape another) {
         if (another instanceof Circle) {
-            if (radius == ((Circle)another).radius)
+            if (radius == ((Circle) another).radius)
                 return 0;
         }
         return Constants.NONZERO;
     }
+
     @Override
     public Circle getCircumcircle() {
         return new Circle(radius);
@@ -89,7 +92,7 @@ public class Circle extends Shape{
 
     @Override
     public Circle getDoubleShape() {
-        return new Circle(radius*Math.sqrt(2));
+        return new Circle(radius * Math.sqrt(2));
     }
 }
 

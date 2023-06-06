@@ -43,12 +43,12 @@ public class DataTaker {
             "u", new StringPair("usuń figurę", "remove the shape")
     );
     public static Map<String, StringPair> EXIT_MAP = Map.of(
-            "x", new StringPair( "zrezygnuj z dodawania figury", "resign from adding the shape")
+            "x", new StringPair("zrezygnuj z dodawania figury", "resign from adding the shape")
     );
 
-    public static String takeOneTaskCommand(Language lang){
+    public static String takeOneTaskCommand(Language lang) {
         String initial_message = "";
-        switch(lang){
+        switch (lang) {
             case POLISH -> {
                 initial_message = "Wybierz figurę:";
             }
@@ -58,9 +58,10 @@ public class DataTaker {
         }
         return takeOneStringFromList(FIGURES_MAP, OTHER_ACTIONS_MAP, initial_message, null);
     }
-    public static String takeSortCriterion(Language lang){
+
+    public static String takeSortCriterion(Language lang) {
         String initial_message = "";
-        switch(lang){
+        switch (lang) {
             case POLISH -> {
                 initial_message = "Wybierz kryterium sortowania:";
             }
@@ -70,9 +71,10 @@ public class DataTaker {
         }
         return takeOneStringFromList(SORT_CRITERION_MAP, null, initial_message, null);
     }
-    public static String takeSortOrder(Language lang){
+
+    public static String takeSortOrder(Language lang) {
         String initial_message = "";
-        switch(lang){
+        switch (lang) {
             case POLISH -> {
                 initial_message = "Wybierz sposób sortowania:";
             }
@@ -82,9 +84,10 @@ public class DataTaker {
         }
         return takeOneStringFromList(SORT_ORDER_MAP, null, initial_message, null);
     }
-    public static String takeFigureModification(Language lang){
+
+    public static String takeFigureModification(Language lang) {
         String initial_message = "";
-        switch(lang){
+        switch (lang) {
             case POLISH -> {
                 initial_message = "Wybierz, co chcesz zrobić:";
             }
@@ -99,11 +102,12 @@ public class DataTaker {
                 null
         );
     }
-    public static SortRule getSortRule(){
+
+    public static SortRule getSortRule() {
         SortCriterion criterion = null;
         Order order = null;
         String criterionString = takeSortCriterion(StringManager.getLanguage());
-        switch (criterionString){
+        switch (criterionString) {
             case "o" -> {
                 criterion = SortCriterion.PERIMETER;
             }
@@ -130,21 +134,21 @@ public class DataTaker {
     }
 
 
-
-    public static Map<String, StringPair> makeKeysUppercase(Map<String, StringPair> map){
-        Map <String, StringPair> result = new HashMap<>();
+    public static Map<String, StringPair> makeKeysUppercase(Map<String, StringPair> map) {
+        Map<String, StringPair> result = new HashMap<>();
         for (String key : map.keySet())
             result.put(key.toLowerCase(), map.get(key));
         return result;
     }
-    public static List<String> makeListOfOptionDescriptions(Map<String, StringPair> options){
+
+    public static List<String> makeListOfOptionDescriptions(Map<String, StringPair> options) {
         List<String> optionDescriptions = new LinkedList<>();
         for (String code : options.keySet())
             optionDescriptions.add(code.toUpperCase() + " - " + options.get(code).get(StringManager.getLanguage()));
         return optionDescriptions;
     }
 
-    public static String generateOptionsMessage(Map<String, StringPair> options, Map<String, StringPair> oneLineOptions){
+    public static String generateOptionsMessage(Map<String, StringPair> options, Map<String, StringPair> oneLineOptions) {
         List<String> optionsDescriptions = makeListOfOptionDescriptions(options);
         List<String> oneLineOptionsDescritions = makeListOfOptionDescriptions(oneLineOptions);
         String firstLineOptionMessage = String.join(", ", optionsDescriptions);
@@ -153,17 +157,17 @@ public class DataTaker {
         if (optionsDescriptions.isEmpty() || oneLineOptionsDescritions.isEmpty())
             delimiter = "";
         String optionMessage = firstLineOptionMessage + delimiter + oneLineOptionMessage;
-        return(optionMessage);
+        return (optionMessage);
     }
 
-    public static String takeOneStringFromList(Map<String, StringPair> optionsFromUser, Map<String, StringPair> oneLineOptionsFromUser, String initialMessage, String finalMessage){
+    public static String takeOneStringFromList(Map<String, StringPair> optionsFromUser, Map<String, StringPair> oneLineOptionsFromUser, String initialMessage, String finalMessage) {
         Scanner scan = new Scanner(System.in);
         if (optionsFromUser == null)
             optionsFromUser = Map.of();
         if (oneLineOptionsFromUser == null)
             oneLineOptionsFromUser = Map.of();
-        Map <String, StringPair> simpleOptions = makeKeysUppercase(optionsFromUser);
-        Map <String, StringPair> oneLineOptions = makeKeysUppercase(oneLineOptionsFromUser);
+        Map<String, StringPair> simpleOptions = makeKeysUppercase(optionsFromUser);
+        Map<String, StringPair> oneLineOptions = makeKeysUppercase(oneLineOptionsFromUser);
         String optionMessage = generateOptionsMessage(simpleOptions, oneLineOptions);
         Map<String, StringPair> allOptions = new HashMap<>();
         allOptions.putAll(simpleOptions);
@@ -188,7 +192,7 @@ public class DataTaker {
     }
 
 
-    public static Integer takeOneNumber(int min, int max, String initialMessage){
+    public static Integer takeOneNumber(int min, int max, String initialMessage) {
         Scanner scan = new Scanner(System.in);
         System.out.println(initialMessage);
         Integer chosen_number;
@@ -199,8 +203,7 @@ public class DataTaker {
             if (number < min || number > max)
                 return null;
             chosen_number = number;
-        }
-        catch (NumberFormatException ex){
+        } catch (NumberFormatException ex) {
             return null;
         }
         return chosen_number;
@@ -216,11 +219,11 @@ public class DataTaker {
         String once_again_message = "";
         String not_num_message = "";
         String val_not_in_range = "";
-        switch(StringManager.getLanguage()){
+        switch (StringManager.getLanguage()) {
             case POLISH -> {
                 initial_message = "Wybierz cechę, którą podasz";
                 wrong_value_message = "Nieprawidłowa wartość";
-                get_value_message = "Podaj jej wartość: (pomiędzy: " + Constants.MIN_ATTR_VAL + " a " + Constants.MAX_ATTR_VAL +")";
+                get_value_message = "Podaj jej wartość: (pomiędzy: " + Constants.MIN_ATTR_VAL + " a " + Constants.MAX_ATTR_VAL + ")";
                 minus_val = "Ujemna wartość!";
                 zero_val = "Zerowa wartość!";
                 once_again_message = "Spróbuj jeszcze raz:";
@@ -230,7 +233,7 @@ public class DataTaker {
             case ENGLISH -> {
                 initial_message = "Pick feature which you want to add";
                 wrong_value_message = "Wrong value";
-                get_value_message = "Provide its value: (between" + Constants.MIN_ATTR_VAL + " and " + Constants.MAX_ATTR_VAL +")";
+                get_value_message = "Provide its value: (between" + Constants.MIN_ATTR_VAL + " and " + Constants.MAX_ATTR_VAL + ")";
                 minus_val = "Value lower than 0!";
                 zero_val = "Value equal 0!";
                 once_again_message = "Try once again:";
@@ -243,7 +246,7 @@ public class DataTaker {
         String messageChoiceFeature = factory.getMessageChoiceFeature(StringManager.getLanguage());
         System.out.println(messageChoiceFeature);
         String feature = scan.nextLine().toLowerCase();
-        while (!factory.isFeatureCode(feature)){
+        while (!factory.isFeatureCode(feature)) {
             System.out.println(wrong_value_message);
             System.out.println(initial_message);
             System.out.println(messageChoiceFeature);
@@ -258,9 +261,9 @@ public class DataTaker {
             try {
                 value = Double.parseDouble(string_value);
                 try {
-                    if (value<0)
+                    if (value < 0)
                         throw new IllegalArgumentException(minus_val);
-                    if (value==0)
+                    if (value == 0)
                         throw new IllegalArgumentException(zero_val);
                     if (value < Constants.MIN_ATTR_VAL || value > Constants.MAX_ATTR_VAL)
                         throw new IllegalArgumentException(val_not_in_range);

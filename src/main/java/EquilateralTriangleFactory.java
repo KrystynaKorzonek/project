@@ -1,7 +1,7 @@
 import java.util.Map;
 import java.util.Set;
 
-public class EquilateralTriangleFactory extends ShapeFactory{
+public class EquilateralTriangleFactory extends ShapeFactory {
     @Override
     public Shape create(Map<String, Double> features) {
         return new EquilateralTriangle(features);
@@ -9,7 +9,7 @@ public class EquilateralTriangleFactory extends ShapeFactory{
 
     @Override
     public boolean isProperSetOfFeatures(Set<String> features) {
-        if (features.size()==1)
+        if (features.size() == 1)
             if (features.contains("a") || features.contains("h") || features.contains("p"))
                 return true;
         return false;
@@ -23,9 +23,10 @@ public class EquilateralTriangleFactory extends ShapeFactory{
     public String getMessageChoiceFeature() {
         return "a - bok, h - wysokosc, p - pole";
     }
+
     @Override
-    public String getMessageChoiceFeature(Language lang){
-        switch(lang){
+    public String getMessageChoiceFeature(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return "a - bok, h - wysokosc, p - pole";
             }

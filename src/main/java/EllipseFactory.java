@@ -1,18 +1,18 @@
 import java.util.Map;
 import java.util.Set;
 
-public class EllipseFactory extends ShapeFactory{
+public class EllipseFactory extends ShapeFactory {
     @Override
     public Shape create(Map<String, Double> features) {
-         Ellipse created = new Ellipse(features);
-         return Ellipse.toCircleIfPossible(created);
+        Ellipse created = new Ellipse(features);
+        return Ellipse.toCircleIfPossible(created);
 
 
     }
 
     @Override
     public boolean isProperSetOfFeatures(Set<String> features) {
-        if (features.size()==2) {
+        if (features.size() == 2) {
             for (String code : features)
                 if (!isFeatureCode(code))
                     return false;
@@ -29,9 +29,10 @@ public class EllipseFactory extends ShapeFactory{
     public String getMessageChoiceFeature() {
         return "a - półoś mała, b - półoś wielka, p - pole";
     }
+
     @Override
-    public String getMessageChoiceFeature(Language lang){
-        switch(lang){
+    public String getMessageChoiceFeature(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return "a - półoś mała, b - półoś wielka, p - pole";
             }

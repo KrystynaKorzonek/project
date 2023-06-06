@@ -4,10 +4,16 @@ import java.util.Map;
 public class EquilateralTriangle extends Shape {
     private double side;
     private double height;
-    public double getSide() { return side;}
-    public double getHeight() { return height;}
 
-    public EquilateralTriangle(Map<String, Double> features){
+    public double getSide() {
+        return side;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public EquilateralTriangle(Map<String, Double> features) {
         this.verticesNumber = 3;
         this.dateTime = LocalDateTime.now();
         if (features.size() != 1)
@@ -16,8 +22,8 @@ public class EquilateralTriangle extends Shape {
             double value = features.get(feature);
             setFeatures(feature, value);
         }
-        if(side< Constants.MIN_ATTR_VAL || height< Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL ||
-                side> Constants.MAX_ATTR_VAL || height> Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL){
+        if (side < Constants.MIN_ATTR_VAL || height < Constants.MIN_ATTR_VAL || area < Constants.MIN_ATTR_VAL ||
+                side > Constants.MAX_ATTR_VAL || height > Constants.MAX_ATTR_VAL || area > Constants.MAX_ATTR_VAL) {
             throw new IllegalArgumentException("Bad values of figure");
         }
     }
@@ -27,32 +33,32 @@ public class EquilateralTriangle extends Shape {
             case "p" -> {
                 area = value;
                 side = Math.sqrt(4 * area / Math.sqrt(3));
-                height = Math.sqrt(3) * side/2;
+                height = Math.sqrt(3) * side / 2;
             }
             case "a" -> {
                 side = value;
-                height = Math.sqrt(3) * side/2;
-                area = side * height/2;
+                height = Math.sqrt(3) * side / 2;
+                area = side * height / 2;
             }
             case "h" -> {
                 height = value;
-                side = height*2 / Math.sqrt(3);
-                area = side * height/2;
+                side = height * 2 / Math.sqrt(3);
+                area = side * height / 2;
             }
         }
         perimeter = 3 * side;
     }
 
-    public int compareTo(Shape another){
+    public int compareTo(Shape another) {
         if (another instanceof EquilateralTriangle) {
-            if (side == ((EquilateralTriangle)another).side && height == ((EquilateralTriangle)another).height)
+            if (side == ((EquilateralTriangle) another).side && height == ((EquilateralTriangle) another).height)
                 return 0;
         }
         return Constants.NONZERO;
     }
 
-    public String toString(Language lang){
-        switch(lang){
+    public String toString(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return "Trojkat rownoboczny - bok: " + RoundClass.round(side) +
                         " wysokosc: " + RoundClass.round(height) + super.toString(lang);
@@ -68,11 +74,11 @@ public class EquilateralTriangle extends Shape {
 
     @Override
     public Circle getCircumcircle() {
-        return new Circle(2*height/3);
+        return new Circle(2 * height / 3);
     }
 
     @Override
-    public EquilateralTriangle getDoubleShape(){
-        return new EquilateralTriangle(Map.of("a", side*Math.sqrt(2)));
+    public EquilateralTriangle getDoubleShape() {
+        return new EquilateralTriangle(Map.of("a", side * Math.sqrt(2)));
     }
 }

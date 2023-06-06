@@ -1,17 +1,17 @@
 import java.util.Map;
 import java.util.Set;
 
-public class CircleFactory extends ShapeFactory{
+public class CircleFactory extends ShapeFactory {
 
     @Override
     public Shape create(Map<String, Double> features) {
-        return(new Circle(features));
+        return (new Circle(features));
     }
 
     @Override
     public boolean isProperSetOfFeatures(Set<String> features) {
-        if (features.size()==1)
-            if (features.contains("r") || features.contains("d") || features.contains("p")  || features.contains("l"))
+        if (features.size() == 1)
+            if (features.contains("r") || features.contains("d") || features.contains("p") || features.contains("l"))
                 return true;
         return false;
     }
@@ -24,9 +24,10 @@ public class CircleFactory extends ShapeFactory{
     public String getMessageChoiceFeature() {
         return "r - promień, d - średnica, p - pole, l - obwód";
     }
+
     @Override
-    public String getMessageChoiceFeature(Language lang){
-        switch(lang){
+    public String getMessageChoiceFeature(Language lang) {
+        switch (lang) {
             case POLISH -> {
                 return "r - promień, d - średnica, p - pole, l - obwód";
             }
@@ -36,7 +37,6 @@ public class CircleFactory extends ShapeFactory{
         }
         return "Wrong language";
     }
-
 
 
 }
