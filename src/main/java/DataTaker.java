@@ -1,4 +1,3 @@
-import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 public class DataTaker {
@@ -215,29 +214,32 @@ public class DataTaker {
         String zero_val = "";
         String once_again_message = "";
         String not_num_message = "";
+        String val_not_in_range = "";
         switch(StringManager.getLanguage()){
             case POLISH -> {
-                initial_message = "Wybierz cechę, którą podasz:";
+                initial_message = "Wybierz cechę, którą podasz";
                 wrong_value_message = "Nieprawidłowa wartość";
-                get_value_message = "Podaj jej wartość:";
+                get_value_message = "Podaj jej wartość: (pomiędzy: " + Constants.MIN_ATTR_VAL + " a " + Constants.MAX_ATTR_VAL +")";
                 minus_val = "Ujemna wartość!";
                 zero_val = "Zerowa wartość!";
                 once_again_message = "Spróbuj jeszcze raz:";
                 not_num_message = "Błąd: input nie jest liczbą!";
+                val_not_in_range = "Wartość nie nalezy do zakresu <" + Constants.MIN_ATTR_VAL + ", " + Constants.MAX_ATTR_VAL + ">";
             }
             case ENGLISH -> {
-                initial_message = "Pick feature which you want to add:";
+                initial_message = "Pick feature which you want to add";
                 wrong_value_message = "Wrong value";
-                get_value_message = "Provide its value";
+                get_value_message = "Provide its value: (between" + Constants.MIN_ATTR_VAL + " and " + Constants.MAX_ATTR_VAL +")";
                 minus_val = "Value lower than 0!";
                 zero_val = "Value equal 0!";
                 once_again_message = "Try once again:";
                 not_num_message = "Error: input is not a number";
+                val_not_in_range = "Value not in range <" + Constants.MIN_ATTR_VAL + ", " + Constants.MAX_ATTR_VAL + ">";
+
             }
         }
         System.out.println(initial_message);
         String messageChoiceFeature = factory.getMessageChoiceFeature(StringManager.getLanguage());
-        //String messageChoiceFeature = factory.getMessageChoiceFeature(StringManager.getLanguage());
         System.out.println(messageChoiceFeature);
         String feature = scan.nextLine().toLowerCase();
         while (!factory.isFeatureCode(feature)){
@@ -259,6 +261,8 @@ public class DataTaker {
                         throw new IllegalArgumentException(minus_val);
                     if (value==0)
                         throw new IllegalArgumentException(zero_val);
+                    if (value < Constants.MIN_ATTR_VAL || value > Constants.MAX_ATTR_VAL)
+                        throw new IllegalArgumentException(val_not_in_range);
                     done = true;
                 } catch (IllegalArgumentException e) {
                     System.out.println(e.getMessage() + "\n" + once_again_message);
