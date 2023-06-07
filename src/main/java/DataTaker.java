@@ -161,6 +161,19 @@ public class DataTaker {
     }
 
     public static String takeOneStringFromList(Map<String, StringPair> optionsFromUser, Map<String, StringPair> oneLineOptionsFromUser, String initialMessage, String finalMessage) {
+        String msg_choose = "";
+        String msg_incorrect = "";
+        switch (StringManager.getLanguage()){
+            case POLISH -> {
+                msg_choose = "Wybierz jedną z poniższych opcji:";
+                msg_incorrect = "Nieprawidłowa wartość! Spróbuj jeszcze raz:";
+            }
+            case ENGLISH -> {
+                msg_choose = "Choose one of the following options:";
+                msg_incorrect = "Incorrect value! Try again:";
+            }
+        }
+
         Scanner scan = new Scanner(System.in);
         if (optionsFromUser == null)
             optionsFromUser = Map.of();
@@ -176,11 +189,11 @@ public class DataTaker {
         if (initialMessage != null)
             System.out.println(initialMessage);
         else
-            System.out.println("Wybierz jedną z poniższych opcji:");
+            System.out.println(msg_choose);
         System.out.println(optionMessage);
         String input = scan.nextLine().toLowerCase();
         while (!allOptions.containsKey(input)) {
-            System.out.println("Nieprawidłowa wartość! Spróbuj jeszcze raz: ");
+            System.out.println(msg_incorrect);
             System.out.println(optionMessage);
             input = scan.nextLine().toLowerCase();
         }

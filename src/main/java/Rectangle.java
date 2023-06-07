@@ -38,7 +38,6 @@ public class Rectangle extends Shape {
         if (features.size() != 2)
             throw new IllegalArgumentException("Too many features\n(that should never happen...)");
         TreeSet keys = new TreeSet(features.keySet());
-        System.out.println(keys);
         switch (keys.toString()) {
             case "[a, b]" -> {
                 String arr[] = new String[2];

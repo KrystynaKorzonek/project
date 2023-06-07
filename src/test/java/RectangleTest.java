@@ -50,11 +50,11 @@ public class RectangleTest {
         double expectedArea = 12.0;
         double actualPerimeter = rectangle.getPerimeter();
         double expectedPerimeter = 14.0;
-        double actualDiagonal = rectangle.getSide1();
-        double expectedDiagonal = 4.0;
+        double actualSide2 = rectangle.getSide2();
+        double expectedSide2 = 4.0;
         Assert.assertEquals(expectedArea, actualArea, 0);
         Assert.assertEquals(expectedPerimeter, actualPerimeter, 0);
-        Assert.assertEquals(expectedDiagonal, actualDiagonal, 0.0000001);
+        Assert.assertEquals(expectedSide2, actualSide2, 0.0000001);
     }
 
     @Test
@@ -64,11 +64,11 @@ public class RectangleTest {
         features.put("e",5.0);
         Rectangle rectangle = new Rectangle(features);
         double actualSide1 = rectangle.getSide1();
-        double expectedSide1 = 4.0;
+        double expectedSide1 = 3.0;
         double actualPerimeter = rectangle.getPerimeter();
         double expectedPerimeter = 14.0;
         double actualSide2 = rectangle.getSide2();
-        double expectedSide2 = 3.0;
+        double expectedSide2 = 4.0;
         Assert.assertEquals(expectedSide1, actualSide1, 0);
         Assert.assertEquals(expectedPerimeter, actualPerimeter, 0);
         Assert.assertEquals(expectedSide2, actualSide2, 0.0000001);
@@ -97,13 +97,13 @@ public class RectangleTest {
         features.put("p",12.0);
         features.put("b",3.0);
         Rectangle rectangle = new Rectangle(features);
-        double actualSide1 = rectangle.getSide1();
-        double expectedSide1 = 4.0;
+        double actualSide2 = rectangle.getSide2();
+        double expectedSide2 = 4.0;
         double actualPerimeter = rectangle.getPerimeter();
         double expectedPerimeter = 14.0;
         double actualDiagonal = rectangle.getDiagonal();
         double expectedDiagonal = 5.0;
-        Assert.assertEquals(expectedSide1, actualSide1, 0);
+        Assert.assertEquals(expectedSide2, actualSide2, 0);
         Assert.assertEquals(expectedPerimeter, actualPerimeter, 0);
         Assert.assertEquals(expectedDiagonal, actualDiagonal, 0.0000001);
     }
