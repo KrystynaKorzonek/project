@@ -1,3 +1,16 @@
-Koło - promień: 4.0 średnica: 8.0 pole:50.27 obwód:25.13 data utworzenia:2023-05-17T00:46:15.583442
-Kwadrat - bok: 3.0 przekątna: 4.24 pole:9.0 obwód:12.0 data utworzenia:2023-05-17T00:46:12.660807
-Square@10f87f48
+
+shapes.Square@728938a9
+shapes.Circle@21b8d17c
+shapes.Rectangle@6433a2
+shapes.Rhombus@5910e440
+shapes.EquilateralTriangle@533ddba
+Trójkąt równoramienny - bok: 5.0 wysokość: 4.0 podstawa: 6.0IsoscelesTriangle@246b179d
+shapes.Rhombus@6267c3bb
+shapes.RectangularTriangle@7a07c5b4
+shapes.Triangle@26a1ab54
+shapes.RectangularTriangle@3d646c37
+shapes.Ellipse@41cf53f9
+shapes.RegularHexagon@5a10411
+Trapez równoramienny - dłuższa podstawa: 15.0 krótsza podstawa: 5.0 ramie: 13.0 wysokość: 12.0EquilateralTrapezoid@2ef1e4fa
+Trapez równoramienny - dłuższa podstawa: 20.0 krótsza podstawa: 10.0 ramie: 13.0 wysokość: 12.0EquilateralTrapezoid@306a30c7
+Trapez równoramienny - dłuższa podstawa: 25.0 krótsza podstawa: 15.0 ramie: 13.0 wysokość: 12.0EquilateralTrapezoid@b81eda8

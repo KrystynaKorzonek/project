@@ -1,4 +1,5 @@
 import org.junit.Test;
+import shapes.Ellipse;
 
 import java.util.Map;
 

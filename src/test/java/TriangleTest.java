@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.Map;
+import shapes.Shape;
+import shapes.Triangle;
 
 import static org.junit.Assert.assertEquals;
 

@@ -1,10 +1,10 @@
 import org.junit.Assert;
 import org.junit.Test;
+import shapes.IsoscelesTriangle;
+import shapes.Shape;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static org.junit.Assert.*;
 
 public class IsoscelesTriangleTest {
 

@@ -1,4 +1,5 @@
 import org.junit.Test;
+import shapes.EquilateralTrapezoid;
 
 import java.util.Map;
 

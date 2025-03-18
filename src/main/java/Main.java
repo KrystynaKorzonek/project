@@ -1,3 +1,16 @@
+import io.DataTaker;
+import io.Message;
+import io.MultithreadingWriteToFile;
+import io.StringManager;
+import shapes.*;
+import sorting.OneStageComparator;
+import sorting.Order;
+import sorting.SortCriterion;
+import sorting.SortRule;
+import utilities.Constants;
+import utilities.Pair;
+import utilities.RoundClass;
+
 import java.io.IOException;
 import java.util.*;
 
@@ -162,7 +175,7 @@ public class Main {
     }
 
     private static boolean writeAllShapes() throws IOException {
-        MultithreadingWriteToFile.write_file_async(allShapes);
+        MultithreadingWriteToFile.write_json_async(allShapes);
         System.out.println(StringManager.getMessageString(Message.WRITTEN_TO_FILE));
         return true;
     }

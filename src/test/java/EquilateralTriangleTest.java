@@ -1,5 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
+import shapes.EquilateralTriangle;
+import shapes.Shape;
 
 import java.util.HashMap;
 import java.util.Map;

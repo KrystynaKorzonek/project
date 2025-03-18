@@ -1,4 +1,6 @@
 import org.junit.Test;
+import shapes.RectangularTriangle;
+import shapes.Shape;
 
 import java.util.Map;
 
